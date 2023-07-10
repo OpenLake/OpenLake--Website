@@ -1,0 +1,74 @@
+.box {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1rem;
+}
+
+.box .group-wrapper {
+    border: 0px none;
+    height: 36px;
+    width: 36px;
+}
+
+.box .group {
+    height: 36px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 36px;
+}
+
+.box .overlap-group {
+    border-radius: 18px;
+    height: 36px;
+    position: relative;
+}
+
+.box .ellipse {
+    background-color: #2b86ae40;
+    border-radius: 18px;
+    height: 36px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+    width: 36px;
+}
+
+.box .div {
+    background-color: #2b86af40;
+    border-radius: 10.25px;
+    box-shadow: 0px 0px 4px #00000026;
+    height: 21px;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    transform: rotate(180deg);
+    width: 21px;
+}
+
+.box .ellipse-2 {
+    background-color: #2b86ae40;
+    border-radius: 6.84px;
+    box-shadow: 0px 0px 4px #00000026;
+    height: 14px;
+    left: 11px;
+    position: absolute;
+    top: 11px;
+    transform: rotate(180deg);
+    width: 14px;
+}
+
+.box .ellipse-3 {
+    background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 0%, rgb(43, 134, 174) 90.9%);
+    border-radius: 2.51px;
+    box-shadow: 0px 0px 4px #00000026;
+    height: 5px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+    transform: rotate(180deg);
+    width: 5px;
+}

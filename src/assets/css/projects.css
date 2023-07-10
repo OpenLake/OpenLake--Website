@@ -1,0 +1,75 @@
+.repo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.repo-card {
+  width: 30%;
+  margin: 20px;
+}
+
+.filter-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+  color: #19e3e3;
+}
+
+.dropdown-menu {
+  position: relative;
+  right:0;
+  top:0;
+  background-color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  z-index: 99999;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-item.selected {
+  background-color: #e6e6e6;
+}
+.repo-name {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 26.3px;
+  opacity: 0.5;
+  white-space: nowrap;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  .repo-card {
+    width: 100%;
+  }
+  .repo-cards {
+    margin-left: 2px;
+  }
+  .repo-name{
+    font-size: 15px;
+  }
+}
+
+
+

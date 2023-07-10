@@ -1,0 +1,133 @@
+.card {
+  width: 20vw;
+  height: 35vh;
+  perspective: 1000px;
+  position: relative;
+  background-color: transparent;
+  pointer-events: all;
+}
+.even-card .card-front,
+.even-card .card-back {
+  background: linear-gradient(
+    180deg,
+    rgba(23, 29, 31, 0) 0%,
+    rgba(25, 227, 227, 0.14) 100%
+  );
+}
+.odd-card {
+  background: transparent;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 20px;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+.card-avatar {
+  width: 2rem;
+}
+.card-title {
+  color: #ffffff;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.card-upperrow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card-innerrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card-tech {
+  color: #ffffff80;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 23.7px;
+  white-space: nowrap;
+}
+.card-tech2 {
+  color: #ffffff80;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 23.7px;
+  /* white-space: nowrap; */
+}
+.card-icon {
+  font-size: 1.25rem;
+  color: #19e3e3;
+}
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.component img {
+  width: 1rem;
+  height: 1rem;
+}
+.component span {
+  margin-top: 5px;
+  color: #ffffff;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card-description {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.card-readmore {
+  color: #19e3e3;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .card {
+    width: 85vw;
+    height: 30vh;
+  }
+  .card-avatar {
+    width: 1.5rem;
+
+  }
+  .card-tech,.card-tech2,.card-title,.card-icon{
+    font-size: 0.65rem;
+    align-items: center;
+  }
+  
+}
