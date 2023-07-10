@@ -11,26 +11,26 @@ import Error from "./pages/Error";
 function App() {
 
 
-  // const [numberOfColorBoxes, setNumberOfColorBoxes] = useState(200);
+  const [numberOfColorBoxes, setNumberOfColorBoxes] = useState(200);
 
-  // useEffect(() => {
-  //   const bgAnimation = document.getElementById('bgAnimation');
+  useEffect(() => {
+    const bgAnimation = document.getElementById('bgAnimation');
 
-  //   for (let i = 0; i < numberOfColorBoxes; i++) {
-  //     const colorBox = document.createElement('div');
-  //     colorBox.classList.add('colorBox');
-  //     bgAnimation.appendChild(colorBox);
-  //   }
-  // }, [numberOfColorBoxes]);
+    for (let i = 0; i < numberOfColorBoxes; i++) {
+      const colorBox = document.createElement('div');
+      colorBox.classList.add('colorBox');
+      bgAnimation.appendChild(colorBox);
+    }
+  }, [numberOfColorBoxes]);
 
   return (
     <div>
       
-        {/* <div className="bgAnimation" id="bgAnimation">
+        <div className="bgAnimation" id="bgAnimation">
           <div className="backgroundAmim">
 
           </div>
-        </div> */}
+        </div>
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />}></Route>

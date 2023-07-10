@@ -32,7 +32,10 @@
 @media (max-width: 768px) {
   #gridd {
     grid-template-columns: 1fr;
+<<<<<<< HEAD
+=======
     background-color: #161616; /* Change to a single column layout */
+>>>>>>> 86341f3 (New)
   }
 
   #gridd1 {
@@ -94,7 +97,13 @@
 
   #grid1 {
     grid-column: 1 / -1;
+<<<<<<< HEAD
+    width: 100%; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+=======
     width: 100%; /* Take up full width in mobile mode */
+>>>>>>> 86341f3 (New)
   }
 
   #grid2,
@@ -107,7 +116,11 @@
 
   #grid2 {
     z-index: 2;
+<<<<<<< HEAD
+    top: 98%;
+=======
     top: 92%;
+>>>>>>> 86341f3 (New)
     margin-left: 2rem;
     width: 80%;
     margin-top: 8rem;

@@ -18,7 +18,7 @@ const Error = () => {
   // }, [numberOfColorBoxes]);
 
   return (
-    <div  className=" pointer-events-none px-[267px] pt-4 min-h-screen">
+    <div  className=" pointer-events-none md:px-[267px] pt-4 min-h-screen">
       <div id="grid" className="">
         <div id="grid1" className="mt-10">
           <div className="text-[#28A9E2] text-[32px] align-middle font-semibold tracking-[0] leading-[normal] bg-[#28A9E2] bg-opacity-20 w-fit px-1 py-2]">
@@ -48,7 +48,7 @@ const Error = () => {
           id="grid2"
           className="bg-[#28A9E233] bg-blur bg-gradient-to-br from-[#1D4B6066] to-[#ffffff00] mt-[129px] rounded-4xl"
         >
-          <div className="flex mx-6 py-[30px] gap-4">
+          <div className="flex mx-6 md:py-[30px] py-[1rem] gap-4">
             <div className="bg-[#f46b5d] px-2 py-2 rounded-xl"></div>
             <div className="bg-[#f9bd4e] px-2 py-2 rounded-xl"></div>
             <div className="bg-[#57c353] px-2 py-2 rounded-xl"></div>
@@ -118,7 +118,7 @@ const Error = () => {
           <div class="text-[#28A9E2] pr-3 text-[1rem] py-3 text-right border-b border-[#ffffff50]">
             Openlake
           </div>
-          <div class="text-white text-[15px] font-normal tracking-[0] leading-[23.5px] mt-[22px] ml-[3.75rem]">
+          <div class="text-white text-[15px] font-normal tracking-[0] leading-[23.5px] md:mt-[22px] mt-[1rem] ml-[2rem] md:ml-[3.75rem]">
             #For a better World!
           </div>
         </div>
@@ -126,12 +126,12 @@ const Error = () => {
 
       <div id="gridd" className="mt-60 min-h-screen ">
         {" "}
-        //background 161616
-        <div id="gridd1" className="mt-20">
-          <div className="text-white font-[400] text-2xl">
+        
+        <div id="gridd1" className="mt-20 ">
+          <div className="text-white font-[400] mx-2 text-2xl">
             What is Open Lake?
           </div>
-          <div className="text-[#808080] text-sm font-[400]">
+          <div className="text-[#808080] px-4 text-sm font-[400]">
             As the world is moving towards a connected society. The communities
             driving the development of open source technologies are becoming
             more prominent. Numerous software giants like Google and Microsoft
