@@ -45,7 +45,7 @@ function ProjectPage() {
   return (
     <div className="pointer-events-none min-h-screen ">
       <div className="p-8">
-        <div className="relative flex flex-col md:flex-row justify-between gap-6 sm:gap-20 py-4 px-8 sm:px-2">
+        <div className="relative flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
           <div className="flex flex-row gap-6 items-center">
             <div className="w-fit" ref={box1Ref}>
               <HeaderDot />
@@ -57,7 +57,7 @@ function ProjectPage() {
               </h1>
             </div>
           </div>
-          <div className="buttons flex flex-col sm:flex-row sm:justify-start ">
+          <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
             <a href={project.html_url} className="my-2 w-fit">
               <RepoButton />
             </a>
@@ -188,7 +188,7 @@ function ProjectPage() {
               startEdge={5}
               endEdge={5}
             />
-            <div className="flex flex-col justify-between sm:mb-5 md:mb-10 ">
+            <div className="flex flex-col justify-between sm:mb-5 md:mb-10">
               <h1 ref={box2Ref4} className="repo-name">
                 -stats
               </h1>

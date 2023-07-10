@@ -3,11 +3,7 @@ import "./css/StatsCard.css";
 import { motion } from "framer-motion"; // Import the CSS file for the card design
 function StatsCard({ repo }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.8 }}
-      className="repo-card "
-    >
+    <div className="repo-card">
       <div className="repo-stats">
         <div className="stat">
           <span className="stat-label">Stars:</span>
@@ -30,7 +26,7 @@ function StatsCard({ repo }) {
       >
         View Repository
       </a>
-    </motion.div>
+    </div>
   );
 }
 

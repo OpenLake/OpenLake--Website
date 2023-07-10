@@ -9,11 +9,26 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [filteredRepos, setFilteredRepos] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState("");
+
+  // useEffect(() => {
+  //   fetch("https://api.github.com/users/openlake/repos")
+  //     .then((response) => response.json())
+  //     .then((data) => setRepos(data))
+  //     .catch((error) => console.error(error));
+  // }, []);
   useEffect(() => {
-    fetch("https://api.github.com/users/openlake/repos")
-      .then((response) => response.json())
-      .then((data) => setRepos(data))
-      .catch((error) => console.error(error));
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/users/openlake/repos"
+        );
+        const data = await response.json();
+        setRepos(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
   }, []);
 
   useEffect(() => {
@@ -56,7 +71,7 @@ const Projects = () => {
     <div>
       <div className="min-h-screen pointer-events-none bg-[#161616]">
         <div className="p-8">
-          <div className="flex flex-row gap-6 sm:gap-16 py-4 px-8">
+          <div className="flex flex-row gap-16 md:gap-6  py-4 px-8">
             <div style={{ position: "relative" }}>
               <Xarrow
                 start={box2Ref}
@@ -78,7 +93,7 @@ const Projects = () => {
               />
             </div>
 
-            <div ref={box2Ref}>
+            <div className="HeaderDot" ref={box2Ref}>
               <HeaderDot />
             </div>
             <h1 className="relative text-white text-[40px] font-semibold leading-10">
