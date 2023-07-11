@@ -11,6 +11,8 @@ import github from "./images/github.svg";
 import img1 from "./images/repo/activity-tracker/img1.png";
 import logonav from "./images/logonav.png";
 import git from "./images/git.png";
+import githubgrey from "./images/githubgrey.svg";
+import linkedingrey from "./images/linkedlngrey.svg"; 
 import linkedin from "./images/linkedin.png";
 import mail from "./images/mail.png";
 import insta from "./images/insta.png";
@@ -21,9 +23,16 @@ import prmerged from "./images/prmerged.png";
 import propened from "./images/propened.png";
 import linesadded from "./images/prmerged.png";
 import closed from "./images/closed.png";
+import carimage from "./images/carimage.png";
+import coordinator  from "./images/Coordinators/Coordinator.svg";
+import mentor from "./images/Mentor/mentor.svg"
 
 
 export {
+  coordinator,
+  mentor,
+  githubgrey,
+  linkedingrey,
   repoavatar,
   watch,
   avatar,
@@ -46,5 +55,6 @@ export {
   closed,
   potential,
   linesadded,
-  propened
+  propened,
+  carimage
 };

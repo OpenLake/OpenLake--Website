@@ -43,7 +43,7 @@ function ProjectPage() {
   }
 
   return (
-    <div>
+    <div className="flex flex-row">
       <div className="p-8">
         <div className="relative flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
           <div className="flex flex-row gap-6 items-center">
@@ -59,7 +59,7 @@ function ProjectPage() {
           </div>
           <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
             <a href={project.html_url} className="my-2 w-fit">
-              <RepoButton />
+              <RepoButton ButtonName={"Github Repo"} />
             </a>
             <a href={project.homepage} className="my-2 w-fit">
               <LivePreviewButton />
@@ -90,7 +90,7 @@ function ProjectPage() {
               <h1 ref={box2Ref1} className="repo-name">
                 -description
               </h1>
-              <p className="pointer-events-none repo-name">
+              <p className="pointer-events-none repo-name ">
                 {project.description}
               </p>
             </div>
@@ -168,35 +168,18 @@ function ProjectPage() {
             </div>
           </Xwrapper>
         </div>
-        <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-8">
-          <Xwrapper>
-            <Xarrow
-              start={box1Ref}
-              end={box2Ref4}
-              color="#2B86AE"
-              strokeWidth={2}
-              headSize={15}
-              tailSize={15}
-              showHead={false}
-              startAnchor="bottom"
-              endAnchor="left"
-              path="smooth"
-              edge={5}
-              zIndex={0}
-              lineColor="#2B86AE"
-              pathColor="#2B86AE"
-              startEdge={5}
-              endEdge={5}
-            />
-            <div className="flex flex-col justify-between sm:mb-5 md:mb-10x w-full">
+        
+      </div>
+      <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-8">
+          
+            <div className="flex flex-col  sm:mb-5 md:mb-10x ">
               <h1 ref={box2Ref4} className="repo-name">
                 -stats
               </h1>
-              <StatsCard className="w-ull" repo={project} />
+              <StatsCard  repo={project} />
             </div>
-          </Xwrapper>
+         
         </div>
-      </div>
     </div>
   );
 }

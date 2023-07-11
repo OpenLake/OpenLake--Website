@@ -1,45 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import {
-  HeaderDot,
-  RepoButton,
-  LivePreviewButton,
-  StatsCard,
-} from "../components";
+import { HeaderDot, RepoButton, MemberCard } from "../components";
 import Xarrow, { Xwrapper } from "react-xarrows";
-import { repoavatar, github, img1 } from "../assets";
+import { repoavatar} from "../assets";
 import "../assets/css/community.css";
+import { Mentors2023, Coordinator2023 } from "../constants";
 const Community = () => {
   const box1Ref = useRef(null);
   const box2Ref1 = useRef(null);
   const box2Ref2 = useRef(null);
-  const box2Ref3 = useRef(null);
-  const box2Ref4 = useRef(null);
-  let { id } = useParams();
-  const [project, setProject] = useState(null);
-  const [contributors, setContributors] = useState([]);
+  const [coordinators, setCoordinators] = useState([]);
+  const [mentors, setMentors] = useState([]);
+  const firstRowMentors = mentors.slice(0, 6);
+  const secondRowMentors = mentors.slice(6, 10);
   useEffect(() => {
-    fetch(`https://api.github.com/repositories/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setProject(data);
-        fetchContributors(data.contributors_url);
-      })
-      .catch((error) => console.error(error));
-  }, [id]);
-
-  const fetchContributors = (url) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setContributors(data);
-      })
-      .catch((error) => console.error(error));
-  };
-
-  if (!project) {
-    return <div>Loading...</div>;
-  }
+    setMentors(Mentors2023);
+  }, []);
+  useEffect(() => {
+    setCoordinators(Coordinator2023);
+  }, []);
 
   return (
     <div className="min-h-screen ">
@@ -51,14 +30,14 @@ const Community = () => {
             </div>
             <div className="flex flex-row sm:justify-evenly md:justify-start gap-2">
               <img src={repoavatar} alt="repoavatar" className="w-8 md:w-10" />
-              <h1 className="pointer-events: all text-white text-[20px] md:text-[40px] font-semibold md:leading-10 uppercase">
+              <h1 className=" text-white text-[20px] md:text-[40px] font-semibold md:leading-10 uppercase">
                 Community
               </h1>
             </div>
           </div>
           <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
             <a href={"https://github.com/OpenLake"} className="my-2 w-fit">
-              <RepoButton />
+              <RepoButton ButtonName={"Openlake Github"} />
             </a>
           </div>
         </div>
@@ -86,10 +65,12 @@ const Community = () => {
               <div className="rectangle-wrapper">
                 <div
                   ref={box2Ref1}
-                  className="rectangle flex flex-col justify-start align-middle"
+                  className="rectangle flex flex-col items-center gap-6"
                 >
-                  <div className="timeline justify-center">2023-24</div>
-                  <div>
+                  <div className="timeline flex flex-row justify-center content-center">
+                    2023-24
+                  </div>
+                  <div className="text-center">
                     <span className="text-white text-lg font-normal leading-normal">
                       Take a look at our{" "}
                     </span>
@@ -101,11 +82,64 @@ const Community = () => {
                       people
                     </span>
                   </div>
+                  <div className="flex flex-wrap gap-8 mb-10">
+                    {coordinators.map((mentor) => (
+                      <MemberCard
+                        className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
+                        key={mentor.id}
+                        mentor={mentor}
+                      />
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap w-fit md:w-max gap-8 mb-10">
+                    {firstRowMentors.map((mentor) => (
+                      <MemberCard
+                        className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
+                        key={mentor.id}
+                        mentor={mentor}
+                      />
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-8 mb-10">
+                    {secondRowMentors.map((mentor) => (
+                      <MemberCard
+                        className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
+                        key={mentor.id}
+                        mentor={mentor}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </Xwrapper>
         </div>
+        <Xwrapper>
+        <Xarrow
+              start={box1Ref}
+              end={box2Ref2}
+              color="#2B86AE"
+              strokeWidth={2}
+              headSize={15}
+              tailSize={15}
+              showHead={false}
+              startAnchor="bottom"
+              endAnchor="left"
+              path="smooth"
+              edge={5}
+              zIndex={0}
+              lineColor="#2B86AE"
+              pathColor="#2B86AE"
+              startEdge={5}
+              endEdge={5}
+            />
+            <div  className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
+            <a  ref={box2Ref2} href={"/past-community"} className="my-2 w-fit">
+              <RepoButton ButtonName={"Past Community"} />
+            </a>
+          </div>
+        </Xwrapper>
+        
       </div>
     </div>
   );

@@ -1,0 +1,51 @@
+.vertical-timeline-element-content {
+  color: black;
+}
+.vertical-timeline-element-title {
+  color: white;
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 700;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+.vertical-timeline-element-subtitle {
+  color: white;
+  font-size: 18px;
+  font-family: Helvetica;
+  font-weight: 400;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+.vertical-timeline-element--work .vertical-timeline-element-content {
+  border-top: 3px solid #2196f3;
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-content {
+  border-top: 3px solid #e91e63;
+}
+
+.vertical-timeline-element-date {
+  color: white;
+}
+
+/* CUSTOM LINE COLOR */
+/* The line */
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #424242;
+}
+
+/* Icon container's border */
+.vertical-timeline.vertical-timeline-custom-line
+  .vertical-timeline-element--work
+  .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #1976d2, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.vertical-timeline.vertical-timeline-custom-line
+  .vertical-timeline-element--education
+  .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #c2185b, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import "./css/RepoButton.css";
 import {  goto } from "../assets";
-const RepoButton = () => {
+const RepoButton = ({ButtonName}) => {
     return (
         <div className="box">
             <div className="button-wrapper">
                 <div className="button">
-                    <div className="text-wrapper">Github repo</div>
+                    <div className="text-wrapper">{ButtonName}</div>
                     <img className="vector" alt="Vector" src={goto} />
                 </div>
             </div>

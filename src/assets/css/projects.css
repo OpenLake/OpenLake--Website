@@ -53,10 +53,11 @@
   color: #ffffff;
   font-family: "Inter-SemiBold", Helvetica;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 550;
   letter-spacing: 0;
   line-height: 26.3px;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  margin-left: 1rem;
   white-space: nowrap;
   /* text-transform: capita; */
 }

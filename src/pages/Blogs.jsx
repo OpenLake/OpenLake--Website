@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import Xarrow from "react-xarrows";
-
 const boxStyle = {border: "grey solid 2px", borderRadius: "10px", padding: "5px"};
 
 function Blogs() {

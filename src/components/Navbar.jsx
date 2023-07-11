@@ -21,11 +21,13 @@ const Navbar = () => {
         <div className={`navbar__menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <a href="/projects" className="navbar__link">Projects</a>
           <a href="/community" className="navbar__link">Community</a>
+          <a href="/past-community" className="navbar__link">Past Community</a>
           <a href="/events" className="navbar__link">Events</a>
           <button className="navbar__button">BLOGS</button>
         </div>
         <div className="navbar__mobile-menu" onClick={toggleMobileMenu}>
           <div className={`navbar__hamburger ${isMobileMenuOpen ? 'open' : ''}`} />
+          <div className={'ham_bar'}></div>
           <div className={'ham_bar'}></div>
           <div className={'ham_bar'}></div>
           <div className={'ham_bar'}></div>
