@@ -9,7 +9,7 @@ import {
 import Xarrow, { Xwrapper } from "react-xarrows";
 import { repoavatar, github, img1 } from "../assets";
 import "../assets/css/community.css";
-const Community = () => {
+const Past = () => {
   const box1Ref = useRef(null);
   const box2Ref1 = useRef(null);
   const box2Ref2 = useRef(null);
@@ -42,9 +42,9 @@ const Community = () => {
   }
 
   return (
-    <div className="min-h-screen ">
+    <div className=" min-h-screen ">
       <div className="p-8">
-        <div className=" flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
+        <div className="relative flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
           <div className="flex flex-row gap-6 items-center">
             <div className="w-fit" ref={box1Ref}>
               <HeaderDot />
@@ -111,4 +111,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default Past;

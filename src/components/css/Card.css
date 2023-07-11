@@ -6,6 +6,12 @@
   background-color: transparent;
   pointer-events: all;
 }
+
+.card-inner{
+    display: flex;
+    /* gap: 2rem; */
+}
+
 .even-card .card-front,
 .even-card .card-back {
   background: linear-gradient(
@@ -56,7 +62,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0;
-  text-transform: uppercase;
+  text-transform:  capitalize;
 }
 
 .card-upperrow {
@@ -123,11 +129,12 @@
   }
   .card-avatar {
     width: 1.5rem;
-
   }
-  .card-tech,.card-tech2,.card-title,.card-icon{
+  .card-tech,
+  .card-tech2,
+  .card-title,
+  .card-icon {
     font-size: 0.65rem;
     align-items: center;
   }
-  
 }

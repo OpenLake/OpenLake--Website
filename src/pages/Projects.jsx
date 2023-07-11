@@ -68,8 +68,7 @@ const Projects = () => {
   };
 
   return (
-    <div>
-      <div className="min-h-screen pointer-events-none bg-[#161616]">
+      <div>
         <div className="p-8">
           <div className="flex flex-row gap-16 md:gap-6  py-4 px-8">
             <div style={{ position: "relative" }}>
@@ -111,48 +110,43 @@ const Projects = () => {
                 <option value="HTML">HTML</option> */}
                 {/* Add more options for other languages */}
                 {/* </select> */}
-                <div className="flex flex-col gap-0">
+                <div className="flex flex-col gap-0 ">
                   <button className="filter-icon" onClick={toggleDropdown}>
                     <FaFilter />
                   </button>
                   {isDropdownOpen && (
                     <div className="dropdown-menu">
                       <button
-                        className={`dropdown-item ${
-                          selectedLanguage === "" ? "selected" : ""
-                        }`}
+                        className={`dropdown-item ${selectedLanguage === "" ? "selected" : ""
+                          }`}
                         onClick={() => handleLanguageSelect("")}
                       >
                         All Languages
                       </button>
                       <button
-                        className={`dropdown-item ${
-                          selectedLanguage === "JavaScript" ? "selected" : ""
-                        }`}
+                        className={`dropdown-item ${selectedLanguage === "JavaScript" ? "selected" : ""
+                          }`}
                         onClick={() => handleLanguageSelect("JavaScript")}
                       >
                         JavaScript
                       </button>
                       <button
-                        className={`dropdown-item ${
-                          selectedLanguage === "Python" ? "selected" : ""
-                        }`}
+                        className={`dropdown-item ${selectedLanguage === "Python" ? "selected" : ""
+                          }`}
                         onClick={() => handleLanguageSelect("Python")}
                       >
                         Python
                       </button>
                       <button
-                        className={`dropdown-item ${
-                          selectedLanguage === "C++" ? "selected" : ""
-                        }`}
+                        className={`dropdown-item ${selectedLanguage === "C++" ? "selected" : ""
+                          }`}
                         onClick={() => handleLanguageSelect("C++")}
                       >
                         C++
                       </button>
                       <button
-                        className={`dropdown-item ${
-                          selectedLanguage === "HTML" ? "selected" : ""
-                        }`}
+                        className={`dropdown-item ${selectedLanguage === "HTML" ? "selected" : ""
+                          }`}
                         onClick={() => handleLanguageSelect("HTML")}
                       >
                         HTML
@@ -162,7 +156,7 @@ const Projects = () => {
                   )}
                 </div>
                 <h1 ref={box1Ref} className="repo-name">
-                  - {selectedLanguage} REPOSITORIES
+                  {selectedLanguage} Repositories
                 </h1>
               </div>
               <div className="repo-cards">
@@ -174,9 +168,9 @@ const Projects = () => {
                       onClick={handleCardFlip}
                       className={
                         index % 8 === 0 ||
-                        index % 8 === 2 ||
-                        index % 8 === 5 ||
-                        index % 8 === 7
+                          index % 8 === 2 ||
+                          index % 8 === 5 ||
+                          index % 8 === 7
                           ? "even-card"
                           : "odd-card"
                       }
@@ -190,7 +184,6 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

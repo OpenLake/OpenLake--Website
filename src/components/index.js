@@ -5,6 +5,7 @@ import Card from './Card';
 import StatsCard from './StatsCard';
 import RepoButton from './RepoButton';
 import LivePreviewButton  from './LivePreviewButton';
+import Footer from './Footer';
 
 export {
   HeaderDot,
@@ -13,4 +14,5 @@ export {
   RepoButton,
   LivePreviewButton,
   StatsCard,
+  Footer
 }

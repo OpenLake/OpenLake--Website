@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #111111;
+  height: 5rem;
+  position: sticky;
+  top:0;
+  margin-top: 0.98 rem;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  /* font-size: 1.2rem; */
+  /* font-weight: bold; */
+  /* height: 1rem; */
+  /* width: auto; */
+  text-decoration: none;
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.navbar__company-name {
+  color: #fff;
+  /* font-family: Inter; */
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 4.6875rem;
+  letter-spacing: -0.045rem;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.50);
+/* font-family: Inter; */
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__link {
+  text-decoration: none;
+  /* color: #333; */
+  margin-right: 1rem;
+}
+
+.navbar__button {
+  display: flex;
+  width: 6.1875rem;
+  height: 2.5rem;
+  padding: 0.3125rem;    
+  justify-content: center;
+  align-items: center;
+vertical-align: center;
+  border-radius: 0.3125rem;
+  background: linear-gradient(90deg, #28a9e2 0%, #007cb2 100%);
+  cursor: pointer;
+  color: #fff;
+  /* font-family: Inter; */
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.04rem;
+}
+
+.navbar__mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__hamburger {
+  /* width: 25px;
+  height: 3px;
+  
+  margin: 5px; */
+  
+}
+
+.ham_bar{
+    width: 25px;
+    height: 3px;
+    
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.50);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar__hamburger.open {
+  transform: rotate(45deg);
+}
+
+.navbar__hamburger.open::before,
+.navbar__hamburger.open::after {
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  .navbar__right {
+    position: relative;
+  }
+
+  .navbar__company-name{
+    display: none;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #111111;
+    padding: 1rem;
+    /* z-index: ; */
+  }
+
+  .navbar__menu.open {
+    display: flex;
+  }
+
+  .navbar__mobile-menu {
+    display: block;
+  }
+}

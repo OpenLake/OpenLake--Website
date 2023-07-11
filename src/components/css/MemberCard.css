@@ -1,0 +1,24 @@
+.box {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.box .rectangle-wrapper {
+  border: 0px none;
+  height: 201px;
+  width: 141px;
+}
+.box .rectangle {
+  -webkit-backdrop-filter: blur(42px) brightness(100%);
+  backdrop-filter: blur(42px) brightness(100%);
+  background-color: #28a9e233;
+  border-radius: 18px;
+  box-shadow: 0px -4px 24px #00000040;
+  height: 201px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 141px;
+}

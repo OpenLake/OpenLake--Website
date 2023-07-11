@@ -9,6 +9,20 @@ import share from "./images/repoavatar.svg";
 import goto from "./images/Goto.svg";
 import github from "./images/github.svg";
 import img1 from "./images/repo/activity-tracker/img1.png";
+import logonav from "./images/logonav.png";
+import git from "./images/git.png";
+import linkedin from "./images/linkedin.png";
+import mail from "./images/mail.png";
+import insta from "./images/insta.png";
+import image from "./images/image.png";
+import secimage from "./images/secimage.png";
+import potential from "./images/potential.png";
+import prmerged from "./images/prmerged.png";
+import propened from "./images/propened.png";
+import linesadded from "./images/prmerged.png";
+import closed from "./images/closed.png";
+
+
 export {
   repoavatar,
   watch,
@@ -21,4 +35,16 @@ export {
   share,
   github,
   img1,
+  logonav,
+  git,
+  linkedin,
+  mail,
+  insta,
+  image,
+  secimage,
+  prmerged,
+  closed,
+  potential,
+  linesadded,
+  propened
 };

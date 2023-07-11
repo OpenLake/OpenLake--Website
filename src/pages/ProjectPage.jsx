@@ -43,7 +43,7 @@ function ProjectPage() {
   }
 
   return (
-    <div className="pointer-events-none min-h-screen ">
+    <div>
       <div className="p-8">
         <div className="relative flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
           <div className="flex flex-row gap-6 items-center">
@@ -188,11 +188,11 @@ function ProjectPage() {
               startEdge={5}
               endEdge={5}
             />
-            <div className="flex flex-col justify-between sm:mb-5 md:mb-10">
+            <div className="flex flex-col justify-between sm:mb-5 md:mb-10x w-full">
               <h1 ref={box2Ref4} className="repo-name">
                 -stats
               </h1>
-              <StatsCard repo={project} />
+              <StatsCard className="w-ull" repo={project} />
             </div>
           </Xwrapper>
         </div>

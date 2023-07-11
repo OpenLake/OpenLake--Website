@@ -18,20 +18,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.bgAnimation{
-  /* z-index: -1; */
+.overlay {
   position: fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  height:100%;
+  /* z-index: ; */
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(20,1fr);
-  grid-template-rows: repeat(20,1fr);
-  background: #1d1d1d;
-  filter: saturate(2);
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity (0.5) to control the darkness of the overlay */
+}
+.bg{
+  z-index: -1;
+  position: fixed;
+  top:0;
+  left:0;
+  /* pointer-events: all; */
+  /* display: block; */
+  width: 100%;
+  height:100%;
 }
 
 .colorBox{
@@ -40,13 +53,14 @@ code {
   transition: 2s ease;
   position: relative;
   margin: 2px;
-  background: #1d1d1d;
+  background: #161616;
+  /* filter: blur(30px); */
 }
 
-.colorBox:hover{
+/* .colorBox:hover{
   background: #00bfff;
   transition-duration: 0s;
-}
+} */
 
 .backgroundAmim{
   position: absolute;
@@ -54,6 +68,7 @@ code {
   left: 0;
   width: 100%;
   height: 40px;
+  opacity: 0.5;
   filter: blur(60px);
   background: #00bfff;
   animation: animBack 6s linear infinite;

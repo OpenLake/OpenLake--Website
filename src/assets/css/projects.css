@@ -22,7 +22,7 @@
   position:absolute;
   top:40px;
   right:10px;
-  background-color: black;
+  background-color: #161616;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 0.5rem;
   z-index: 99999;
@@ -41,11 +41,13 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f0f0f0;
+  background-color: #17acac;
+  color: black;
 }
 
 .dropdown-item.selected {
-  background-color: #e6e6e6;
+  background-color: #19e3e3;
+  color: black;
 }
 .repo-name {
   color: #ffffff;
@@ -56,7 +58,7 @@
   line-height: 26.3px;
   opacity: 0.5;
   white-space: nowrap;
-  text-transform: lowercase;
+  /* text-transform: capita; */
 }
 
 @media (max-width: 768px) {

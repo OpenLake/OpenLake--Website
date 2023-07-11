@@ -28,8 +28,8 @@ function Card({ repo, className }) {
   }, [repo.contributors_url]);
   return (
     <motion.div
-      whileHover={{ scale: 1.5}}
-      whileTap={{ scale: 0.8 }}
+      // whileHover={{ scale: 1.5}}
+      // whileTap={{ scale: 0.8 }}
       className={`card pointer-events-none ${className}`}
     >
       <div className="card-inner">
@@ -42,11 +42,11 @@ function Card({ repo, className }) {
           </div>
           <h1 className="card-title">{repo.name}</h1>
           <div className="flex flex-row gap-2">
-            <h3 className="card-tech">techstack:</h3>
+            <h3 className="card-tech">Techstack:</h3>
             <i className={` ${icons} card-icon`}></i>
           </div>
           <div className="flex flex-row gap-2">
-            <h3 className="card-tech">maintainers: </h3>
+            <h3 className="card-tech">Maintainers: </h3>
             <div className="card-tech2">
               {maintainers.map((maintainer) => (
                 <span key={maintainer.id}>{maintainer.login} </span>
@@ -76,11 +76,13 @@ function Card({ repo, className }) {
               </div>
             </div>
           </div>
+          <h1 className="card-title">{repo.name}</h1>
           <p className="card-description">{repo.description}</p>
           <Link
             key={repo.id}
             className="card-readmore pointer-events-auto"
             to={`/projects/${repo.id}`}
+            style={{pointerEvents:'auto'}}
           >
             Read More
           </Link>
