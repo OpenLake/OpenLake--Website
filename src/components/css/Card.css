@@ -123,6 +123,10 @@
   text-decoration: underline;
 }
 @media (max-width: 768px) {
+
+  .card-title{
+    font-size: 2rem;
+  }
   .card {
     width: 85vw;
     height: 30vh;
@@ -136,5 +140,8 @@
   .card-icon {
     font-size: 0.65rem;
     align-items: center;
+  }
+  .card-description{
+    font-size: 0.7rem;
   }
 }

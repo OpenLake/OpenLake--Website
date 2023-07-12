@@ -1,0 +1,48 @@
+.box {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.box .button-wrapper {
+  border: 0px none;
+  height: 44px;
+  width: 129px;
+}
+
+.box .button {
+  align-items: center;
+  border: 1px solid;
+  border-color: #ffffff26;
+  border-radius: 8px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 12px 16px;
+  width: fit-content;
+  background: var(
+    --button-gradient,
+    linear-gradient(90deg, #28a9e2 0%, #007cb2 100%)
+  );
+}
+
+.box .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.box .vector {
+  height: 10px;
+  min-width: 12px;
+  position: relative;
+}

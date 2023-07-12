@@ -137,3 +137,35 @@ vertical-align: center;
     display: block;
   }
 }
+
+
+.navbar__submenu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: calc(75% + 0rem); /* Adjust the offset as needed */
+  /* left: 0; */
+  background-color: #111111;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+
+.navbar__submenu.open {
+  display: flex;
+}
+
+.navbar__submenu-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  /* ... */
+  .navbar__submenu {
+    top: calc(50% + 0rem);
+  }
+}

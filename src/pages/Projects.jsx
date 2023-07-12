@@ -3,6 +3,7 @@ import { HeaderDot, Card } from "../components";
 import "../assets/css/projects.css";
 import Xarrow from "react-xarrows";
 import { FaFilter } from "react-icons/fa";
+import AdvancedCarousel from "../components/AdvancedCarousel";
 const Projects = () => {
   const box1Ref = useRef(null);
   const box2Ref = useRef(null);
@@ -70,8 +71,8 @@ const Projects = () => {
   return (
       <div>
         <div className="p-8">
-          <div className="flex flex-row gap-16 md:gap-6  py-4 px-8">
-            <div style={{ position: "relative" }}>
+          <div className="flex flex-row gap-2 md:gap-10">
+            {/* <div style={{ position: "relative" }}> */}
               <Xarrow
                 start={box2Ref}
                 end={box1Ref}
@@ -90,7 +91,7 @@ const Projects = () => {
                 startEdge={5}
                 endEdge={5}
               />
-            </div>
+            {/* </div> */}
 
             <div className="HeaderDot" ref={box2Ref}>
               <HeaderDot />
@@ -180,6 +181,7 @@ const Projects = () => {
                   <p>No repositories found</p>
                 )}
               </div>
+              {/* <AdvancedCarousel/> */}
             </div>
           </div>
         </div>

@@ -25,10 +25,17 @@ import linesadded from "./images/prmerged.png";
 import closed from "./images/closed.png";
 import carimage from "./images/carimage.png";
 import coordinator  from "./images/Coordinators/Coordinator.svg";
-import mentor from "./images/Mentor/mentor.svg"
-
+import mentor from "./images/Mentor/mentor.svg";
+import blogs from "./images/blogs.png";
+import githubblog from "./images/github.png";
+import bloginsta from "./images/bloginsta.png";
+import linkedinblog from "./images/linkedinblog.png";
+import sharearrow from "./images/sharearrow.svg";
+import events from "./images/events.svg";
 
 export {
+  sharearrow,
+  events,
   coordinator,
   mentor,
   githubgrey,
@@ -56,5 +63,9 @@ export {
   potential,
   linesadded,
   propened,
-  carimage
+  carimage,
+  blogs,
+  githubblog,
+  bloginsta,
+  linkedinblog
 };

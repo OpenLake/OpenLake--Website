@@ -13,7 +13,6 @@ import {
 } from "../assets";
 import "../assets/css/homepage.css";
 import Xarrow from "react-xarrows";
-import AdvancedCarousel from "../components/AdvancedCarousel";
 import { useSnapCarousel } from "react-snap-carousel";
 
 const programs = [
@@ -103,7 +102,7 @@ const Homepage = () => {
   const carousel = useRef();
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 40);
-  });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -527,7 +526,7 @@ const Homepage = () => {
                   </svg>
                 </button>
                 <button
-                  className="p-2 bg-gray-800 text-white rounded-full absolute right-0"
+                  className="p-2 cursor-pointer bg-gray-800 text-white rounded-full absolute right-0"
                   style={{ marginRight: "1rem" }}
                   onClick={() => next()}
                 >
@@ -554,7 +553,7 @@ const Homepage = () => {
                 {pages.map((_, i) => (
                   <li key={i}>
                     <button
-                      className="text-center mx-auto"
+                      className="text-center cursor-pointer mx-auto"
                       style={i === activePageIndex ? { opacity: 0.5 } : {}}
                       onClick={() => goTo(i)}
                     >

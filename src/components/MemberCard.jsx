@@ -33,7 +33,8 @@ function MemberCard({ mentor }) {
         {mentor.name}
       </div>
       <div
-        className="text-white text-opacity-50  text-center leading-[13.15px] text-[rgba(255,255,255,0.50)] text-[10px] not-italic font-normal leading-[131.523%];
+        className="text-white
+        ]/>?]9. text-opacity-50  text-center leading-[13.15px] text-[rgba(255,255,255,0.50)] text-[15px] not-italic font-normal leading-[131.523%]; 
   font-family: Menlo;"
       >
         {mentor.designation}

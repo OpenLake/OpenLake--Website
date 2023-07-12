@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { HeaderDot, RepoButton, MemberCard } from "../components";
 import Xarrow, { Xwrapper } from "react-xarrows";
-import { repoavatar} from "../assets";
+import { repoavatar } from "../assets";
 import "../assets/css/community.css";
 import { Mentors2023, Coordinator2023 } from "../constants";
 const Community = () => {
@@ -115,31 +115,31 @@ const Community = () => {
           </Xwrapper>
         </div>
         <Xwrapper>
-        <Xarrow
-              start={box1Ref}
-              end={box2Ref2}
-              color="#2B86AE"
-              strokeWidth={2}
-              headSize={15}
-              tailSize={15}
-              showHead={false}
-              startAnchor="bottom"
-              endAnchor="left"
-              path="smooth"
-              edge={5}
-              zIndex={0}
-              lineColor="#2B86AE"
-              pathColor="#2B86AE"
-              startEdge={5}
-              endEdge={5}
-            />
-            <div  className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
-            <a  ref={box2Ref2} href={"/past-community"} className="my-2 w-fit">
+          <Xarrow
+            start={box1Ref}
+            end={box2Ref2}
+            color="#2B86AE"
+            strokeWidth={2}
+            headSize={15}
+            tailSize={15}
+            showHead={false}
+            startAnchor="bottom"
+            endAnchor="left"
+            path="smooth"
+            edge={5}
+            zIndex={0}
+            lineColor="#2B86AE"
+            pathColor="#2B86AE"
+            startEdge={5}
+            endEdge={5}
+          />
+          <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
+            <a ref={box2Ref2} href={"/past-community"} className="my-2 w-fit">
               <RepoButton ButtonName={"Past Community"} />
             </a>
           </div>
         </Xwrapper>
-        
+
       </div>
     </div>
   );

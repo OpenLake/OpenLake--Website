@@ -8,7 +8,7 @@
   border-bottom: 1px solid #188989;
   display: flex;
   flex-direction: column;
-  min-width: 20rem;
+  min-width: 20vw;
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -55,4 +55,10 @@
   font-weight: 500;
   /* line-height: normal; */
   /* margin-bottom: 1rem; */
+}
+@media (max-width: 768px) {
+  /* ... */
+  .repo-card {
+    max-width: 80vw;
+  }
 }
