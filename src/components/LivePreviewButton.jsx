@@ -4,7 +4,7 @@ import { share } from "../assets";
 
 const LivePreviewButton = () => {
   return (
-    <div className="box">
+    <div className="boxlive">
       <div className="button-wrapper">
         <div className="button">
           <div className="text-wrapper">Live preview</div>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Menlo:wght@400&display=swap");
 #gridd {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -62,7 +63,7 @@
 #grid {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 170px;
+  gap: 10px;
   position: relative;
 }
 
@@ -75,11 +76,14 @@
 #grid3 {
   position: absolute;
   top: 0;
-  right: 0;
-  width: calc(50% - 5rem); /* Adjust the width and margin values as needed */
+  left:55%;
+  /* right: 0; */
+  width: 35vw; /* Adjust the width and margin values as needed */
 }
 #grid2 {
   z-index: 2;
+  left: 60%;
+  font-family: Menlo;
 }
 #grid3 {
   z-index: 1;
@@ -94,13 +98,13 @@
 
   #grid1 {
     grid-column: 1 / -1;
-    width: 100%; /* Take up full width in mobile mode */
+    width:100vw;/* Take up full width in mobile mode*/
   }
 
   #grid2,
   #grid3 {
     position: absolute;
-    right: 10%;
+    left:1rem;
     margin-top: 4rem; /* Add desired gap between grid1 and grid2/grid3 */
     width: 100%;
   }
@@ -108,14 +112,15 @@
   #grid2 {
     z-index: 2;
     top: 92%;
-    margin-left: 2rem;
-    width: 80%;
+    margin-left: 1rem;
+    width: 85%;
     margin-top: 8rem;
   }
 
   #grid3 {
     z-index: 1;
     top: 90%;
+    height: 60%;
     margin-right: 1rem;
     width: 80%; /* Add desired gap between grid2 and grid3 */
   }

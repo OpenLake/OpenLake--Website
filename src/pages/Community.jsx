@@ -41,7 +41,7 @@ const Community = () => {
             </a>
           </div>
         </div>
-        <div className="relative flex flex-row sm:ml-2 md:ml-10 gap-6 sm:gap-16 py-4 px-8">
+        <div className="relative flex flex-row  sm:ml-2 md:ml-0 gap-6 sm:gap-16 py-4 px-8">
           <Xwrapper>
             <Xarrow
               start={box1Ref}
@@ -82,7 +82,7 @@ const Community = () => {
                       people
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-8 mb-10">
+                  <div className="flex flex-wrap justify-center gap-8 mb-10">
                     {coordinators.map((mentor) => (
                       <MemberCard
                         className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
@@ -91,7 +91,7 @@ const Community = () => {
                       />
                     ))}
                   </div>
-                  <div className="flex flex-wrap w-fit md:w-max gap-8 mb-10">
+                  <div className="flex flex-wrap justify-center w-fit md:w-max gap-8 mb-10">
                     {firstRowMentors.map((mentor) => (
                       <MemberCard
                         className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
@@ -100,7 +100,7 @@ const Community = () => {
                       />
                     ))}
                   </div>
-                  <div className="flex flex-wrap gap-8 mb-10">
+                  <div className="flex flex-wrap justify-center gap-8 mb-10">
                     {secondRowMentors.map((mentor) => (
                       <MemberCard
                         className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"

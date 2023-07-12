@@ -1,6 +1,6 @@
 import React from 'react';
 import "./css/Footer.css";
-import { logonav} from "../assets";
+import { logonav } from "../assets";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -21,7 +21,7 @@ const Footer = () => {
 
                 </a>
                 <a href="https://www.instagram.com" className="social-icon-link">
-                <i className="far fa-envelope social-icon"></i>
+                    <i className="far fa-envelope social-icon"></i>
                 </a>
                 <a href="https://www.linkedin.com" className="social-icon-link">
                     <i className="fab fa-instagram social-icon"></i>
@@ -41,9 +41,7 @@ const Footer = () => {
                 <a href="/community" className="section-link">
                     Community
                 </a>
-                <a href="/past-community" className="section-link">
-                    Past Community
-                </a>
+
                 <a href="/events" className="section-link">
                     Events
                 </a>

@@ -70,7 +70,7 @@ const Projects = () => {
 
   return (
       <div>
-        <div className="p-8">
+        <div className="p-4 md:p-8">
           <div className="flex flex-row gap-2 md:gap-10">
             {/* <div style={{ position: "relative" }}> */}
               <Xarrow
@@ -100,7 +100,7 @@ const Projects = () => {
               Projects
             </h1>
           </div>
-          <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-8">
+          <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-4 md:px-8">
             <div className="w-full">
               <div className="pointer-events-auto flex flex-col md:flex-row-reverse justify-between sm:mb-5 md:mb-10 ">
                 {/* <select value={selectedLanguage} onChange={handleLanguageSelect}>
@@ -111,12 +111,12 @@ const Projects = () => {
                 <option value="HTML">HTML</option> */}
                 {/* Add more options for other languages */}
                 {/* </select> */}
-                <div className="flex flex-col gap-0 ">
+                <div className="flex flex-col-reverse items-end">
                   <button className="filter-icon" onClick={toggleDropdown}>
                     <FaFilter />
                   </button>
                   {isDropdownOpen && (
-                    <div className="dropdown-menu">
+                    <div className="dropdown-menu flex flex-col justify-end">
                       <button
                         className={`dropdown-item ${selectedLanguage === "" ? "selected" : ""
                           }`}

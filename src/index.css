@@ -18,7 +18,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.overlay {
+/* .overlay {
   position: fixed;
   left:0;
   top:0;
@@ -34,8 +34,8 @@ code {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Adjust the opacity (0.5) to control the darkness of the overlay */
-}
+  background-color: rgba(0, 0, 0, 0.9); 
+} */
 .bg{
   z-index: -2;
   position: fixed;

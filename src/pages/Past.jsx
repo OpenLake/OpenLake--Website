@@ -66,12 +66,12 @@ const Past = () => {
         /> */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "#511693", color: "#fff" }}
+            contentStyle={{ background: "linear-gradient(270deg, #161616 0%, #141C24 100%)", color: "#fff" }}
             contentArrowStyle={{
-              borderRight: "20px solid #511693",
+              borderRight: "20px solid #28A9E2",
             }}
             date="2023 - 2024"
-            iconStyle={{ background: "#511693", color: "#fff" }}
+            iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faPerson} />}
             
           >
@@ -87,12 +87,12 @@ const Past = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "#1DDFCB", color: "#fff" }}
+            contentStyle={{ background: "linear-gradient(270deg, #141C24 0%, #161616 100%)", color: "#fff" }}
             contentArrowStyle={{
-              borderRight: "20px solid #1DDFCB",
+              borderRight: "20px solid #2B86AE",
             }}
             date="2023 - 2024"
-            iconStyle={{ background: "#1DDFCB", color: "#fff" }}
+            iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faUsers} />}
           >
             <h1 className="vertical-timeline-element-title">Coordinators</h1>
@@ -108,12 +108,12 @@ const Past = () => {
           
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "#511693", color: "#fff" }}
+            contentStyle={{ background: "linear-gradient(270deg, #161616 0%, #141C24 100%)", color: "#fff" }}
             contentArrowStyle={{
-              borderRight: "20px solid #511693",
+              borderRight: "20px solid #2B86AE",
             }}
             date="2022 - 2023"
-            iconStyle={{ background: "#511693", color: "#fff" }}
+            iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faPerson} />}
           >
             <h1 className="vertical-timeline-element-title">Coordinators</h1>
@@ -128,12 +128,12 @@ const Past = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "#1DDFCB", color: "#fff" }}
+            contentStyle={{ background: "linear-gradient(270deg, #141C24 0%, #161616 100%)", color: "#fff" }}
             contentArrowStyle={{
-              borderRight: "20px solid #1DDFCB",
+              borderRight: "20px solid #2B86AE",
             }}
             date="2022 - 2023"
-            iconStyle={{ background: "#1DDFCB", color: "#fff" }}
+            iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faUsers} />}
           >
             <h1 className="vertical-timeline-element-title">Coordinators</h1>
@@ -148,12 +148,12 @@ const Past = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "#511693", color: "#fff" }}
+            contentStyle={{ background: "linear-gradient(270deg, #161616 0%, #141C24 100%)", color: "#fff" }}
             contentArrowStyle={{
-              borderRight: "20px solid #511693",
+              borderRight: "20px solid #2B86AE",
             }}
             date="2021 - 2022"
-            iconStyle={{ background: "#511693", color: "#fff" }}
+            iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faPerson} />}
           >
             <h1 className="vertical-timeline-element-title">Coordinators</h1>
@@ -168,12 +168,12 @@ const Past = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "#1DDFCB", color: "#fff" }}
+            contentStyle={{ background: "linear-gradient(270deg, #141C24 0%, #161616 100%)", color: "#fff" }}
             contentArrowStyle={{
-              borderRight: "20px solid #1DDFCB",
+              borderRight: "20px solid #2B86AE",
             }}
             date="2021 - 2022"
-            iconStyle={{ background: "#1DDFCB", color: "#fff" }}
+            iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faUsers} />}
           >
             <h1 className="vertical-timeline-element-title">Coordinators</h1>

@@ -19,14 +19,18 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="md:mx-36 min-h-screen mt-4 md:mt-16 mx-4">
-      <div className=" text-white text-xl text-base font-semibold uppercase leading-tight">
+    <div className=" md:mx-36 min-h-screen mt-4 md:mt-16 mx-4">
+      <div className=" flex align-middle  text-white text-xl text-base font-semibold uppercase leading-tight">
         {article.author}
+        <div className="pl-4 pt-2 text-center text-[#FFFFFF80] text-[13px] font-bold leading-none">
+          {article.time} read
+        </div>
       </div>
-      <div className=" text-white mt-8 text-xl md:text-[40px] font-semibold leading-8 md:leading-[40px]">
+
+      <div className=" text-white mt-4 text-xl md:text-[40px] font-semibold leading-8 md:leading-[40px]">
         {article.title}
       </div>
-      <div className="flex md:mt-16 mt-4">
+      <div className="flex md:mt-6 mt-4">
         <div className="bg-gradient-to-r px-3 py-2 from-sky-500 to-sky-600 rounded-tl-md rounded-bl-md items-center text-center text-white text-[13px] font-bold uppercase leading-none tracking-wide">
           {article.tag}
         </div>

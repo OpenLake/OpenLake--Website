@@ -1,4 +1,4 @@
-.box {
+.boxlive {
     background-color: transparent;
     display: flex;
     flex-direction: row;
@@ -6,15 +6,17 @@
     width: 100%;
 }
 
-.box .button-wrapper {
+.boxlive .button-wrapper {
     border: 0px none;
     height: 44px;
     width: 145px;
 }
 
-.box .button {
+.boxlive .button {
     align-items: center;
-    background-color: #173030;
+    border: 1px solid;
+    border-color: #ffffff26;
+    /* background-color: #173030; */
     border-radius: 8px;
     display: flex;
     gap: 8px;
@@ -23,7 +25,7 @@
     width: fit-content;
 }
 
-.box .text-wrapper {
+.boxlive .text-wrapper {
     color: #ffffff;
     font-family: "Inter-SemiBold", Helvetica;
     font-size: 14px;
@@ -36,7 +38,7 @@
     width: fit-content;
 }
 
-.box .share {
+.boxlive .share {
     height: 20px;
     min-width: 20px;
     position: relative;

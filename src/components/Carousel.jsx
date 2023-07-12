@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { EventsTop } from "../constants";
 import { GlimpseButton } from "../components";
 import { Carousel } from "react-responsive-carousel";
+import "./css/Carousel.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const MyCarousel = () => {
@@ -24,15 +25,20 @@ const MyCarousel = () => {
       showThumbs={false}
       autoPlay
       infiniteLoop
-      interval={3000}
+      interval={6000}
     >
       {EventsTop.map((slide, index) => (
-        <div key={index} className="relative bg-cover bg-center">
-        <img
-          src={slide.image}
-          alt={slide.title}
-          className="w-full h-full object-cover"
-        />
+        <div
+          key={index}
+          className="relative md:h-[500px] h-[500px] bg-cover bg-center"
+        >
+          {/* <div className="overlays"> */}
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+          {/* </div> */}
           <div className="ml-4 carousel-overlay absolute inset-0 flex flex-col justify-center items-start text-center gap-2">
             <h1 className="text-white text-2xl md:text-4xl font-bold leading-tight font-inter">
               {slide.title}

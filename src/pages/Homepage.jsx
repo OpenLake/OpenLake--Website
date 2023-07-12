@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Card } from "../components";
+import { Card,HeaderDot } from "../components";
 import { motion } from "framer-motion";
 import {
   image,
@@ -9,6 +9,7 @@ import {
   closed,
   potential,
   propened,
+  logosvg,
   carimage,
 } from "../assets";
 import "../assets/css/homepage.css";
@@ -94,8 +95,14 @@ const stats = [
 
 const Homepage = () => {
   const box1Ref = useRef(null);
-  const { scrollRef, pages, activePageIndex, next, prev, goTo } =
-    useSnapCarousel();
+  const {
+    scrollRef,
+    pages,
+    activePageIndex,
+    next,
+    prev,
+    goTo,
+  } = useSnapCarousel();
 
   const [repos, setRepos] = useState([]);
   const [width, setWidth] = useState(0);
@@ -133,10 +140,10 @@ const Homepage = () => {
 
   return (
     <div>
-      <div className=" pointer-events-none md:px-[200px] pt-4 ">
-        <div id="grid" className="">
-          <div id="grid1" className="mt-10 md:mx-0 px-4">
-            <div className="text-[#28A9E2] text-[32px] align-middle font-semibold tracking-[0] leading-[normal] bg-[#28A9E2] bg-opacity-20 w-fit px-1 py-2]">
+      <div className="md:px-[150px] relative top-4 md:top-28 pt-4 ">
+        <div id="grid">
+          <div id="grid1" className="mt-10 md:mx-0 px-4 w-full mb-16 md:mb:0">
+            <div className="w-fit h-fit md:w-[160px] md:h-[40px] text-[#28A9E2] text-[32px] align-middle font-semibold tracking-[0] leading-[normal] bg-[#28A9E2] bg-opacity-20 px-1 py-2] rounded text-center">
               Openlake
             </div>
             <div className="text-[#FFFFFF] text-[40px] font-semibold tracking-[0] leading-[52.6px] my-2">
@@ -145,15 +152,15 @@ const Homepage = () => {
             <div className="text-white text-xl font-semibold tracking-[0] leading-[26.3px] opacity-50 text-[1.25rem] my-2">
               Fostering Innovation Through Collective Expertise
             </div>
-            <div className="bg-[#1F2526] mt-4 w-fit">
-              <div className="text-[#aaaeb3] text-[10.5px] font-normal tracking-[0] leading-[15.8px] border-b border-[#3C4045] py-1 p-4">
+            <div className="bg-[#1F2526] mt-4 w-[90vw] md:w-[450px] rounded ">
+              <div className="text-[#aaaeb3] text-[13.5px] font-normal tracking-[0] leading-[15.8px] border-b border-[#3C4045] py-2 p-4">
                 Hi, we are Open Lake!
               </div>
-              <div className="py-4 pl-4 pr-40">
-                <span className="text-[#6E7681] py-4 text-[1rem] text-xs font-normal tracking-[0] leading-[18px]">
+              <div className="py-4 pl-4">
+                <span className="text-[#6E7681] py-4 text-[15.2px] mr-1 md:mr-2 text-xs font-normal tracking-[0] leading-[18px]">
                   1
                 </span>
-                <span className="py-4 text-[#a5d6ff] text-[11.2px] font-normal tracking-[0] leading-[18px]">
+                <span className="py-4 text-[#a5d6ff] text-[15.2px] font-normal tracking-[0] leading-[18px]">
                   "Embrace the open source revolution"
                 </span>
               </div>
@@ -169,7 +176,7 @@ const Homepage = () => {
               <div className="bg-[#57c353] px-2 py-2 rounded-xl"></div>
             </div>
             <div className="border-b border-[#ffffff50]"></div>
-            <div className="px-[30px] font-normal text-[15px] py-[40px]">
+            <div className="px-[30px] font-mono font-normal text-[12px] md:text-[15px] py-[20px] md:py-[40px]">
               <span className="text-wrapper text-white">console.log(</span>
               <span className="span text-cyan-300">
                 'Building a better world'
@@ -230,15 +237,24 @@ const Homepage = () => {
             id="grid3"
             class="mt-4 relative bg-[#28A9E233] bg-gradient-to-br from-[#1D4B6066] to-[#ffffff00] rounded-4xl"
           >
-            <div class="text-[#28A9E2] pr-3 text-[1rem] py-3 text-right border-b border-[#ffffff50]">
+            <div className="z-[3] w-1/2 md:w-full absolute -top-16 -left-8 md:-top-36 md:-left-16">
+              <img src={logosvg} alt="logosvg" />
+            </div>
+            <div class="text-[#28A9E2] pr-5 text-[0.8rem] md:text-[1rem] font-bold py-3 text-right border-b border-[#ffffff50]">
               Openlake
             </div>
-            <div class="text-white text-[15px] font-normal tracking-[0] leading-[23.5px] md:mt-[22px] mt-[1rem] ml-[2rem] md:ml-[3.75rem]">
+            <div class="text-white text-[12px] md:text-[15px] font-normal tracking-[0] leading-[23.5px]   mt-[1px] md:mt-[22px] ml-[2rem] md:ml-[3.75rem]">
               #For a better World!
             </div>
           </div>
         </div>
-
+        <div className="flex flex-col h-screen justify-center items-center">
+          <div>
+            <HeaderDot />
+          </div>
+          <h1>What we do?</h1>
+          <p>Connecting Students to the World of Open Source Development</p>
+        </div>
         <div id="gridd" className="mt-60 ">
           {" "}
           <div id="gridd1" className="mt-20 ">

@@ -58,7 +58,7 @@ function ProjectPage() {
               </h1>
             </div>
           </div>
-          <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
+          <div className=" buttons flex flex-col gap-0 ml-10 sm:gap-5 sm:flex-row sm:justify-center ">
             <a href={project.html_url} className="my-2 w-fit">
               <RepoButton ButtonName={"Github Repo"} />
             </a>
@@ -89,10 +89,10 @@ function ProjectPage() {
                   endEdge={5}
                 />
                 <div className="flex flex-col justify-between mb-10 sm:mb-0">
-                  <h1 ref={box2Ref1} className="">
+                  <h1 ref={box2Ref1} className="repo-name">
                     Description
                   </h1>
-                  <p className=" ">
+                  <p className=" pl-3 text-[#ffffff80] font-medium text-lg">
                     {project.description}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ function ProjectPage() {
                     {contributors.map((contributor) => (
                       <li key={contributor.id}>
                         <a
-                          className="pointer-events-auto flex flex-row repo-name"
+                          className="pointer-events-auto flex flex-row align-middle content-center justify-center text-[#ffffff80] font-medium text-lg"
                           href={contributor.html_url}
                         >
                           {contributor.login}

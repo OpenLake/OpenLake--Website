@@ -72,11 +72,12 @@
   .repo-name{
     font-size: 15px;
   }
-  .dropdown-menu{
-    left:10px;
-  }
   .HeaderDot{
     left:0px;
+  }
+  .dropdown-menu {
+    width: 40%;
+    right: 0;
   }
 }
 

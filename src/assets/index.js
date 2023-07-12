@@ -32,6 +32,7 @@ import bloginsta from "./images/bloginsta.png";
 import linkedinblog from "./images/linkedinblog.png";
 import sharearrow from "./images/sharearrow.svg";
 import events from "./images/events.svg";
+import eventsimage from "./images/eventsimage.png";
 
 export {
   sharearrow,
@@ -67,5 +68,6 @@ export {
   blogs,
   githubblog,
   bloginsta,
-  linkedinblog
+  linkedinblog,
+  eventsimage
 };

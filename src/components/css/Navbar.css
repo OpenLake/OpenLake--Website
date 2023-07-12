@@ -49,6 +49,7 @@ line-height: normal;
 .navbar__menu {
   display: flex;
   align-items: center;
+  /* gap:40px; */
 }
 
 .navbar__link {

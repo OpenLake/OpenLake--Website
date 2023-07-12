@@ -28,7 +28,7 @@ function Blogs() {
     articles.filter((article) => !getLatestBlogs().includes(article))
   );
   return (
-    <div className="mt-8 min-h-screen">
+    <div className="mt-8 min-h-screen ">
       <div className="md:flex md:pb-24 pb-8 md:pl-[180px] pl-8 md:gap-[12rem] pr-8 md:pr-[111px] justify-between">
         <div>
           <div className=" text-white text-base font-semibold uppercase leading-tight">
@@ -39,15 +39,15 @@ function Blogs() {
           </div>
         </div>
         <div className="md:mt-4 mt-6">
-          <div className="text-center w-fit mx-auto px-5 py-2.5 bg-gradient-to-r from-sky-500 to-sky-600 rounded-lg items-center text-white text-xl md:text-[32px] font-bold tracking-wider">
-            Subscribe
+          <div className="text-center  w-[12rem] mx-auto px-1.5 py-1.5 bg-gradient-to-r from-sky-500 to-sky-600 rounded-lg items-center text-white   font-bold tracking-wider cursor-pointer">
+            <span className="text-lg">Subscribe </span>
           </div>
-          <div className="text-center text-white text-xl font-medium">
+          <div className="text-center text-white text-s font-medium pt-1">
             Newsletter
           </div>
         </div>
       </div>
-      <div className="bg-neutral-900 md:flex flex-row justify-between">
+      <div className="bg-neutral-900 md:flex flex-row justify-between mx-4 mb-4">
         <div className="mt-8 md:w-4/5 md:pl-[120px]">
           <div className="text-white border-b-4 pb-8 p-2 pt-8 border-white border-opacity-50 text-xl md:text-[45px] font-semibold">
             Latest Blogs
@@ -143,12 +143,12 @@ function Blogs() {
             ))}
           </div>
         </div>
-        <div className="md:w-1/5 md:px-6 px-4 pt-8 md:pt-24">
+        <div className="md:w-1/5 md:px-6 px-4 pt-8 md:pt-24 md:pr-[110px]">
           <div className="text-white text-[25px] font-normal leading-[33px]">
             Follow Us
           </div>
-          <div className="text-center mx-auto">
-            <div className="flex mt-6 gap-4 items-center">
+          <div className="text-center ">
+            <div className="flex mt-4 gap-10 items-center justify-center">
               <div>
                 <img className="w-[28px] h-[28px]" src={githubblog} alt="" />
                 <div>10</div>
@@ -167,19 +167,19 @@ function Blogs() {
               </div>
             </div>
           </div>
-          <div className="text-white text-[1rem] font-normal mt-6">
-            Subscription Subscribe to our newsletter and receive a selection of
+          <div className="text-white text-[1rem] font-normal mt-4">
+            Subscribe to our newsletter and receive a selection of
             cool articles every weeks
           </div>
           <div className="mt-4">
             <input
-              className="px-6 py-3 border-white border-2 rounded-lg bg-[#111111]"
+              className="px-6 w-[100%] justify-center text-[#757575] py-3 border-[#CECECE] border-2 rounded-sm bg-[#111111]"
               type="text"
               placeholder="Enter Your Email"
             />
           </div>
-          <div className=" mx-auto text-center ">
-            <button className="bg-[#111111] mt-2 px-6 py-3 text-white rounded-lg">
+          <div className=" flex justify-center mx-auto  ">
+            <button className="bg-[#111111] w-[100%] mt-2 mb-2 px-6 py-3 text-white rounded-lg tracking-widest ">
               SUBSCRIBE
             </button>
           </div>

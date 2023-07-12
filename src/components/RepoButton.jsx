@@ -3,7 +3,7 @@ import "./css/RepoButton.css";
 import {  goto } from "../assets";
 const RepoButton = ({ButtonName}) => {
     return (
-        <div className="box">
+        <div className="boxing">
             <div className="button-wrapper">
                 <div className="button">
                     <div className="text-wrapper">{ButtonName}</div>
