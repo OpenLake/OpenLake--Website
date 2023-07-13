@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "./css/Navbar.css";
 import { logonav } from "../assets";
 
@@ -14,8 +14,11 @@ const Navbar = () => {
     setIsCommunityMenuOpen(!isCommunityMenuOpen);
   };
 
+  
+
+
   return (
-    <nav className="navbar z-50">
+    <nav className="navbar z-50 ">
       <div className="navbar__left">
         <a href="/" className="navbar__logo">
           <img src={logonav} alt="logonav" />

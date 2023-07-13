@@ -38,15 +38,21 @@ const BlogDetail = () => {
           {article.date}
         </div>
       </div>
-      <div className="text-white md:mt-12 mt-4 text-opacity-50 text-sm md:text-lg font-normal md:leading-[27px]">
-        {article.description}
+      <div className="bg-neutral-900 mx-0 md:mx-[-8rem]">
+        <div className="md:mx-36 px-2  min-h-screen mt-4 ">
+          <div className=" text-white pt-5 md:mt-12 mt-4 text-opacity-50 text-sm md:text-lg font-normal md:leading-[27px]">
+            {article.description}
+          </div>
+          <div className="mx-auto md:mt-12 mt-4 text-center">
+            <img className="mx-auto md:mt-12 mt-4 text-center" src={article.image} alt="" />
+          </div>
+          <div className="text-white md:mt-12 mt-4 text-opacity-50 text-sm md:text-lg font-normal md:leading-[27px]">
+            {article.content}
+          </div>
+        </div>
+
       </div>
-      <div className="mx-auto md:mt-12 mt-4 text-center">
-        <img className="mx-auto md:mt-12 mt-4 text-center" src={article.image} alt="" />
-      </div>
-      <div className="text-white md:mt-12 mt-4 text-opacity-50 text-sm md:text-lg font-normal md:leading-[27px]">
-        {article.content}
-      </div>
+
     </div>
   );
 };

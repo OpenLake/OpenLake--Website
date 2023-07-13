@@ -8,6 +8,10 @@
   position: sticky;
   top:0;
   margin-top: 0.98 rem;
+  /* margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; */
 }
 
 .navbar__left {
@@ -56,6 +60,13 @@ line-height: normal;
   text-decoration: none;
   /* color: #333; */
   margin-right: 1rem;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.5s;
+}
+
+.navbar__link:hover{
+  color: rgba(255, 255, 255, 1);
 }
 
 .navbar__button {
@@ -110,6 +121,11 @@ vertical-align: center;
 }
 
 @media (max-width: 768px) {
+
+  /* .navbar{
+  margin-left: 0rem;
+  margin-right: 0rem;} */
+
   .navbar__right {
     position: relative;
   }

@@ -72,7 +72,7 @@ function Programs() {
             Upcoming Event
           </div>
 
-          <div className="text-white rounded-xl text-lg px-4 py-2 bg-blue-500 md:text-[25px] font-semibold leading-tight">
+          <div className="text-white rounded-xl text-lg px-4 py-3 bg-blue-500 md:text-[20px] font-semibold cursor-pointer ">
             Register Now
           </div>
         </div>
@@ -114,11 +114,11 @@ function Programs() {
                 tortor semper hac tempor tortor. Adipiscing nullam facilisi
                 ultricies in sed in vehicula justo.
               </div>
-              <div className="flex mt-8 gap-12">
-                <div className="text-white w-fit rounded-xl text-lg px-4 py-2 bg-blue-500 font-semibold leading-tight">
+              <div className="flex align-middle mt-8 gap-1">
+                <div className="text-white w-fit rounded-xl text-lg px-4 py-2 bg-blue-500 font-semibold leading-tight cursor-pointer">
                   Register Now
                 </div>
-                <div className="text-white w-fit rounded-xl text-lg px-4 py-2 bg-gray-800  font-semibold leading-tight">
+                <div className="text-white w-fit rounded-xl text-lg px-4 py-2 font-normal underline leading-normal cursor-pointer">
                   Rule Book
                 </div>
               </div>

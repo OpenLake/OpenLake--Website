@@ -5,6 +5,7 @@
   position: relative;
   background-color: transparent;
   pointer-events: all;
+  margin-bottom: 0;
 }
 
 .card-inner{
@@ -125,11 +126,12 @@
 @media (max-width: 768px) {
 
   .card-title{
-    font-size: 2rem;
+    font-size: 10rem;
   }
   .card {
     width: 85vw;
-    height: 30vh;
+    height: 35vh;
+    margin-bottom: 10px;
   }
   .card-avatar {
     width: 1.5rem;
@@ -138,10 +140,10 @@
   .card-tech2,
   .card-title,
   .card-icon {
-    font-size: 0.65rem;
+    font-size: 0.95rem;
     align-items: center;
   }
   .card-description{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
