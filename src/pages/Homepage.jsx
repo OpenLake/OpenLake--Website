@@ -560,7 +560,7 @@ const Homepage = () => {
               </div>
             </>
           </div>
-          <div className="bg-gray-800 mx-2 md:w-[900px] w-fit md:mb-[10rem] md:mx-auto px-12 py-4 rounded-[18px] shadow border backdrop-blur-[42px]">
+          <div className="bg-[#161616] mx-2 mb-10 md:w-[600px] w-fit md:mb-[10rem] md:mx-auto px-12 py-8 rounded-[18px] shadow  backdrop-blur-[42px]">
             <div className="text-white font-semibold text-lg">
               Subscribe to our newsletter
             </div>
@@ -572,7 +572,7 @@ const Homepage = () => {
               <input
                 type="text"
                 placeholder="Your Email Address"
-                className="border-b-2 md:w-[500px] w-full bg-gray-800 border-white border-opacity-40"
+                className="border-b-2 md:w-[500px] w-full bg-[#161616] border-white border-opacity-40"
               />
               <div className=" md:mx-0 mx-auto md:mt-0 mt-2">
                 <button className="text-white text-center px-4 py-2 font-bold bg-gradient-to-r from-sky-500 to-sky-600 rounded-[5px]">
