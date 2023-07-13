@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Menlo:wght@400&display=swap");
 #gridd {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 3rem;
   position: relative;
-  
+  /* height:70vh; */
 }
 
 #gridd1 {
@@ -43,21 +42,20 @@
     margin-top: 28rem; /* Add margin between the grids */
     margin-bottom: 6rem;
   }
-  #gridd2{
+  #gridd2 {
     z-index: 2;
     top: 98%;
     margin-left: 1rem;
     width: 80%;
     margin-top: 4rem;
   }
-  #gridd3{
+  #gridd3 {
     z-index: 1;
     top: 90%;
     margin-left: 3rem;
     width: 80%;
     margin-top: 4rem;
   }
-
 }
 
 #grid {
@@ -65,6 +63,7 @@
   grid-template-columns: 1fr auto;
   gap: 10px;
   position: relative;
+  margin-bottom: 100px;
 }
 
 #grid1 {
@@ -76,19 +75,45 @@
 #grid3 {
   position: absolute;
   top: 0;
-  left:55%;
+  left: 55%;
   /* right: 0; */
   width: 35vw; /* Adjust the width and margin values as needed */
 }
 #grid2 {
   z-index: 2;
   left: 60%;
-  font-family: Menlo;
+  /* font-family: "Inconsolata", monospace; */
+  border-radius: 18px;
+  background: linear-gradient(
+      0deg,
+      rgba(40, 169, 226, 0.2) 0%,
+      rgba(40, 169, 226, 0.2) 100%
+    ),
+    radial-gradient(
+      231% 135.8% at 0.9% 2.98%,
+      rgba(29, 75, 96, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(21px);
 }
 #grid3 {
   z-index: 1;
   margin-right: 60px; /* Add desired gap between grid2 and grid3 */
   height: 100%;
+  border-radius: 18px;
+  background: linear-gradient(
+      0deg,
+      rgba(40, 169, 226, 0.2) 0%,
+      rgba(40, 169, 226, 0.2) 100%
+    ),
+    radial-gradient(
+      231% 135.8% at 0.9% 2.98%,
+      rgba(29, 75, 96, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(21px);
 }
 
 @media (max-width: 768px) {
@@ -98,13 +123,13 @@
 
   #grid1 {
     grid-column: 1 / -1;
-    width:100vw;/* Take up full width in mobile mode*/
+    width: 100vw; /* Take up full width in mobile mode*/
   }
 
   #grid2,
   #grid3 {
     position: absolute;
-    left:1rem;
+    left: 1rem;
     margin-top: 4rem; /* Add desired gap between grid1 and grid2/grid3 */
     width: 100%;
   }
@@ -125,7 +150,21 @@
     width: 80%; /* Add desired gap between grid2 and grid3 */
   }
 }
-
+/* .arrow {
+  position: relative;
+} */
+/* .arrow {
+  width: 40vw;
+  height: 50vh;
+  border-image:  linear-gradient(180deg, rgba(40,169,226,0.20772058823529416) 0%, rgba(43,134,174,1) 100%) 1;
+  position: absolute;
+  z-index: -1;
+  border-width: 16px;
+  border-style: solid;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 50%;
+} */
 .cards {
   display: flex;
   height: 35vh;
@@ -142,5 +181,3 @@
     transform: translateX(-35%);
   }
 }
-
-

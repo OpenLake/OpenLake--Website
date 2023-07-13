@@ -3,8 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      // sans: ['Graphik', 'sans-serif'],
+      // serif: ['Merriweather', 'serif'],
+      // mono: ['Menlo'],
+      // inter:['Inter', 'sans-serif'],
+      inconsolata: ['Inconsolata', 'monospace'],
     },
     extend: {
       spacing: {

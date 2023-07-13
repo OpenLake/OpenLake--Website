@@ -33,8 +33,10 @@ import linkedinblog from "./images/linkedinblog.png";
 import sharearrow from "./images/sharearrow.svg";
 import events from "./images/events.svg";
 import eventsimage from "./images/eventsimage.png";
+import toparrow from "./images/toparrow.svg";
 
 export {
+  toparrow,
   sharearrow,
   events,
   coordinator,

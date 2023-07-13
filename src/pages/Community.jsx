@@ -82,7 +82,7 @@ const Community = () => {
                       people
                     </span>
                   </div>
-                  <div className="flex flex-wrap justify-center gap-8 mb-10">
+                  <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-8 mb-10">
                     {coordinators.map((mentor) => (
                       <MemberCard
                         className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
@@ -91,7 +91,7 @@ const Community = () => {
                       />
                     ))}
                   </div>
-                  <div className="flex flex-wrap justify-center w-fit md:w-max gap-8 mb-10">
+                  <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center w-fit md:w-max gap-8 mb-10">
                     {firstRowMentors.map((mentor) => (
                       <MemberCard
                         className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
@@ -100,7 +100,7 @@ const Community = () => {
                       />
                     ))}
                   </div>
-                  <div className="flex flex-wrap justify-center gap-8 mb-10">
+                  <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-8 mb-10">
                     {secondRowMentors.map((mentor) => (
                       <MemberCard
                         className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"

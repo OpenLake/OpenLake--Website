@@ -28,7 +28,7 @@ function Card({ repo, className }) {
   }, [repo.contributors_url]);
   return (
     <motion.div
-      // whileHover={{ scale: 1.5}}
+      whileHover={{ scale: 1.5}}
       // whileTap={{ scale: 0.8 }}
       className={`card pointer-events-none ${className}`}
     >

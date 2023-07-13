@@ -1,6 +1,8 @@
 import React from "react";
 import { articles } from "../constants";
 import { bloginsta, linkedinblog, githubblog } from "../assets";
+import { Logoturn, fadeIn, slideIn, textVariant } from "../utils/motion";
+
 function Blogs() {
   const getLatestBlogs = () => {
     const currentDate = new Date();
@@ -30,7 +32,7 @@ function Blogs() {
   return (
     <div className="mt-8 min-h-screen ">
       <div className="md:flex md:pb-24 pb-8 md:pl-[180px] pl-8 md:gap-[12rem] pr-8 md:pr-[111px] justify-between">
-        <div>
+        <div className="animate__animated animate__backInLeft">
           <div className=" text-white text-base font-semibold uppercase leading-tight">
             👋 HELLO
           </div>
@@ -38,7 +40,7 @@ function Blogs() {
             Insights about the world of open source, and the in-betweens
           </div>
         </div>
-        <div className="md:mt-4 mt-6">
+        <div className=" animate__animated animate__fadeInRight animate__delay-1s md:mt-4 mt-6">
           <div className="text-center  w-[12rem] mx-auto px-1.5 py-1.5 bg-gradient-to-r from-sky-500 to-sky-600 rounded-lg items-center text-white   font-bold tracking-wider cursor-pointer">
             <span className="text-lg">Subscribe </span>
           </div>
@@ -48,11 +50,11 @@ function Blogs() {
         </div>
       </div>
       <div className="bg-neutral-900 md:flex flex-row justify-between mx-4 mb-4">
-        <div className="mt-8 md:w-4/5 md:pl-[120px]">
+        <div className="mt-8 animate__animated animate__backInLeft animate__delay-1s md:w-4/5 md:pl-[120px]">
           <div className="text-white border-b-4 pb-8 p-2 pt-8 border-white border-opacity-50 text-xl md:text-[45px] font-semibold">
             Latest Blogs
           </div>
-          <div>
+          <div className="animate__animated animate__fadeInLeft animate__delay-2s">
             {Object.entries(latestBlogs).map(([tag, articles]) => (
               <div key={tag}>
                 {articles.map((article) => (
@@ -143,7 +145,7 @@ function Blogs() {
             ))}
           </div>
         </div>
-        <div className="md:w-1/5 md:px-6 px-4 pt-8 md:pt-24 md:pr-[110px]">
+        <div className="md:w-1/5 animate__animated animate__fadeInRight animate__delay-2s md:px-6 px-4 pt-8 md:pt-24 md:pr-[110px]">
           <div className="text-white text-[25px] font-normal leading-[33px]">
             Follow Us
           </div>

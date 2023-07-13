@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700&family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+
 body {
   margin: 0;
   color: #fff;
-    background: #111;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #111;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: var(--i); */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
 }
 /* .overlay {
   position: fixed;
@@ -36,18 +39,18 @@ code {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9); 
 } */
-.bg{
+.bg {
   z-index: -2;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   /* pointer-events: all; */
   /* display: block; */
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
-.colorBox{
+.colorBox {
   z-index: 54;
   filter: brightness(1.1);
   transition: 2s ease;
@@ -62,7 +65,7 @@ code {
   transition-duration: 0s;
 } */
 
-.backgroundAmim{
+.backgroundAmim {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,11 +78,10 @@ code {
 }
 
 @keyframes animBack {
-  0%{
-      top: -60px;
+  0% {
+    top: -60px;
   }
-  100%{
-      top: 120%;
+  100% {
+    top: 120%;
   }
 }
-
