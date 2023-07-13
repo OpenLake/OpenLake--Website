@@ -19,6 +19,7 @@ const MyCarousel = () => {
   }, []);
 
   return (
+    
     <Carousel
       selectedItem={currentSlide}
       showStatus={false}
@@ -26,11 +27,12 @@ const MyCarousel = () => {
       autoPlay
       infiniteLoop
       interval={6000}
+      renderIndicator={false}
     >
       {EventsTop.map((slide, index) => (
         <div
           key={index}
-          className="relative md:h-[500px] h-[500px] bg-cover bg-center"
+          className="relative md:h-[400px] h-[500px] bg-cover bg-center"
         >
           {/* <div className="overlays"> */}
             <img

@@ -1,7 +1,6 @@
 import React from "react";
 import { articles } from "../constants";
 import { bloginsta, linkedinblog, githubblog } from "../assets";
-import { Logoturn, fadeIn, slideIn, textVariant } from "../utils/motion";
 
 function Blogs() {
   const getLatestBlogs = () => {

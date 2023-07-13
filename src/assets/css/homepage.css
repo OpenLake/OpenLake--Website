@@ -18,16 +18,43 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(50% - 5rem); /* Adjust the width and margin values as needed */
+  width: 40%; /* Adjust the width and margin values as needed */
+  height: 40vh;
 }
 
 #gridd2 {
   z-index: 2;
+  border-radius: 18px;
+  background: linear-gradient(
+      0deg,
+      rgba(40, 169, 226, 0.2) 0%,
+      rgba(40, 169, 226, 0.2) 100%
+    ),
+    radial-gradient(
+      231% 135.8% at 0.9% 2.98%,
+      rgba(29, 75, 96, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(21px);
 }
 
 #gridd3 {
   z-index: 1;
-  margin-left: 3rem; /* Add desired gap between grid2 and grid3 */
+  margin-left: 3rem;
+  border-radius: 18px;
+  background: linear-gradient(
+      0deg,
+      rgba(40, 169, 226, 0.2) 0%,
+      rgba(40, 169, 226, 0.2) 100%
+    ),
+    radial-gradient(
+      231% 135.8% at 0.9% 2.98%,
+      rgba(29, 75, 96, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(21px);
 }
 @media (max-width: 768px) {
   #gridd {
@@ -39,7 +66,6 @@
     grid-column: 1 / -1;
     width: 100%;
     position: relative;
-    margin-top: 28rem; /* Add margin between the grids */
     margin-bottom: 6rem;
   }
   #gridd2 {

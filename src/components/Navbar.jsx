@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState } from "react";
 import "./css/Navbar.css";
 import { logonav } from "../assets";
 
@@ -14,8 +14,6 @@ const Navbar = () => {
     setIsCommunityMenuOpen(!isCommunityMenuOpen);
   };
 
-  
-
 
   return (
     <nav className="navbar z-50 ">
@@ -23,7 +21,10 @@ const Navbar = () => {
         <a href="/" className="navbar__logo">
           <img src={logonav} alt="logonav" />
         </a>
-        <span className="navbar__company-name">Open Lake</span>
+        <a href="/" >
+          <span className="navbar__company-name">Open Lake</span>
+        </a>
+
       </div>
       <div className="navbar__right">
         <div className={`navbar__menu ${isMobileMenuOpen ? "open" : ""}`}>

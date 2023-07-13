@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/StatsCard.css";
-import { motion } from "framer-motion"; // Import the CSS file for the card design
 function StatsCard({ repo }) {
   return (
     <div className="repo-card ">

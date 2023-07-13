@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Card,  HeaderDot } from "../components";
-import { motion } from "framer-motion"
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import { Card, HeaderDot } from "../components";
+import { motion } from "framer-motion";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 import {
   image,
   secimage,
@@ -14,11 +14,13 @@ import {
   logosvg,
   carimage,
   toparrow,
+  downarrow,
 } from "../assets";
+
 import "../assets/css/homepage.css";
-import Xarrow from "react-xarrows";
+// import Xarrow from "react-xarrows";
 import { useSnapCarousel } from "react-snap-carousel";
-import { Logoturn, fadeIn, slideIn, textVariant } from "../utils/motion";
+import { slideIn } from "../utils/motion";
 
 const programs = [
   {
@@ -101,17 +103,14 @@ const Homepage = () => {
   const box1Ref = useRef(null);
   const {
     scrollRef,
-    pages,
-    activePageIndex,
     next,
     prev,
-    goTo,
   } = useSnapCarousel();
 
   const [repos, setRepos] = useState([]);
   const [width, setWidth] = useState(0);
   const carousel = useRef();
-  
+
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 40);
   }, []);
@@ -251,10 +250,7 @@ const Homepage = () => {
             class="mt-4 animate__animated animate__fadeInRight relative bg-[#28A9E233] bg-gradient-to-br from-[#1D4B6066] to-[#ffffff00] rounded-4xl"
           >
             <div className="z-[3] w-1/2 md:w-full absolute -top-16 -left-8 md:-top-36 md:-left-16">
-              <img
-                src={logosvg}
-                alt="logosvg"
-              />
+              <img src={logosvg} alt="logosvg" />
             </div>
             <div class="text-[#28A9E2] font-inter pr-5 text-[0.8rem] md:text-[1rem] font-bold py-3 text-right border-b border-[#ffffff50]">
               Openlake
@@ -264,24 +260,28 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className="px-8 md:px-0 relative md:flex flex-col-reverse md:flex-col w-fit md:h-4/5 md:w-5/6 justify-start items-end mt-[17rem] md:mt-8">
-          <img className="animate__animated animate__fadeInDown animate__delay-4s" src={toparrow} alt="toparrow" />
-          <div className="animate__animated animate__fadeInRight animate__delay-5s relative md:absolute md:top-[42vh] md:left-[30vw] text-white text-[20px] md:text-[40px] font-semibold leading-[52.61px]">
-            What we do?
-          </div>
-          <div className="animate__animated animate__fadeInLeft animate__delay-5s relative text-start md:absolute md:bottom-[30vh] md:left-[20vw] text-white text-opacity-50 text-xl font-semibold leading-relaxed">
-            Connecting Students to the World of Open Source Development
+        <div className="px-8 md:px-0 relative flex flex-col-reverse md:flex-col w-fit md:h-4/5 md:w-5/6 justify-start items-end mt-[18rem] md:mt-8">
+          <img
+            className="animate__animated animate__fadeInDown animate__delay-4s"
+            src={toparrow}
+            alt="toparrow"
+          />
+          <div>
+            <div className="animate__animated animate__fadeInRight animate__delay-5s text-end relative md:absolute md:top-[40vh] md:left-[30vw] text-white text-[25px] md:text-[40px] font-semibold leading-[52.61px] ">
+              What we do?
+            </div>
+            <div className="animate__animated animate__fadeInLeft animate__delay-5s relative text-end md:absolute md:bottom-[24vh] md:left-[20vw] text-white text-opacity-50 text-xl  font-semibold leading-relaxed">
+              Connecting Students to the World of Open Source Development
+            </div>
           </div>
         </div>
-        <div id="gridd" className="">
+        <div id="gridd" className="md:mt-2 px-8">
           {" "}
-          <div id="gridd1" className="">
-            <div className="text-white font-[600] mx-2 text-3xl">
+          <div id="gridd1" className="justify-center mt-24">
+            <div className="text-white font-[600] mx-2 text-2xl md:text-3xl">
               What is Open Lake?
             </div>
-            <div
-              className="text-[#808080] px-2 text-[10px] md:text-xl text-justify font-[600]"
-            >
+            <div className="text-[#808080] px-2 text-[15px] md:text-l text-justify mt-3 font-[600]">
               As the world is moving towards a connected society. The
               communities driving the development of open source technologies
               are becoming more prominent. Numerous software giants like Google
@@ -296,16 +296,16 @@ const Homepage = () => {
           </div>
           <div
             id="gridd2"
-            className="bg-opacity-99 mt-16 bg-[#1D4B60] rounded-4xl"
+            className="bg-opacity-99  mt-16 bg-[#1D4B60] rounded-4xl font-inconsolata font-normal"
           >
             <div className="flex mx-6 py-4 gap-4">
               <div className="bg-[#f46b5d] px-2 py-2 rounded-xl"></div>
               <div className="bg-[#f9bd4e] px-2 py-2 rounded-xl"></div>
               <div className="bg-[#57c353] px-2 py-2 rounded-xl"></div>
             </div>
-            <div className="border-b border-[#ffffff50]"></div>
-            <div className="px-4 py-4">
-              <span className="text-whitetext-wrapper text-white">
+            <div className="border-b border-[#ffffff50] "></div>
+            <div className="px-4 py-4 text-[11px] md:text-[16px]">
+              <span className="text-whitetext-wrapper text-white ">
                 console.log(
               </span>
               <span className="span text-cyan-300">
@@ -366,83 +366,29 @@ const Homepage = () => {
             id="gridd3"
             className="bg-opacity-70 mx-6 mt-6 bg-[#1D4B60] rounded-4xl"
           >
-            <div id="elem2" className="flex mx-6 py-4 gap-4">
-              <div className=" px-2 py-2 rounded-xl"></div>
-              <div className=" px-2 py-2 rounded-xl"></div>
-              <div className=" px-2 py-2 rounded-xl"></div>
-            </div>
-            <div className="border-b border-[#ffffff50]"></div>
-            <div className="px-4 py-4">
-              <span className="text-whitetext-wrapper text-white">
-                console.log(
-              </span>
-              <span className="span text-cyan-300">
-                'Building a better world'
-              </span>
-              <span className="text-wrapper text-white">)</span>
-              <br />
-              <span className="text-wrapper-2 text-[#C398FF]">import</span>
-              <span className="text-white text-wrapper">
-                {" "}
-                {"{"} world {"}"}{" "}
-              </span>
-              <span className="text-wrapper-2 text-[#C398FF]">from</span>
-              <span className="text-wrapper text-white">&nbsp;</span>
-              <br />
-              <span className="text-wrapper text-white">
-                function openLake() {"{"}
-              </span>
-              <span className="text-wrapper-2 text-[#C398FF]">return</span>
-              <span className="text-wrapper text-white">&nbsp;</span>
-              <span className="text-wrapper text-white"> {"}"}</span>
-              <br />
-              <span className="text-white">const happiness =</span>{" "}
-              <span className="text-wrapper-2 text-[#C398FF]">await</span>
-              <span className="text-wrapper text-white">)</span>
-              <br />
-              <span className="text-wrapper-2 text-white">if</span>
-              <span className="span text-white">happiness++;</span>
-              <span className="text-wrapper text-white"> {"}"}</span>
-              <br />
-              <span className="text-white">commit(</span>
-              <span className="span text-cyan-300">'BetterWorld'</span>
-              <span className="text-white">)</span>
-              <br />
-              <span className="text-white">devClub() // OpenLake</span>
-              <br />
-              <span className="text-white">openLake = () =&gt;</span> <br />
-              <span className="text-wrapper text-white">#Code </span>
-              <span className="text-wrapper-2 text-[#C398FF]">with</span>
-              <span className="text-wrapper text-white"> Purpose</span>
-              <br />
-              <span className="text-wrapper text-white">#Code </span>
-              <span className="text-wrapper-2 text-[#C398FF]"> for</span>
-              <span className="text-wrapper text-center text-white">
-                {" "}
-                a Cause
-              </span>
-            </div>
+            {" "}
           </div>
         </div>
+
         {/* <Xarrow
           start={box1Ref} //can be react ref
           end="elem2" //or an id
         /> */}
-        <div className="mt-[30rem] md:mx-[-8rem] px-14 md:rounded-[4rem] rounded-[2rem] mx-2 bg-gradient-to-b from-[#1d4b6000] via-[#1d4b604d] to-[#1d4b60a4]">
-          <div className="bg-[#326074] mt-8 rounded-lg py-1 mx-auto text-center w-fit">
-            <div className="text-[#a5d6ff] px-6 text-[11.2px] font-normal font-[Menlo-Regular] tracking-[0] leading-[22px]">
+        <div className="mt-[25rem] md:mt-[30rem] md:mx-[-8rem] md:px-14 md:rounded-[4rem] rounded-[2rem] mx-2 bg-gradient-to-b from-[#1d4b6000] via-[#1d4b604d] to-[#1d4b60a4]">
+          <div className="bg-[#326074] mt-8 rounded-lg py-1 mx-auto text-center w-[80vw] md:w-[30vw]">
+            <div className="text-[#a5d6ff] px-6 text-[13.2px] font-normal font-[Menlo-Regular] tracking-[0] leading-[27px]">
               &#34;Bridging gap between Students and the World of Open Source
             </div>
             <div className=" border-b border-dotted border-[#a5d6ff] "></div>
-            <div className="text-[#a5d6ff] px-6 text-[11.2px] font-normal font-[Menlo-Regular] tracking-[0] leading-[22px]">
+            <div className="text-[#a5d6ff] px-6 text-[13.2px] font-normal font-[Menlo-Regular] tracking-[0] leading-[27px]">
               Development&#34;
             </div>
           </div>
-          <div className="mt-[15rem]">
-            <div className="text-white text-[40px] font-semibold tracking-[0] leading-[52.6px] text-center">
+          <div className="mt-10 md:mt-[12rem]">
+            <div className=" text-white text-[24px] md:text-[40px] font-semibold tracking-[0] leading-[52.6px] text-center">
               Our Notable Projects
             </div>
-            <div className="text-[#ffffff80] text-center text-xl font-semibold tracking-[0] leading-[26.3px] ">
+            <div className="mt-2 mb-24 text-[#ffffff80] text-center text-l md:text-2xl font-semibold tracking-[0] leading-[26.3px] ">
               We always strive towards the benefit of society with our projects.
             </div>
             <motion.div ref={carousel} className="overflow-hidden mx-auto my-8">
@@ -462,9 +408,9 @@ const Homepage = () => {
                         repo={repo}
                         className={
                           index % 8 === 0 ||
-                            index % 8 === 2 ||
-                            index % 8 === 5 ||
-                            index % 8 === 7
+                          index % 8 === 2 ||
+                          index % 8 === 5 ||
+                          index % 8 === 7
                             ? "even-card"
                             : "odd-card"
                         }
@@ -477,29 +423,38 @@ const Homepage = () => {
             </motion.div>
           </div>
         </div>
-        <div className="mt-40">
-          <div className="text-[#ffffff80] mx-2 text-xl font-semibold tracking-[0] leading-[26.3px]">
-            Openlake
+        <div className="px-8 w-fit flex flex-col justify-center items-start">
+          <img
+            className="animate__animated animate__fadeInDown"
+            src={downarrow}
+            alt="toparrow"
+          />
+          <div>
+            <div className="animate__animated animate__fadeInRight animate__delay-2s text-[#ffffff80] mx-2 text-xl md:text-2xl font-semibold tracking-[0] leading-[26.3px] ">
+              Openlake
+            </div>
+            <div className="animate__animated animate__fadeInLeft animate__delay-2s text-white mx-2 text-2xl md:text-[45px] font-semibold tracking-[0] md:leading-[52.6px]">
+              Our Github stats
+              <img
+                className="inline w-[30px] md:w-[42px] md:h-[23px] ml-4"
+                src={image}
+                alt="githubstats"
+              />
+            </div>
           </div>
-          <div className="text-white mx-2 text-2xl md:text-[40px] font-semibold tracking-[0] md:leading-[52.6px]">
-            Our Github stats
-            <img
-              className="inline w-[42px] h-[23px] ml-4"
-              src={image}
-              alt="githubstats"
-            />
-          </div>
+        </div>
+        <div className="mt-10 md:mt-20">
           <div className="grid grid-cols-3 md:flex md:gap-4 mt-4">
             {stats.map((stat) => (
-              <div key={stat.title} className="mx-auto gap-4">
+              <div key={stat.title} className="mx-auto my-2 gap-4">
                 <div>
                   <img
-                    className="w-[41px] box-content text-center h-[41px] mx-auto"
+                    className="w-[20px] h-[20px] md:w-[41px] box-content text-center md:h-[41px] mx-auto"
                     src={stat.image}
-                    alt=""
+                    alt="stats"
                   />
                 </div>
-                <div className="text-[#f2ffff] text-3xl font-medium h-9 tracking-[-0.24px] mt-2 mb-2 leading-[normal] text-center">
+                <div className="text-[#f2ffff] text-l md:text-3xl font-medium h-9 tracking-[-0.24px] mt-2 mb-2 leading-[normal] text-center">
                   <CountUp end={stat.num} duration={6} redraw={true}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
@@ -508,14 +463,14 @@ const Homepage = () => {
                     )}
                   </CountUp>
                 </div>
-                <div className="text-[#8f959e] text-center text-xs font-normal h-[23px] tracking-[-0.24px] leading-[22.4px]">
+                <div className="text-[#8f959e] text-center text-xs md:text-xl font-normal h-[23px] tracking-[-0.24px] leading-[22.4px]">
                   {stat.title}
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-16">
-            <div className="text-[#ffffff80] text-center text-xl font-semibold tracking-[0] leading-[26.3px]">
+            <div className="text-[#ffffff80] text-center text-xl md:text-3xl font-semibold tracking-[0] leading-[26.3px]">
               Checkout our past events
             </div>
             <>
@@ -606,15 +561,24 @@ const Homepage = () => {
             </>
           </div>
           <div className="bg-gray-800 mx-2 md:w-[900px] w-fit md:mb-[10rem] md:mx-auto px-12 py-4 rounded-[18px] shadow border backdrop-blur-[42px]">
-            <div className="text-white font-semibold text-lg">Subscribe to our newsletter</div>
-            <div className="text-white text-opacity-50 whitespace-normal break-words text-[0.75rem] font-semibold">We provide latest news from ever possible tech domain. Enter your email and be updated with our newsletters!</div>
+            <div className="text-white font-semibold text-lg">
+              Subscribe to our newsletter
+            </div>
+            <div className="text-white text-opacity-50 whitespace-normal break-words text-[0.75rem] font-semibold">
+              We provide latest news from ever possible tech domain. Enter your
+              email and be updated with our newsletters!
+            </div>
             <div className="md:flex flex-row justify-between md:gap-12 mx-4 mt-8">
-              <input type="text" placeholder="Your Email Address" className="border-b-2 md:w-[500px] w-full bg-gray-800 border-white border-opacity-40" />
+              <input
+                type="text"
+                placeholder="Your Email Address"
+                className="border-b-2 md:w-[500px] w-full bg-gray-800 border-white border-opacity-40"
+              />
               <div className=" md:mx-0 mx-auto md:mt-0 mt-2">
-
-                <button className="text-white text-center px-4 py-2 font-bold bg-gradient-to-r from-sky-500 to-sky-600 rounded-[5px]">SUBSCRIBE</button>
+                <button className="text-white text-center px-4 py-2 font-bold bg-gradient-to-r from-sky-500 to-sky-600 rounded-[5px]">
+                  SUBSCRIBE
+                </button>
               </div>
-
             </div>
           </div>
         </div>

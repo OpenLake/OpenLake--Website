@@ -1,11 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
-import { AdvancedCarousel, Carousel, GlimpseButton } from "../components";
-import Xarrow, { Xwrapper } from "react-xarrows";
-import { repoavatar, github, img1, eventsimage } from "../assets";
+import React from "react";
+import { AdvancedCarousel } from "../components";
+import { eventsimage } from "../assets";
 import "../assets/css/programs.css";
-import { motion } from "framer-motion";
 import MyCarousel from "../components/Carousel";
+import { sharearrow } from "../assets";
 
 
 function Programs() {
@@ -14,8 +12,8 @@ function Programs() {
       <div className="z-5">
         <MyCarousel />
       </div>
-      <div className="TopStat animate__animated animate__fadeInDown animate__delay-1s mt-[-5rem] flex flex-col md:flex-row items-center mx-0 md:mx-2 gap-6 md:gap-12  sm:justify-center">
-        <div className="w-2/3 md:w-1/4 z-40  bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
+      <div className="TopStat animate__animated animate__fadeInDown animate__delay-1s mt-[-10rem] md:mt-[-12rem] flex flex-col md:flex-row items-center mx-0 md:mx-2 gap-6 md:gap-12  sm:justify-center">
+        <div className="w-2/3 py-3 md:w-1/4 z-40 border-b-[0.25rem] border-b-[#28A9E2] bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
           <div className="md:flex flex-row md:mx-2 mx-1 md:my-4 my-2">
             <div className="align-middle my-auto items-center">
               <div className="bg-slate-800 rounded-full text-center w-fit px-3 py-2 md:px-5 md:py-4 border align-middle my-auto items-center border-sky-500 mx-auto md:mx-8 ">
@@ -32,7 +30,7 @@ function Programs() {
             </div>
           </div>
         </div>
-        <div className="w-2/3 md:w-1/4 z-40 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
+        <div className="w-2/3 py-3 md:w-1/4 z-40 border-b-[0.25rem] border-b-[#28A9E2] bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
           <div className="md:flex flex-row md:mx-2 mx-1 md:my-4 my-2">
             <div className="align-middle my-auto items-center">
               <div className="bg-slate-800 rounded-full text-center w-fit px-3 py-2 md:px-5 md:py-4 border align-middle my-auto items-center border-sky-500 mx-auto md:mx-8 ">
@@ -49,7 +47,7 @@ function Programs() {
             </div>
           </div>
         </div>
-        <div className="w-2/3 md:w-1/4 z-40  bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
+        <div className="w-2/3 py-3 md:w-1/4 z-40 border-b-[0.25rem] border-b-[#28A9E2] bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
           <div className="md:flex flex-row md:mx-2 mx-1 md:my-4 my-2">
             <div className="align-middle my-auto items-center">
               <div className="bg-slate-800 rounded-full text-center w-fit px-3 py-2 md:px-5 md:py-4 border align-middle my-auto items-center border-sky-500 mx-auto md:mx-8 ">
@@ -73,15 +71,18 @@ function Programs() {
             Upcoming Event
           </div>
 
-          <div className="text-white rounded-xl animate__animated animate__fadeInRight animate__delay-1s text-lg px-4 py-3 bg-blue-500 md:text-[20px] font-semibold cursor-pointer ">
-            Register Now
+          <div className=" button_bg flex gap-1 align-middle  text-white rounded-xl animate__animated animate__fadeInRight animate__delay-1s py-2 md:text-lg px-5 md:py-3 bg-blue-500 md:text-[20px] font-[500] cursor-pointer  ">
+            <div className="flex-none">
+              Register Now
+            </div>
+            <img src={sharearrow} alt="sharearrow" className=" button_arrow" />
           </div>
         </div>
         <div className="md:mx-8 md:mt-16 mt-8 ">
           <div className="md:flex flex-row md:gap-20">
             <div className="md:w-[590px] animate__animated animate__fadeInLeft animate__delay-2s mx-auto w-[280px]">
               <img className="md:h-[590px] h-auto" src={eventsimage} alt="" />
-              <div className="flex md:w-[590px] w-[280px] justify-between px-2 md:px-4 py-2 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
+              <div className="flex md:w-[590px] w-[280px] gap-5 align-middle content-center px-2 md:px-4 py-3 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
                 <div>
                   <div className="text-center py-2 text-cyan-400 text-xl md:text-[25px] font-bold">
                     APR
@@ -102,10 +103,10 @@ function Programs() {
               </div>
             </div>
             <div className="md:mx-16 md:mt-24 align-middle items-center mx-4">
-              <div className="text-white text-[50px] font-bold leading-tight">
+              <div className="text-white text-[25px] mt-2 md:mt-0 md:text-[50px] font-bold leading-tight">
                 Hackathon & Tutorial
               </div>
-              <div className="text-gray-400 text-[20px] font-normal leading-[33.42px]">
+              <div className="text-gray-400 text-[15px] leading-2 md:text-[20px] font-normal md:leading-[33.42px]">
                 Lorem ipsum dolor sit amet consectetur. Pharetra risus praesent
                 suscipit nullam a pharetra quisque. Tortor risus feugiat
                 eleifend pellentesque et. Tellus pharetra ultricies duis sit
@@ -116,8 +117,11 @@ function Programs() {
                 ultricies in sed in vehicula justo.
               </div>
               <div className="flex align-middle mt-8 gap-1">
-                <div className="text-white w-fit rounded-xl text-lg px-4 py-2 bg-blue-500 font-semibold leading-tight cursor-pointer">
-                  Register Now
+                <div className="button_bg flex gap-1 align-middle text-white w-fit rounded-xl text-lg px-4 py-2 bg-blue-500 font-semibold  cursor-pointer">
+                  <div className="flex-none">
+                    Register Now
+                  </div>
+                  <img src={sharearrow} alt="" className="button_arrow" />
                 </div>
                 <div className="text-white w-fit rounded-xl text-lg px-4 py-2 font-normal underline leading-normal cursor-pointer">
                   Rule Book

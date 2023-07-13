@@ -3,7 +3,6 @@ import { HeaderDot, Card } from "../components";
 import "../assets/css/projects.css";
 import Xarrow from "react-xarrows";
 import { FaFilter } from "react-icons/fa";
-import AdvancedCarousel from "../components/AdvancedCarousel";
 const Projects = () => {
   const box1Ref = useRef(null);
   const box2Ref = useRef(null);

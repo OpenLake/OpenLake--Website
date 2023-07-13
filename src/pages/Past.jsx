@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -20,7 +20,7 @@ import {
 // import Xarrow from "react-xarrows";
 const Past = () => {
   const box1Ref = useRef(null);
-  const box2Ref1 = useRef(null);
+  // const box2Ref1 = useRef(null);
 
   return (
     <div className=" min-h-screen ">

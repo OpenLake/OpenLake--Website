@@ -1,8 +1,6 @@
 import React from "react";
 import { useSnapCarousel } from "react-snap-carousel";
 import { carimage, eventsimage } from "../assets";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import "./css/AdvancedCarousel.css";
 const programs = [
   {
@@ -51,7 +49,7 @@ const programs = [
 
 const AdvancedCarousel = () => {
   // useEffect(() => {
-  const { scrollRef, pages, activePageIndex, next, prev, goTo } =
+  const { scrollRef, next, prev } =
     useSnapCarousel();
   // }, [])
   return (

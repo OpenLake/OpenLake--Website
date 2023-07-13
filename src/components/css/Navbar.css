@@ -69,6 +69,10 @@ line-height: normal;
   color: rgba(255, 255, 255, 1);
 }
 
+.navbar__link.active{
+  color: rgba(255, 255, 255, 1);
+}
+
 .navbar__button {
   display: flex;
   width: 6.1875rem;
@@ -87,6 +91,13 @@ vertical-align: center;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.04rem;
+  animation-delay: 1s;
+  
+}
+.navbar__button:hover{
+  
+  background: linear-gradient(90deg, #007cb2 0%, #28a9e2 100%);
+  
 }
 
 .navbar__mobile-menu {

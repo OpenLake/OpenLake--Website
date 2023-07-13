@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
 import { HeaderDot, RepoButton, MemberCard } from "../components";
 import Xarrow, { Xwrapper } from "react-xarrows";
 import { repoavatar } from "../assets";
