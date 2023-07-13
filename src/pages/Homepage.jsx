@@ -296,7 +296,7 @@ const Homepage = () => {
           </div>
           <div
             id="gridd2"
-            className="bg-opacity-99  mt-16 bg-[#1D4B60] rounded-4xl font-inconsolata font-normal"
+            className="bg-opacity-99 mt-16 bg-[#1D4B60] rounded-4xl font-inconsolata font-normal"
           >
             <div className="flex mx-6 py-4 gap-4">
               <div className="bg-[#f46b5d] px-2 py-2 rounded-xl"></div>

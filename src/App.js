@@ -1,4 +1,4 @@
-import {React,useState,useRef,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Community from "./pages/Community";
@@ -10,42 +10,52 @@ import Error from "./pages/Error";
 import { Navbar } from "./components";
 import { Footer } from "./components";
 import Past from "./pages/Past";
-import GLOBE from "vanta/src/vanta.globe";
+// import GLOBE from "vanta/src/vanta.globe";
 import AdvancedCarousel from "./components/AdvancedCarousel";
 import BlogDetail from "./pages/BlogDetail";
-
+import LoadingPage from "./components/LoadingPage";
 
 
 function App() {
-  const [vantaEffect, setVantaEffect] = useState(null);
-  const myRef = useRef(null);
+  const [loading, setLoading] = useState(true);
+  // const [vantaEffect, setVantaEffect] = useState(null);
+  // const myRef = useRef(null);
+  // useEffect(() => {
+  //   if (!vantaEffect) {
+  //     setVantaEffect(
+  //       GLOBE({
+  //         el: myRef.current,
+  //         mouseControls: true,
+  //         touchControls: true,
+  //         gyroControls: true,
+  //         minHeight: 20.0,
+  //         minWidth: 20.0,
+  //         scale: 0.05,
+  //         scaleMobile: 1.0,
+  //         size: 0.5,
+  //       })
+  //     );
+  //   }
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //   };
+  // }, [vantaEffect]);
   useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        GLOBE({
-          el: myRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: true,
-          minHeight: 20.0,
-          minWidth: 20.0,
-          scale: 0.05,
-          scaleMobile: 1.0,
-          size: 0.5,
-        })
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
   return (
     <div>
-      <div className="overlay">
+      {/* <div className="overlay">
         <div ref={myRef} className="bg" id="vanta">
           {" "}
         </div>
-      </div>
+      </div> */}
       <Navbar />
 
       <BrowserRouter>

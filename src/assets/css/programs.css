@@ -27,8 +27,6 @@
   transform: rotate(0);
 }
 
-.button_bg:hover {
-  .button_arrow {
-    transform: rotate(45deg);
-  }
+.button_bg:hover .button_arrow {
+  transform: rotate(45deg);
 }
