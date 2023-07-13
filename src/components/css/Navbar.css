@@ -6,7 +6,7 @@
   background-color: #111111;
   height: 5rem;
   position: sticky;
-  top:0;
+  top: 0;
   margin-top: 0.98 rem;
   /* margin-left: 3rem;
   margin-right: 3rem;
@@ -42,12 +42,12 @@
 .navbar__right {
   display: flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.50);
-/* font-family: Inter; */
-font-size: 1rem;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  color: rgba(255, 255, 255, 0.5);
+  /* font-family: Inter; */
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .navbar__menu {
@@ -65,11 +65,11 @@ line-height: normal;
   transition: color 0.5s;
 }
 
-.navbar__link:hover{
+.navbar__link:hover {
   color: rgba(255, 255, 255, 1);
 }
 
-.navbar__link.active{
+.navbar__link.active {
   color: rgba(255, 255, 255, 1);
 }
 
@@ -77,10 +77,10 @@ line-height: normal;
   display: flex;
   width: 6.1875rem;
   height: 2.5rem;
-  padding: 0.3125rem;    
+  padding: 0.3125rem;
   justify-content: center;
   align-items: center;
-vertical-align: center;
+  vertical-align: center;
   border-radius: 0.3125rem;
   background: linear-gradient(90deg, #28a9e2 0%, #007cb2 100%);
   cursor: pointer;
@@ -92,12 +92,9 @@ vertical-align: center;
   line-height: normal;
   letter-spacing: 0.04rem;
   animation-delay: 1s;
-  
 }
-.navbar__button:hover{
-  
+.navbar__button:hover {
   background: linear-gradient(90deg, #007cb2 0%, #28a9e2 100%);
-  
 }
 
 .navbar__mobile-menu {
@@ -110,16 +107,15 @@ vertical-align: center;
   height: 3px;
   
   margin: 5px; */
-  
 }
 
-.ham_bar{
-    width: 25px;
-    height: 3px;
-    
-    margin: 5px;
-    background-color: rgba(255, 255, 255, 0.50);
-    transition: transform 0.3s ease-in-out;
+.ham_bar {
+  width: 25px;
+  height: 3px;
+
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar__hamburger.open {
@@ -132,7 +128,6 @@ vertical-align: center;
 }
 
 @media (max-width: 768px) {
-
   /* .navbar{
   margin-left: 0rem;
   margin-right: 0rem;} */
@@ -141,7 +136,7 @@ vertical-align: center;
     position: relative;
   }
 
-  .navbar__company-name{
+  .navbar__company-name {
     display: none;
   }
 
@@ -166,7 +161,6 @@ vertical-align: center;
   }
 }
 
-
 .navbar__submenu {
   display: none;
   flex-direction: column;
@@ -178,7 +172,6 @@ vertical-align: center;
   padding: 0.5rem;
   z-index: 1;
 }
-
 
 .navbar__submenu.open {
   display: flex;
