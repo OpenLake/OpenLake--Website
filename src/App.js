@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Community from "./pages/Community";
@@ -11,10 +11,8 @@ import { Navbar } from "./components";
 import { Footer } from "./components";
 import Past from "./pages/Past";
 // import GLOBE from "vanta/src/vanta.globe";
-import AdvancedCarousel from "./components/AdvancedCarousel";
 import BlogDetail from "./pages/BlogDetail";
 import LoadingPage from "./components/LoadingPage";
-
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +41,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 4000);
   }, []);
 
   if (loading) {
@@ -61,15 +59,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          <Route path="/car" element={<AdvancedCarousel />}></Route>
           <Route path="/community" element={<Community />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
           <Route path="/projects/:id" element={<ProjectPage />}></Route>
           <Route path="/programs" element={<Programs />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/blogs/:id" element={<BlogDetail />}></Route>
-          <Route path="/error" element={<Error />}></Route>
           <Route path="/past-community" element={<Past />}></Route>
+          <Route path="*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
 

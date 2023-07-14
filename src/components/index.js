@@ -10,7 +10,9 @@ import Footer from './Footer'
 import MemberCard  from './MemberCard';
 import AdvancedCarousel from './AdvancedCarousel';
 import Carousel from './Carousel';
+import Testimonial from './Testimonial';
 export {
+  Testimonial,
   Carousel,
   MemberCard,
   HeaderDot,

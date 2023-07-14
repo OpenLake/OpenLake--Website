@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Card, HeaderDot } from "../components";
+import { Card, Testimonial } from "../components";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
@@ -101,11 +101,7 @@ const stats = [
 
 const Homepage = () => {
   const box1Ref = useRef(null);
-  const {
-    scrollRef,
-    next,
-    prev,
-  } = useSnapCarousel();
+  const { scrollRef, next, prev } = useSnapCarousel();
 
   const [repos, setRepos] = useState([]);
   const [width, setWidth] = useState(0);
@@ -559,6 +555,9 @@ const Homepage = () => {
                 </button>
               </div>
             </>
+          </div>
+          <div className="mb-32">
+            <Testimonial />
           </div>
           <div className="bg-[#161616] mx-2 mb-10 md:w-[600px] w-fit md:mb-[10rem] md:mx-auto px-12 py-8 rounded-[18px] shadow  backdrop-blur-[42px]">
             <div className="text-white font-semibold text-lg">
