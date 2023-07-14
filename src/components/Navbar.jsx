@@ -18,10 +18,10 @@ const Navbar = () => {
   return (
     <nav className="navbar z-50 ">
       <div className="navbar__left">
-        <a href="/error" className="navbar__logo">
+        <a href="/" className="navbar__logo">
           <img src={logonav} alt="logonav" />
         </a>
-        <a href="/" >
+        <a href="/error" >
           <span className="navbar__company-name">Open Lake</span>
         </a>
 

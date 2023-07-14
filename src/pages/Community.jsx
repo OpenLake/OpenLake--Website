@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import { HeaderDot, RepoButton, MemberCard } from "../components";
-import Xarrow, { Xwrapper } from "react-xarrows";
+// import Xarrow, { Xwrapper } from "react-xarrows";
 import { repoavatar } from "../assets";
 import "../assets/css/community.css";
 import { Mentors2023, Coordinator2023 } from "../constants";
 const Community = () => {
-  const box1Ref = useRef(null);
-  const box2Ref1 = useRef(null);
-  const box2Ref2 = useRef(null);
+  // const box1Ref = useRef(null);
+  // const box2Ref1 = useRef(null);
+  // const box2Ref2 = useRef(null);
   const [coordinators, setCoordinators] = useState([]);
   const [mentors, setMentors] = useState([]);
   const firstRowMentors = mentors.slice(0, 6);
@@ -24,7 +24,7 @@ const Community = () => {
       <div className="p-8">
         <div className=" flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
           <div className="flex flex-row gap-6 items-center">
-            <div className="w-fit" ref={box1Ref}>
+            <div className="w-fit" >
               <HeaderDot />
             </div>
             <div className="flex flex-row sm:justify-evenly md:justify-start gap-2">
@@ -41,7 +41,7 @@ const Community = () => {
           </div>
         </div>
         <div className="relative flex flex-row  sm:ml-2 md:ml-0 gap-6 sm:gap-16 py-4 px-8">
-          <Xwrapper>
+          {/* <Xwrapper>
             <Xarrow
               start={box1Ref}
               end={box2Ref1}
@@ -59,11 +59,10 @@ const Community = () => {
               pathColor="#2B86AE"
               startEdge={5}
               endEdge={5}
-            />
+            /> */}
             <div className="box">
               <div className="rectangle-wrapper">
                 <div
-                  ref={box2Ref1}
                   className="rectangle flex flex-col items-center gap-6"
                 >
                   <div className="timeline flex flex-row justify-center content-center">
@@ -111,9 +110,9 @@ const Community = () => {
                 </div>
               </div>
             </div>
-          </Xwrapper>
+          {/* </Xwrapper> */}
         </div>
-        <Xwrapper>
+        {/* <Xwrapper>
           <Xarrow
             start={box1Ref}
             end={box2Ref2}
@@ -131,13 +130,13 @@ const Community = () => {
             pathColor="#2B86AE"
             startEdge={5}
             endEdge={5}
-          />
+          /> */}
           <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
-            <a ref={box2Ref2} href={"/past-community"} className="my-2 w-fit">
+            <a  href={"/past-community"} className="my-2 w-fit">
               <RepoButton ButtonName={"Past Community"} />
             </a>
           </div>
-        </Xwrapper>
+        {/* </Xwrapper> */}
 
       </div>
     </div>

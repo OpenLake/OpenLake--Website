@@ -32,9 +32,9 @@ const Testimonial = () => {
       <div style={{ width: "50%", textAlign: "center" }}>
       <h1 className="texthead leading-relaxed font-[600] mb-10 ">Message from <span className="bg-opacity-20 text-[#28A9E2] bg-[#28A9E2] px-1 py-1">Alumni</span></h1>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
-          <Card img="https://www.tutorialrepublic.com/examples/images/clients/1.jpg" />
-          <Card img="https://www.tutorialrepublic.com/examples/images/clients/2.jpg" />
-          <Card img="https://www.tutorialrepublic.com/examples/images/clients/3.jpg" />
+          <Card img="https://i.ibb.co/dB9kSZy/47217984.jpg" />
+          <Card img="https://i.ibb.co/dB9kSZy/47217984.jpg" />
+          <Card img="https://i.ibb.co/dB9kSZy/47217984.jpg" />
         </Slider>
       </div>
     </div>
@@ -64,14 +64,11 @@ const Card = ({ img }) => {
         }}
       />
       <p>
-        Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.
-        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
-        tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
-        fringilla massa. Etiam hendrerit dolor eget rutrum
+      Closed source is like eating pizza with only crust. It's just not as satisfying, right? Open source is like a pizza with unlimited toppings, where you can customize to your heart's content! 🍕😋 And best of all, with open source, you can have that extra cheese without any extra charge! 🧀🙌
       </p>
       <p style={{ fontStyle: "italic", marginTop: 25 }}>
-        <span style={{ fontWeight: 500, color: "#28A9E2" }}>PAULA WILSON</span> ,
-        Media Analyst
+        <span style={{ fontWeight: 500, color: "#28A9E2" }}>K Shivendu</span> ,
+        Open Source Engineer @supertokens
       </p>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import {
   HeaderDot,
@@ -6,16 +6,16 @@ import {
   LivePreviewButton,
   StatsCard,
 } from "../components";
-import Xarrow, { Xwrapper } from "react-xarrows";
+// import Xarrow, { Xwrapper } from "react-xarrows";
 import { repoavatar, github, img1 } from "../assets";
 import "../assets/css/projectpage.css";
 
 function ProjectPage() {
-  const box1Ref = useRef(null);
-  const box2Ref1 = useRef(null);
-  const box2Ref2 = useRef(null);
-  const box2Ref3 = useRef(null);
-  const box2Ref4 = useRef(null);
+  // const box1Ref = useRef(null);
+  // const box2Ref1 = useRef(null);
+  // const box2Ref2 = useRef(null);
+  // const box2Ref3 = useRef(null);
+  // const box2Ref4 = useRef(null);
   let { id } = useParams();
   const [project, setProject] = useState(null);
   const [contributors, setContributors] = useState([]);
@@ -48,7 +48,7 @@ function ProjectPage() {
       <div className="p-8">
         <div className="relative flex flex-col md:flex-row justify-between gap-6 sm:gap-2 px-0 md:py-4 md:px-8">
           <div className="flex flex-row gap-6 items-center">
-            <div className="w-fit" ref={box1Ref}>
+            <div className="w-fit">
               <HeaderDot />
             </div>
             <div className="flex flex-row sm:justify-evenly md:justify-start gap-2">
@@ -70,7 +70,7 @@ function ProjectPage() {
         <div className="flex flex-col sm:flex-row">
           <div>
             <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-8">
-                <Xarrow
+                {/* <Xarrow
                   start={box1Ref}
                   end={box2Ref1}
                   color="#2B86AE"
@@ -87,9 +87,9 @@ function ProjectPage() {
                   pathColor="#2B86AE"
                   startEdge={5}
                   endEdge={5}
-                />
+                /> */}
                 <div className="flex flex-col justify-between mb-10 sm:mb-0">
-                  <h1 ref={box2Ref1} className="repo-name">
+                  <h1 className="repo-name">
                     Description
                   </h1>
                   <p className=" pl-3 text-[#ffffff80] font-medium text-lg">
@@ -99,7 +99,7 @@ function ProjectPage() {
             </div>
 
             <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-8">
-              <Xwrapper>
+              {/* <Xwrapper>
                 <Xarrow
                   start={box1Ref}
                   end={box2Ref2}
@@ -117,17 +117,17 @@ function ProjectPage() {
                   pathColor="#2B86AE"
                   startEdge={5}
                   endEdge={5}
-                />
+                /> */}
                 <div className="flex flex-col justify-between sm:mb-5 md:mb-10 ">
-                  <h1 ref={box2Ref2} className="repo-name">
+                  <h1 className="repo-name">
                     Screenshots
                   </h1>
                   <img className="ml-1 md:ml-32 w-3/5" src={img1} alt="img1" />
                 </div>
-              </Xwrapper>
+              {/* </Xwrapper> */}
             </div>
             <div className="relative flex flex-row sm:ml-2 md:ml-32 gap-6 sm:gap-16 py-4 px-8">
-              <Xwrapper>
+              {/* <Xwrapper>
                 <Xarrow
                   start={box1Ref}
                   end={box2Ref3}
@@ -145,9 +145,9 @@ function ProjectPage() {
                   pathColor="#2B86AE"
                   startEdge={5}
                   endEdge={5}
-                />
+                /> */}
                 <div className="flex flex-col justify-between sm:mb-5 md:mb-10 ">
-                  <h1 ref={box2Ref3} className="repo-name">
+                  <h1 className="repo-name">
                     Maintainers
                   </h1>
                   <ul className="ml-10 ">
@@ -168,11 +168,11 @@ function ProjectPage() {
                     ))}
                   </ul>
                 </div>
-              </Xwrapper>
+              {/* </Xwrapper> */}
             </div>
           </div>
           <div className="flex flex-col mb-10 sm:mb-5  ">
-            <h1 ref={box2Ref4} className="repo-name">
+            <h1 className="repo-name">
               Statistics
             </h1>
             <StatsCard repo={project} />

@@ -30,7 +30,11 @@
   font-family: 'Inter';
 }
 
-
-
+@media (max-width: 768px) {
+  /* ... */
+  .texthead{
+    font-size: 25px;
+  }
+}
 
           

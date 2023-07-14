@@ -155,7 +155,7 @@ const Projects = () => {
                     </div>
                   )}
                 </div>
-                <h1 ref={box1Ref} className="repo-name">
+                <h1 ref={box1Ref} className="repo-name font-[600]">
                   {selectedLanguage} Repositories
                 </h1>
               </div>

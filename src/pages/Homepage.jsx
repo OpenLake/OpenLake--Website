@@ -266,7 +266,7 @@ const Homepage = () => {
             <div className="animate__animated animate__fadeInRight animate__delay-5s text-end relative md:absolute md:top-[40vh] md:left-[30vw] text-white text-[25px] md:text-[40px] font-semibold leading-[52.61px] ">
               What we do?
             </div>
-            <div className="animate__animated animate__fadeInLeft animate__delay-5s relative text-end md:absolute md:bottom-[26vh] md:left-[20vw] text-white text-opacity-50 text-xl  font-semibold leading-relaxed">
+            <div className="animate__animated animate__fadeInLeft animate__delay-5s relative text-end md:absolute md:bottom-[30vh] md:left-[20vw] text-white text-opacity-50 text-xl  font-semibold leading-relaxed">
               Connecting Students to the World of Open Source Development
             </div>
           </div>
@@ -372,11 +372,11 @@ const Homepage = () => {
         /> */}
         <div className="mt-[25rem] md:mt-[30rem] md:mx-[-8rem] md:px-14 md:rounded-[4rem] rounded-[2rem] mx-2 bg-gradient-to-b from-[#1d4b6000] via-[#1d4b604d] to-[#1d4b60a4]">
           <div className="bg-[#326074] mt-8 rounded-lg py-1 mx-auto text-center w-[80vw] md:w-[30vw]">
-            <div className="text-[#a5d6ff] px-6 text-[13.2px] font-normal font-[Menlo-Regular] tracking-[0] leading-[27px]">
-              &#34;Bridging gap between Students and the World of Open Source
+            <div className="text-[#a5d6ff] px-6 text-[13.2px] font-normal font-inconsolata tracking-[0] leading-[27px]">
+              &#34;Bridging gap between Students and the World of<span className="text-white font-semibold"> Open Source </span>
             </div>
             <div className=" border-b border-dotted border-[#a5d6ff] "></div>
-            <div className="text-[#a5d6ff] px-6 text-[13.2px] font-normal font-[Menlo-Regular] tracking-[0] leading-[27px]">
+            <div className="text-white px-6 text-[13.2px] font-semibold font-inconsolata tracking-[0] leading-[27px]">
               Development&#34;
             </div>
           </div>

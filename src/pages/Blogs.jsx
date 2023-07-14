@@ -29,7 +29,7 @@ function Blogs() {
     articles.filter((article) => !getLatestBlogs().includes(article))
   );
   return (
-    <div className="mt-8 min-h-screen ">
+    <div className="mt-8 min-h-screen overflow-hidden ">
       <div className="md:flex md:pb-24 pb-8 md:pl-[180px] pl-8 md:gap-[12rem] pr-8 md:pr-[111px] justify-between">
         <div className="animate__animated animate__backInLeft">
           <div className=" text-white text-base font-semibold uppercase leading-tight">
@@ -144,7 +144,7 @@ function Blogs() {
             ))}
           </div>
         </div>
-        <div className="md:w-1/5 animate__animated animate__fadeInRight animate__delay-2s md:px-6 px-4 pt-8 md:pt-24 md:pr-[110px]">
+        <div className="md:w-1/5 animate__animated animate__fadeInRight animate__delay-2s px-4 md:px-6  pt-8 md:pt-24 md:pr-[90px]">
           <div className="text-white text-[25px] font-normal leading-[33px]">
             Follow Us
           </div>

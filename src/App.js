@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Community from "./pages/Community";
@@ -12,10 +12,11 @@ import { Footer } from "./components";
 import Past from "./pages/Past";
 // import GLOBE from "vanta/src/vanta.globe";
 import BlogDetail from "./pages/BlogDetail";
-import LoadingPage from "./components/LoadingPage";
+// import LoadingPage from "./components/LoadingPage";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
+  // const location = useLocation();
   // const [vantaEffect, setVantaEffect] = useState(null);
   // const myRef = useRef(null);
   // useEffect(() => {
@@ -38,15 +39,15 @@ function App() {
   //     if (vantaEffect) vantaEffect.destroy();
   //   };
   // }, [vantaEffect]);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
-  if (loading) {
-    return <LoadingPage />;
-  }
+  // if (loading) {
+  //   return <LoadingPage />;
+  // }
   return (
     <div>
       {/* <div className="overlay">

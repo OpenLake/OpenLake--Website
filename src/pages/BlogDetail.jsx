@@ -46,7 +46,7 @@ const BlogDetail = () => {
           <div className="mx-auto md:mt-12 mt-4 text-center">
             <img className="mx-auto md:mt-12 mt-4 text-center" src={article.image} alt="" />
           </div>
-          <div className="text-white md:mt-12 mt-4 text-opacity-50 text-sm md:text-lg font-normal md:leading-[27px]">
+          <div className="text-white md:mt-12 mt-4 pb-4 text-opacity-50 text-sm md:text-lg font-normal md:leading-[27px]">
             {article.content}
           </div>
         </div>
