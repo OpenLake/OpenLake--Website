@@ -171,8 +171,8 @@ const Projects = () => {
                           index % 8 === 2 ||
                           index % 8 === 5 ||
                           index % 8 === 7
-                          ? "even-card"
-                          : "odd-card"
+                          ? "even-card animate__animated animate__backInLeft"
+                          : "odd-card animate__animated animate__backInRight"
                       }
                     />
                   ))

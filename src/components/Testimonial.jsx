@@ -28,8 +28,9 @@ const Testimonial = () => {
       className="testimonial"
       style={{ display: "flex", justifyContent: "center", marginTop: 50 }}
     >
+    
       <div style={{ width: "50%", textAlign: "center" }}>
-        <h1 style={{ marginBottom: 20 }}>TESTIMONIALS</h1>
+      <h1 className="texthead leading-relaxed font-[600] mb-10 ">Message from <span className="bg-opacity-20 text-[#28A9E2] bg-[#28A9E2] px-1 py-1">Alumni</span></h1>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
           <Card img="https://www.tutorialrepublic.com/examples/images/clients/1.jpg" />
           <Card img="https://www.tutorialrepublic.com/examples/images/clients/2.jpg" />
@@ -69,7 +70,7 @@ const Card = ({ img }) => {
         fringilla massa. Etiam hendrerit dolor eget rutrum
       </p>
       <p style={{ fontStyle: "italic", marginTop: 25 }}>
-        <span style={{ fontWeight: 500, color: "green" }}>PAULA WILSON</span> ,
+        <span style={{ fontWeight: 500, color: "#28A9E2" }}>PAULA WILSON</span> ,
         Media Analyst
       </p>
     </div>

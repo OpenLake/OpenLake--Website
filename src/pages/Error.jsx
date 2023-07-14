@@ -14,7 +14,7 @@ const Error = () => {
                 </div>
 
                 <div className="contant_box_404">
-                  <h3 className="h2">OpenLake is out of service(Chill out just an easter egg)</h3>
+                  <h3 className="h2">OpenLake is out of service(Easter Egg)</h3>
 
                   <p>Tushar and Madhur are out for coffee!</p>
 

@@ -12,7 +12,7 @@ function Programs() {
       <div className="z-5">
         <MyCarousel />
       </div>
-      <div className="TopStat animate__animated animate__fadeInDown animate__delay-1s mt-[-10rem] md:mt-[-12rem] flex flex-col md:flex-row items-center mx-0 md:mx-2 gap-6 md:gap-12  sm:justify-center">
+      <div className="TopStat animate__animated animate__fadeInDown animate__delay-1s mt-[-10rem] md:mt-[-6rem] flex flex-col md:flex-row items-center mx-0 md:mx-2 gap-6 md:gap-12  sm:justify-center">
         <div className="w-2/3 py-3 md:w-1/4 z-40 border-b-[0.25rem] border-b-[#28A9E2] bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
           <div className="md:flex flex-row md:mx-2 mx-1 md:my-4 my-2">
             <div className="align-middle my-auto items-center">

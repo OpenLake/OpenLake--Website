@@ -3,6 +3,7 @@ import "./css/Card.css"; // Import the CSS file for the card design
 import { repoavatar, fork, likes, watch } from "../assets";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import 'animate.css';
 function Card({ repo, className }) {
   let x = repo.language || "";
   if (x === "C++") {
@@ -27,10 +28,10 @@ function Card({ repo, className }) {
       .catch((error) => console.error(error));
   }, [repo.contributors_url]);
   return (
-    <motion.div
+    <div
       // whileHover={{ scale: 1.5}}
       // whileTap={{ scale: 0.8 }}
-      className={`card pointer-events-none ${className}`}
+      className={`card animate__animated animate__slideInDown ${className}`}
     >
       <div className="card-inner">
         <div className="card-front gap-4">
@@ -88,7 +89,7 @@ function Card({ repo, className }) {
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

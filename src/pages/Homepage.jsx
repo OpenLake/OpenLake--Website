@@ -266,7 +266,7 @@ const Homepage = () => {
             <div className="animate__animated animate__fadeInRight animate__delay-5s text-end relative md:absolute md:top-[40vh] md:left-[30vw] text-white text-[25px] md:text-[40px] font-semibold leading-[52.61px] ">
               What we do?
             </div>
-            <div className="animate__animated animate__fadeInLeft animate__delay-5s relative text-end md:absolute md:bottom-[24vh] md:left-[20vw] text-white text-opacity-50 text-xl  font-semibold leading-relaxed">
+            <div className="animate__animated animate__fadeInLeft animate__delay-5s relative text-end md:absolute md:bottom-[26vh] md:left-[20vw] text-white text-opacity-50 text-xl  font-semibold leading-relaxed">
               Connecting Students to the World of Open Source Development
             </div>
           </div>
