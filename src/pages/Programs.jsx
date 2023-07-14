@@ -1,6 +1,6 @@
 import React from "react";
 import { AdvancedCarousel } from "../components";
-import { eventsimage } from "../assets";
+import { eventsimage, foss } from "../assets";
 import "../assets/css/programs.css";
 import MyCarousel from "../components/Carousel";
 import { sharearrow } from "../assets";
@@ -33,7 +33,7 @@ function Programs() {
           <div className="md:flex flex-row md:mx-2 mx-1 md:my-4 my-2">
             <div className="align-middle my-auto items-center">
               <div className="bg-slate-800 rounded-full text-center w-fit px-3 py-2 md:px-5 md:py-4 border align-middle my-auto items-center border-sky-500 mx-auto md:mx-8 ">
-                32
+                16
               </div>
             </div>
             <div>
@@ -50,8 +50,8 @@ function Programs() {
         <div className="w-2/3 py-3 md:w-1/4 z-40 border-b-[0.25rem] border-b-[#28A9E2] bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
           <div className="md:flex flex-row md:mx-2 mx-1 md:my-4 my-2">
             <div className="align-middle my-auto items-center">
-              <div className="bg-slate-800 rounded-full text-center w-fit px-3 py-2 md:px-5 md:py-4 border align-middle my-auto items-center border-sky-500 mx-auto md:mx-8 ">
-                32
+              <div className="bg-slate-800 rounded-full text-center w-fit px-3 py-2 md:px-4 md:py-3 border align-middle my-auto items-center border-sky-500 mx-auto md:mx-8 ">
+                <img src={foss} className="h-[41px] w-auto" />
               </div>
             </div>
             <div>

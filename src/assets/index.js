@@ -35,6 +35,7 @@ import events from "./images/events.svg";
 import eventsimage from "./images/eventsimage.png";
 import toparrow from "./images/toparrow.svg";
 import downarrow from "./images/downarrow.svg";
+import foss from "./images/foss.svg";
 export {
   downarrow,
   toparrow,
@@ -72,5 +73,6 @@ export {
   githubblog,
   bloginsta,
   linkedinblog,
-  eventsimage
+  eventsimage,
+  foss
 };
