@@ -1,30 +1,30 @@
-import { coordinator } from "../assets";
+import { coordinator,Madhur,Tushar } from "../assets";
 const Coordinator2023 = [
   {
     name: "Tushar Bansal",
     designation: "Coordinator",
-    image: coordinator,
+    image: Tushar,
     github: "www.github.com",
     linkedln: "www.linkedln.com",
   },
   {
     name: "Madhur Jain",
     designation: "Coordinator",
-    image: coordinator,
+    image: Madhur,
     github: "www.github.com",
     linkedln: "www.linkedln.com",
   },
 ];
 const Coordinator2022 = [
   {
-    name: "Tushar Bansal",
+    name: "Sudhir Sharma",
     designation: "Coordinator",
     image: coordinator,
     github: "www.github.com",
     linkedln: "www.linkedln.com",
   },
   {
-    name: "Madhur Jain",
+    name: "Satvik Vemuganti",
     designation: "Coordinator",
     image: coordinator,
     github: "www.github.com",
@@ -33,14 +33,14 @@ const Coordinator2022 = [
 ];
 const Coordinator2021 = [
   {
-    name: "Tushar Bansal",
+    name: "Kumar Shivendu",
     designation: "Coordinator",
     image: coordinator,
     github: "www.github.com",
     linkedln: "www.linkedln.com",
   },
   {
-    name: "Madhur Jain",
+    name: "Shashwat Jaiswal",
     designation: "Coordinator",
     image: coordinator,
     github: "www.github.com",

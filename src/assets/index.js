@@ -24,8 +24,6 @@ import propened from "./images/propened.png";
 import linesadded from "./images/prmerged.png";
 import closed from "./images/closed.png";
 import carimage from "./images/carimage.png";
-import coordinator  from "./images/Coordinators/Coordinator.svg";
-import mentor from "./images/Mentor/mentor.svg";
 import blogs from "./images/blogs.png";
 import githubblog from "./images/github.png";
 import bloginsta from "./images/bloginsta.png";
@@ -36,6 +34,19 @@ import eventsimage from "./images/eventsimage.png";
 import toparrow from "./images/toparrow.svg";
 import downarrow from "./images/downarrow.svg";
 import foss from "./images/foss.svg";
+import coordinator  from "./images/Coordinators/Coordinator.svg";
+import Madhur from "./images/Coordinators/Madhur.png";
+import Tushar from "./images/Coordinators/Tushar.png";
+import Sudeep from "./images/Mentor/Sudeep.png"
+import Siddhi from "./images/Mentor/Siddhi.png"
+import Shubham from "./images/Mentor/Shubham.png"
+import Roshan from "./images/Mentor/Roshan.png"
+import Rohit from "./images/Mentor/Rohit.png"
+import Javed from "./images/Mentor/Javed.png"
+import Arya from "./images/Mentor/Arya.png"
+import Aditya from "./images/Mentor/Aditya.png"
+import Ayush from "./images/Mentor/Ayush.png"
+import mentor from "./images/Mentor/mentor.svg";
 export {
   downarrow,
   toparrow,
@@ -74,5 +85,16 @@ export {
   bloginsta,
   linkedinblog,
   eventsimage,
-  foss
+  foss,
+  Madhur,
+  Tushar,
+  Sudeep,
+  Siddhi,
+  Shubham,
+  Roshan,
+  Rohit,
+  Javed,
+  Arya,
+  Ayush,
+  Aditya,
 };

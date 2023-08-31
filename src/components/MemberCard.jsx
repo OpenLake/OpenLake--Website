@@ -21,7 +21,7 @@ function MemberCard({ mentor }) {
         className="rounded-full bg-[#28A9E2] overflow-hidden shadow-black shadow-md"
       >
         <img
-          className="w-[122px] h-[129px] lightgray 0px -17.084px / 100% 151.697% no-repeat;"
+          className="w-[122px] h-[129px] lightgray 0px -10.084px / 100% 151.697% no-repeat;"
           src={mentor.image}
           alt={avatar}
         />

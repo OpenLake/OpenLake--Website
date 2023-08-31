@@ -13,17 +13,17 @@ const Footer = () => {
             </div>
             <hr className="footer-hr" />
             <div className="social-icons-row">
-                <a href="https://www.facebook.com" className="social-icon-link">
+                <a href="https://www.linkedin.com/company/openlake/" className="social-icon-link">
                     <i className="fab fa-linkedin-in social-icon"></i>
                 </a>
-                <a href="https://www.twitter.com" className="social-icon-link">
+                <a href="https://github.com/OpenLake" className="social-icon-link">
                     <i className="fab fa-github social-icon"></i>
 
                 </a>
-                <a href="https://www.instagram.com" className="social-icon-link">
+                <a href="openlake@iitbhilai.ac.in" className="social-icon-link">
                     <i className="far fa-envelope social-icon"></i>
                 </a>
-                <a href="https://www.linkedin.com" className="social-icon-link">
+                <a href="https://www.instagram.com/openlake_iitbhilai/" className="social-icon-link">
                     <i className="fab fa-instagram social-icon"></i>
                 </a>
             </div>
