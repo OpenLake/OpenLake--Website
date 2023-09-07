@@ -95,7 +95,7 @@ const Past = () => {
             iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faUsers} />}
           >
-            <h1 className="vertical-timeline-element-title">Coordinators</h1>
+            <h1 className="vertical-timeline-element-title">Mentors</h1>
             <hr />
             <ul>
               {Mentors2023.map((item, index) => (
@@ -136,7 +136,7 @@ const Past = () => {
             iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faUsers} />}
           >
-            <h1 className="vertical-timeline-element-title">Coordinators</h1>
+            <h1 className="vertical-timeline-element-title">Mentors</h1>
             <hr />
             <ul>
               {Mentors2022.map((item, index) => (
@@ -176,7 +176,7 @@ const Past = () => {
             iconStyle={{ background: "#141C24", color: "#fff" }}
             icon={<FontAwesomeIcon icon={faUsers} />}
           >
-            <h1 className="vertical-timeline-element-title">Coordinators</h1>
+            <h1 className="vertical-timeline-element-title">Mentors</h1>
             <hr />
             <ul>
               {Mentors2021.map((item, index) => (
