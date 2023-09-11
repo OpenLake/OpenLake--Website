@@ -85,7 +85,7 @@ function Programs() {
               <div className="flex md:w-[590px] w-[280px] gap-5 align-middle content-center px-2 md:px-4 py-3 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
                 <div>
                   <div className="text-center py-2 text-cyan-400 text-xl md:text-[25px] font-bold">
-                    APR
+                    SEP
                   </div>
                   <div className="text-white text-center text-xl md:text-[50px] font-bold">
                     14
@@ -93,28 +93,20 @@ function Programs() {
                 </div>
                 <div className="animate__animated animate__fadeInRight animate__delay-2s">
                   <div className="text-white text-xl md:text-[25px] font-bold">
-                    Tutorial & Hackathon
+                    WEB HACKATHON
                   </div>
                   <div className="text-gray-400 text-[0.75rem] md:text-lg font-normal">
-                    Sessions conducted by our <br />
-                    mentors for community.
+                    Long hackathon to build websites.
                   </div>
                 </div>
               </div>
             </div>
             <div className="md:mx-16 md:mt-24 align-middle items-center mx-4">
               <div className="text-white text-[25px] mt-2 md:mt-0 md:text-[50px] font-bold leading-tight">
-                Hackathon & Tutorial
+                Web Hackathon
               </div>
               <div className="text-gray-400 text-[15px] leading-2 md:text-[20px] font-normal md:leading-[33.42px]">
-                Lorem ipsum dolor sit amet consectetur. Pharetra risus praesent
-                suscipit nullam a pharetra quisque. Tortor risus feugiat
-                eleifend pellentesque et. Tellus pharetra ultricies duis sit
-                mollis vitae felis sed scelerisque. Facilisis faucibus
-                adipiscing tincidunt tristique ultrices. Lacus mi purus velit
-                sed maecenas dui lectus eget tortor. Duis elit aliquet curabitur
-                tortor semper hac tempor tortor. Adipiscing nullam facilisi
-                ultricies in sed in vehicula justo.
+                This will be a 6 hour long based hackathon where participanmts has to make a website on any framework of their choice.
               </div>
               <div className="flex align-middle mt-8 gap-1">
                 <div className="button_bg flex gap-1 align-middle text-white w-fit rounded-xl text-lg px-4 py-2 bg-blue-500 font-semibold  cursor-pointer">

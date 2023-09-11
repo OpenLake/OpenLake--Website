@@ -47,6 +47,9 @@ import Arya from "./images/Mentor/Arya.png"
 import Aditya from "./images/Mentor/Aditya.png"
 import Ayush from "./images/Mentor/Ayush.png"
 import mentor from "./images/Mentor/mentor.svg";
+import event1 from "./images/events/event1.jpg"
+import event2 from "./images/events/event2.jpg"
+import event3 from "./images/events/event3.jpg"
 export {
   downarrow,
   toparrow,
@@ -97,4 +100,7 @@ export {
   Arya,
   Ayush,
   Aditya,
+  event1,
+  event2,
+  event3,
 };

@@ -1,49 +1,31 @@
 import React from "react";
 import { useSnapCarousel } from "react-snap-carousel";
-import { carimage, eventsimage } from "../assets";
+import { carimage, eventsimage,event1,event2,event3 } from "../assets";
 import "./css/AdvancedCarousel.css";
 const programs = [
   {
-    date: "Apr 14",
-    image: eventsimage,
-    title: "Lorem ipsum dolor sit amet consectetur. Mi massa.",
+    date: "14",
+    month: "Jun",
+    image: event1,
+    title: "Web Wave",
     content:
-      "We’ll get you directly seated and inside for you to enjoy the show.",
+      "Hackathon to make the openlake website and to learn about webdev.",
   },
   {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur. Mi massa.",
+    date: "19",
+    month: "Aug",
+    image: event2,
+    title: "Workshop on Git",
     content:
-      "We’ll get you directly seated and inside for you to enjoy the show.",
+      "Worshop and handson tutorial on git and github basics.",
   },
   {
-    date: "Apr 14",
-    image: eventsimage,
-    title: "Lorem ipsum dolor sit amet consectetur. Mi massa.",
+    date: "14",
+    month: "Jun",
+    image: event3,
+    title: "How to open source",
     content:
-      "We’ll get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: eventsimage,
-    title: "Lorem ipsum dolor sit amet consectetur. Mi massa.",
-    content:
-      "We’ll get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur. Mi massa.",
-    content:
-      "We’ll get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: eventsimage,
-    title: "Lorem ipsum dolor sit amet consectetur. Mi massa.",
-    content:
-      "We’ll get you directly seated and inside for you to enjoy the show.",
+      "Learn and get intro about the basics of open source",
   },
 ];
 
@@ -72,19 +54,18 @@ const AdvancedCarousel = () => {
               <div className="flex w-[308px] justify-between px-4 py-2 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
                 <div>
                   <div className="text-center py-2 text-cyan-400 text-xl font-bold">
-                    APR
+                    {program.month}
                   </div>
                   <div className="text-white text-2xl font-bold">
-                    14
+                    {program.date}
                   </div>
                 </div>
                 <div>
                   <div className="text-white text-xl font-bold">
-                    Tutorial & Hackathon
+                    {program.title}
                   </div>
                   <div className="text-gray-400 text-lg font-normal">
-                    Sessions conducted by our <br />
-                    mentors for community.
+                    {program.content}
                   </div>
                 </div>
               </div>
