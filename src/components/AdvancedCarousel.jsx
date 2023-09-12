@@ -48,23 +48,23 @@ const AdvancedCarousel = () => {
         {programs.map((program, i) => {
           return (
             <div key={i} className="">
-              <div className="w-[308px]">
-                <img className="w-full h-[308px]" src={program.image} alt="" />
+              <div className="w-[308px] h-[308px]">
+                <img className="w-full h-full" src={program.image} alt="" />
               </div>
               <div className="flex w-[308px] justify-between px-4 py-2 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
-                <div>
+                <div className="mx-2 px-2">
                   <div className="text-center py-2 text-cyan-400 text-xl font-bold">
                     {program.month}
                   </div>
-                  <div className="text-white text-2xl font-bold">
+                  <div className="text-white text-xl font-bold">
                     {program.date}
                   </div>
                 </div>
                 <div>
-                  <div className="text-white text-xl font-bold">
+                  <div className="text-white text-[1.2rem] font-bold">
                     {program.title}
                   </div>
-                  <div className="text-gray-400 text-lg font-normal">
+                  <div className="text-gray-400 text-[1rem] font-normal">
                     {program.content}
                   </div>
                 </div>
