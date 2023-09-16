@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="footer-container">
             <div className="logo-row">
                 <img src={logonav} alt="Company Logo" className="logo" />
-                <span className="company-name">Open Lake</span>
+                <span className="company-name">OpenLake</span>
             </div>
             <hr className="footer-hr" />
             <div className="social-icons-row">
