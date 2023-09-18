@@ -1,4 +1,4 @@
-import {mentor,Sudeep,Siddhi,Shubham,Roshan,Rohit,Arya,Aditya,Javed,Ayush,} from "../assets"
+import {mentor,Sudeep,Siddhi,Shubham,Roshan,Rohit,Arya,Aditya,Javed,Ayush,Arnav,} from "../assets"
 const Mentors2023 = [
   {
     name: "Sudeep Ranjan Sahoo",
@@ -18,8 +18,8 @@ const Mentors2023 = [
     name: "Arya Lanjewar",
     designation: "Mentor",
     image:  Arya,
-    github: "www.github.com",
-    linkedln: "www.linkedln.com",
+    github: "www.github.com/AryaLanjewar3005",
+    linkedln: "www.linkedln.com/in/lanjewar-arya",
   },
   {
     name: "Ayush Krishnan",
@@ -66,7 +66,7 @@ const Mentors2023 = [
   {
     name: "Arnav Prakash Choudhury",
     designation: "Mentor",
-    image:  mentor,
+    image:  Arnav,
     github: "www.github.com",
     linkedln: "www.linkedln.com",
   },

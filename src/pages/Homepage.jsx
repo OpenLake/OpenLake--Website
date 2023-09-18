@@ -115,7 +115,12 @@ const Homepage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/openlake/repos"
+          "https://api.github.com/users/openlake/repos",
+          {
+            headers: {
+              Authorization: process.env.PERSONAL_ACCESS_TOKEN,
+            },
+          }
         );
         const data = await response.json();
         setRepos(data);
@@ -373,7 +378,8 @@ const Homepage = () => {
         <div className="mt-[25rem] md:mt-[30rem] md:mx-[-8rem] md:px-14 md:rounded-[4rem] rounded-[2rem] mx-2 bg-gradient-to-b from-[#1d4b6000] via-[#1d4b604d] to-[#1d4b60a4]">
           <div className="bg-[#326074] mt-8 rounded-lg py-1 mx-auto text-center w-[80vw] md:w-[30vw]">
             <div className="text-[#a5d6ff] px-6 text-[13.2px] font-normal font-inconsolata tracking-[0] leading-[27px]">
-              &#34;Bridging gap between Students and the World of<span className="text-white font-semibold"> Open Source </span>
+              &#34;Bridging gap between Students and the World of
+              <span className="text-white font-semibold"> Open Source </span>
             </div>
             <div className=" border-b border-dotted border-[#a5d6ff] "></div>
             <div className="text-white px-6 text-[13.2px] font-semibold font-inconsolata tracking-[0] leading-[27px]">
