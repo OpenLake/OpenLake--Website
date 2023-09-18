@@ -46,6 +46,7 @@ import Javed from "./images/Mentor/Javed.png"
 import Arya from "./images/Mentor/Arya.png"
 import Aditya from "./images/Mentor/Aditya.png"
 import Ayush from "./images/Mentor/Ayush.png"
+import Arnav from "./images/Mentor/Arnav.png"
 import mentor from "./images/Mentor/mentor.svg";
 import event1 from "./images/events/event1.jpg"
 import event2 from "./images/events/event2.jpg"
@@ -100,6 +101,7 @@ export {
   Arya,
   Ayush,
   Aditya,
+  Arnav,
   event1,
   event2,
   event3,
