@@ -3,7 +3,7 @@ import { HeaderDot, RepoButton, MemberCard } from "../components";
 // import Xarrow, { Xwrapper } from "react-xarrows";
 import { repoavatar } from "../assets";
 import "../assets/css/community.css";
-import { Mentors2023, Coordinator2023 } from "../constants";
+import { Mentors, Coordinators } from "../constants";
 const Community = () => {
   // const box1Ref = useRef(null);
   // const box2Ref1 = useRef(null);
@@ -13,10 +13,10 @@ const Community = () => {
   const firstRowMentors = mentors.slice(0, 6);
   const secondRowMentors = mentors.slice(6, 10);
   useEffect(() => {
-    setMentors(Mentors2023);
+    setMentors(Mentors[2023]);
   }, []);
   useEffect(() => {
-    setCoordinators(Coordinator2023);
+    setCoordinators(Coordinators[2023]);
   }, []);
 
   return (
