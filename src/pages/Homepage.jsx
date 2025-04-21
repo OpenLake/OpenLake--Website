@@ -118,7 +118,7 @@ const Homepage = () => {
           "https://api.github.com/users/openlake/repos",
           {
             headers: {
-              Authorization: process.env.PERSONAL_ACCESS_TOKEN,
+              Authorization: import.meta.env.PERSONAL_ACCESS_TOKEN,
             },
           }
         );
@@ -248,15 +248,15 @@ const Homepage = () => {
           </div>
           <div
             id="grid3"
-            class="mt-4 animate__animated animate__fadeInRight relative bg-[#28A9E233] bg-gradient-to-br from-[#1D4B6066] to-[#ffffff00] rounded-4xl"
+            className="mt-4 animate__animated animate__fadeInRight relative bg-[#28A9E233] bg-gradient-to-br from-[#1D4B6066] to-[#ffffff00] rounded-4xl"
           >
             <div className="z-[3] w-1/2 md:w-full absolute -top-16 -left-8 md:-top-36 md:-left-16">
               <img src={logosvg} alt="logosvg" />
             </div>
-            <div class="text-[#28A9E2] font-inter pr-5 text-[0.8rem] md:text-[1rem] font-bold py-3 text-right border-b border-[#ffffff50]">
+            <div className="text-[#28A9E2] font-inter pr-5 text-[0.8rem] md:text-[1rem] font-bold py-3 text-right border-b border-[#ffffff50]">
               Openlake
             </div>
-            <div class="text-white text-[12px] font-inconsolata md:text-[15px] font-normal tracking-[0] leading-[23.5px]   mt-[1px] md:mt-[22px] ml-[2rem] md:ml-[3.75rem]">
+            <div className="text-white text-[12px] font-inconsolata md:text-[15px] font-normal tracking-[0] leading-[23.5px]   mt-[1px] md:mt-[22px] ml-[2rem] md:ml-[3.75rem]">
               #For a better World!
             </div>
           </div>
