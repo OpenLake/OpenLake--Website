@@ -21,7 +21,7 @@ const Navbar = () => {
         <a href="/" className="navbar__logo">
           <img src={logonav} alt="logonav" />
         </a>
-        <a href="/error" >
+        <a href="/" >
           <span className="navbar__company-name">OpenLake</span>
         </a>
 
