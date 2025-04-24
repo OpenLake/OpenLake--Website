@@ -23,5 +23,4 @@ To run the deployment mode
 
 ### Maintainers
 
-- [Sudeep Ranjan Sahoo](https://github.com/srs-sudeep)
-- [Tushar Bansal](https://github.com/tusharbansal22)
+- [Amay Dixit](https://github.com/amaydixit11)
