@@ -2,6 +2,7 @@
   "name": "openlake_rahsut_ruhdam",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",

@@ -21,6 +21,7 @@ import "../assets/css/homepage.css";
 // import Xarrow from "react-xarrows";
 import { useSnapCarousel } from "react-snap-carousel";
 import { slideIn } from "../utils/motion";
+import { useProjects } from "../hooks/useProjects";
 
 const programs = [
   {
@@ -103,32 +104,12 @@ const Homepage = () => {
   const box1Ref = useRef(null);
   const { scrollRef, next, prev } = useSnapCarousel();
 
-  const [repos, setRepos] = useState([]);
+  const { repos, loading, error } = useProjects();
   const [width, setWidth] = useState(0);
   const carousel = useRef();
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 40);
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://api.github.com/users/openlake/repos",
-          {
-            headers: {
-              Authorization: import.meta.env.PERSONAL_ACCESS_TOKEN,
-            },
-          }
-        );
-        const data = await response.json();
-        setRepos(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
   }, []);
 
   // const [numberOfColorBoxes, setNumberOfColorBoxes] = useState(400);
@@ -394,35 +375,44 @@ const Homepage = () => {
               We always strive towards the benefit of society with our projects.
             </div>
             <motion.div ref={carousel} className="overflow-hidden mx-auto my-8">
-              <motion.div
-                drag="x"
-                dragConstraints={{ right: 0, left: -width }}
-                whileHover={{ scale: 0.9 }}
-                className="cards mx-8 w-[110rem] overflow-hidden"
-                style={{ animation: "scroll 10s linear infinite" }}
-              >
-                {Array.isArray(repos) ? (
-                  repos
-                    .slice(2, 8)
-                    .map((repo, index) => (
-                      <Card
-                        key={repo.id}
-                        repo={repo}
-                        className={
-                          index % 8 === 0 ||
-                          index % 8 === 2 ||
-                          index % 8 === 5 ||
-                          index % 8 === 7
-                            ? "even-card"
-                            : "odd-card"
-                        }
-                      />
-                    ))
+                {loading ? (
+                  <p className="text-center text-lg font-medium text-gray-400 animate-pulse">Loading projects...</p>
+                ) : error ? (
+                  <p className="text-center text-lg font-medium text-red-500">
+                    Error loading projects: {error.message}
+                  </p>
                 ) : (
-                  <p>No repositories found</p>
+                  <motion.div
+                    drag="x"
+                    dragConstraints={{ right: 0, left: -width }}
+                    whileHover={{ scale: 0.9 }}
+                    className="cards mx-8 w-[110rem] overflow-hidden"
+                    style={{ animation: "scroll 10s linear infinite" }}
+                  >
+                    {Array.isArray(repos) && repos.length > 0 ? (
+                      repos.slice(2, 8).map((repo, index) => (
+                        <Card
+                          key={repo.id}
+                          repo={repo}
+                          className={
+                            index % 8 === 0 ||
+                            index % 8 === 2 ||
+                            index % 8 === 5 ||
+                            index % 8 === 7
+                              ? "even-card"
+                              : "odd-card"
+                          }
+                        />
+                      ))
+                    ) : (
+                      <p className="text-center text-lg font-medium text-gray-500">
+                        No repositories found.
+                      </p>
+                    )}
+                  </motion.div>
                 )}
               </motion.div>
-            </motion.div>
+
           </div>
         </div>
         <div className="px-8 w-fit flex flex-col justify-center items-start">
