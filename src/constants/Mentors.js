@@ -2,21 +2,128 @@ import {mentor,Sudeep,Siddhi,Shubham,Roshan,Rohit,Arya,Aditya,Javed,Ayush,Arnav,
 const Mentors = {
   2025: [
     {
-      name: "Amay Dixit",
+      name: "Divyansh Dubey",
       designation: "Mentor",
       image: mentor,
-      github: "https://github.com/amaydixit11",
-      linkedln: "https://www.linkedin.com/in/amay-dixit-462113284/",
+      github: "https://github.com/divyansh1705",
+      linkedln: "https://www.linkedin.com/in/divyansh-dubey-b55a49280"
     },
+    {
+      name: "Harshit Kandpal",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/HarK-github",
+      linkedln: "https://www.linkedin.com/in/harshit-k-a746a1310/",
+    },
+    {
+      name: "Sakshi Shamrao Jadhav",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/sakshi1755",
+      linkedln: "https://www.linkedin.com/in/sakshi-jadhav-020925282"
+    },
+    {
+      name: "Saurav Gupta",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/Saurav1375",
+      linkedln: "https://www.linkedin.com/in/saurav1375/"
+    },
+    {
+      name: "Rajeev Kumar",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/rajeev-sr",
+      linkedln: "https://www.linkedin.com/in/rajeev-kumar-bb143a289"
+    },
+    {
+      name: "Slok Tulsyan",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/Slok9931",
+      linkedln: "https://www.linkedin.com/in/slok-tulsyan-003786293"
+    },
+    {
+      name: "Thanmaie Nagineni",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/naginenithanmaie",
+      linkedln: "https://www.linkedin.com/in/thanmaie-nagineni-454a79321/"
+    }    
+    
   ],
   2024: [
+    {
+      name: "Hemanth Kumar Reddy",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/asp-irin",
+      linkedln: "https://in.linkedin.com/in/hemanth-kumar-reddy-89668b252"
+    }, 
+    {
+      name: "Kriti Arora",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/kritiarora2003",
+      linkedln: "https://in.linkedin.com/in/arora-kriti"
+    },
+    {
+      name: "Arbaz Shaikh",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/arbazshaikh150",
+      linkedln: "https://in.linkedin.com/in/aatsshaikh"
+    },
+    {
+      name: "Sachin Prakash",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/prasachin",
+      linkedln: "https://in.linkedin.com/in/sachin-prakash-24076b289"
+    },
     {
       name: "Amay Dixit",
       designation: "Mentor",
       image: mentor,
       github: "https://github.com/amaydixit11",
-      linkedln: "https://www.linkedin.com/in/amay-dixit-462113284/",
+      linkedln: "https://www.linkedin.com/in/amay-dixit-462113284/"
     },
+    {
+      name: "Sumit Pathak",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/sk-pathak",
+      linkedln: "https://in.linkedin.com/in/sumit-pathak-263420225"
+    },
+    {
+      name: "Shashank Pant",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/shashankpantiitbhilai",
+      linkedln: "https://in.linkedin.com/in/shashankpant12"
+    },
+    {
+      name: "Divyanshu Prakash",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/divyanshu-prakash-rx",
+      linkedln: "https://in.linkedin.com/in/divyanshu-prakash-rx"
+    },
+    {
+      name: "Nidhi Singh",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/Nidhicodes",
+      linkedln: "https://in.linkedin.com/in/nidhi-singh-376a171b8"
+    },
+    {
+      name: "Nishant",
+      designation: "Mentor",
+      image: mentor,
+      github: "https://github.com/nishant9083",
+      linkedln: ""
+    }
+    
   ],
   2023: [
     {
