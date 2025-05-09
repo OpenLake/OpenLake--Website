@@ -16,7 +16,7 @@ To download the dependencies
 
 To run the website in development mode
 
-> ```npm start```
+> ```npm run dev```
 
 To run the deployment mode
 
