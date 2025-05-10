@@ -1,4 +1,5 @@
-## OpenLake Website
+
+# OpenLake Website
 
 This repository is the source code of the official website of OpenLake, an opensource organisation based at Indian Institute of Technology, Bhilai.
 
@@ -11,15 +12,15 @@ This repository is the source code of the official website of OpenLake, an opens
 
 To download the dependencies
 
-```npm i```
+> ```npm i```
 
 To run the website in development mode
 
-```npm start```
+> ```npm run dev```
 
 To run the deployment mode
 
-```npm run build```
+> ```npm run build```
 
 ### Maintainers
 
