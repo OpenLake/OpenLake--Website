@@ -198,6 +198,7 @@
   cursor: grab;
   overflow: hidden;
   animation: scroll 10s linear infinite;
+  
 }
 @keyframes scroll {
   0% {

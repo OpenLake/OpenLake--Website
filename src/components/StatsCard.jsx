@@ -1,5 +1,7 @@
 import React from "react";
 import "./css/StatsCard.css";
+import useStats from "../hooks/useStats";
+
 function StatsCard({ repo }) {
   return (
     <div className="repo-card ">
