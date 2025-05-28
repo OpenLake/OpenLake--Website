@@ -3,6 +3,8 @@ import { Card, Testimonial } from "../components";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import useStats from "../hooks/useStats";
+
 import {
   image,
   secimage,
@@ -67,42 +69,21 @@ const programs = [
       "We will get you directly seated and inside for you to enjoy the show.",
   },
 ];
-const stats = [
-  {
-    image: propened,
-    num: 112,
-    title: "PRs open",
-  },
-  {
-    image: prmerged,
-    num: 1053,
-    title: "PRs merged",
-  },
-  {
-    image: secimage,
-    num: 421,
-    title: "Isseues opened",
-  },
-  {
-    image: closed,
-    num: 421,
-    title: "Isseues closed",
-  },
-  {
-    image: linesadded,
-    num: 705000,
-    title: "Lines Added",
-  },
-  {
-    image: potential,
-    num: 999999,
-    title: "Potential",
-  },
-];
+
+
 
 const Homepage = () => {
   const box1Ref = useRef(null);
   const { scrollRef, next, prev } = useSnapCarousel();
+  const { openPRs, mergedPRs, issuesOpened, issuesClosed, linesAdded, contributors, isLoading } = useStats();
+  const stats = [
+    { image: propened, num: openPRs, title: 'PRs open' },
+    { image: prmerged, num: mergedPRs, title: 'PRs merged' },
+    { image: secimage, num: issuesOpened, title: 'Issues opened' },
+    { image: closed, num: issuesClosed, title: 'Issues closed' },
+    { image: linesadded, num: linesAdded, title: 'Lines Added' },
+    { image: potential, num: contributors, title: 'Potential' },
+  ];
 
   const { repos, loading, error } = useProjects();
   const [width, setWidth] = useState(0);
@@ -437,6 +418,7 @@ const Homepage = () => {
         </div>
         <div className="mt-10 md:mt-20">
           <div className="grid grid-cols-3 md:flex md:gap-4 mt-4">
+
             {stats.map((stat) => (
               <div key={stat.title} className="mx-auto my-2 gap-4">
                 <div>
@@ -447,7 +429,7 @@ const Homepage = () => {
                   />
                 </div>
                 <div className="text-[#f2ffff] text-l md:text-3xl font-medium h-9 tracking-[-0.24px] mt-2 mb-2 leading-[normal] text-center">
-                  <CountUp end={stat.num} duration={6} redraw={true}>
+                  <CountUp end={stat.num} duration={1} redraw={true}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -460,6 +442,8 @@ const Homepage = () => {
                 </div>
               </div>
             ))}
+
+
           </div>
           <div className="mt-16">
             <div className="text-[#ffffff80] text-center text-xl md:text-3xl font-semibold tracking-[0] leading-[26.3px]">
