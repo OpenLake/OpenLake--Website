@@ -7,7 +7,7 @@ const HeaderDot = () => {
             <div className="group-wrapper">
                 <div className="group">
                     <div className="overlap-group">
-                        <div className="ellipse" />
+                        <div className="ellipse " />
                         <div className="div" />
                         <div className="ellipse-2" />
                         <div className="ellipse-3" />

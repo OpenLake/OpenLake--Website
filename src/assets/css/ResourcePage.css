@@ -1,0 +1,86 @@
+:root {
+  --bg-main: #0a0a0a;
+  --bg-sidebar: #1a1a1a;
+  --bg-hover: #222222;
+  --highlight: #00ffff;
+  --text: #ffffff;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.resources-container {
+  display: flex;
+}
+
+.resources-sidebar {
+  width: 20vw;
+  background-color: var(--bg-sidebar);
+}
+
+.resources-nav {
+  padding: 1rem;
+}
+
+.resources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resources-button {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resources-button:hover {
+  background-color: var(--bg-hover);
+}
+
+.resources-submenu {
+  margin-left: 1rem;
+  border-left: 2px solid var(--highlight);
+  padding-left: 0.5rem;
+}
+
+.resources-submenu-button {
+  width: 100%;
+  padding: 0.3rem;
+  background: none;
+  border: none;
+  color: var(--highlight);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.resources-submenu-button:hover {
+  background-color: var(--bg-hover);
+}
+
+.resources-link {
+  display: block;
+  padding: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resources-link:hover {
+  background-color: var(--bg-hover);
+}
+
+.resources-content {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--bg-main);
+}

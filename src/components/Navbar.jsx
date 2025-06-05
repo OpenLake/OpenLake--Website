@@ -50,6 +50,9 @@ const Navbar = () => {
           <a href="/programs" className="navbar__link">
             Events
           </a>
+          <a href="/resources" className="navbar__link">
+            Resources
+          </a>
           <a href="/blogs">
             <button className="navbar__button">BLOGS</button>
           </a>
