@@ -30,7 +30,7 @@ function Blogs() {
   );
   return (
     <div className="mt-8 min-h-screen overflow-hidden ">
-      <div className="md:flex md:pb-24 pb-8 md:pl-[180px] pl-8 md:gap-[12rem] pr-8 md:pr-[111px] justify-between">
+      <div className="md:flex md:pb-24 pb-8 md:pl-[180px] pl-8 md:gap-[12rem] pr-8 md:pr-[111px] justify-between ">
         <div className="animate__animated animate__backInLeft">
           <div className=" text-white text-base font-semibold uppercase leading-tight">
             👋 HELLO
@@ -48,7 +48,7 @@ function Blogs() {
           </div>
         </div>
       </div>
-      <div className="bg-neutral-900 md:flex flex-row justify-between mx-4 mb-4">
+      <div className="bg-neutral-900 md:flex flex-row justify-between mx-4 mb-4 ">
         <div className="mt-8 animate__animated animate__backInLeft animate__delay-1s md:w-4/5 md:pl-[120px]">
           <div className="text-white border-b-4 pb-8 p-2 pt-8 border-white border-opacity-50 text-xl md:text-[45px] font-semibold">
             Latest Blogs

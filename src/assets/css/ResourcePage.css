@@ -1,86 +1,172 @@
-:root {
-  --bg-main: #0a0a0a;
-  --bg-sidebar: #1a1a1a;
-  --bg-hover: #222222;
-  --highlight: #00ffff;
-  --text: #ffffff;
-}
-
+/* ---------- GLOBAL STYLES ---------- */
 body {
-  background-color: var(--bg-main);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #0f1117;
+  color: #e4e4e4;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .resources-container {
   display: flex;
+  height: 100vh;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.resources-sidebar {
-  width: 20vw;
-  background-color: var(--bg-sidebar);
-}
-
-.resources-nav {
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  width: 260px;
+  background-color: #15171e;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
   padding: 1rem;
+  overflow-y: auto;
+  transition: width 0.3s ease;
 }
 
-.resources-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.hidden-sidebar {
+  width: 60px;
+  background-color: #15171e;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  transition: width 0.3s ease;
 }
 
-.resources-button {
-  width: 100%;
-  padding: 0.5rem;
+/* ---------- TOGGLE BUTTON ---------- */
+.togglesidebar {
+  margin-bottom: 1.5rem;
   text-align: left;
+}
+.togglesidebarbtn {
   background: none;
   border: none;
-  color: var(--text);
+  color: #bbb;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.resources-button:hover {
-  background-color: var(--bg-hover);
-}
-
-.resources-submenu {
-  margin-left: 1rem;
-  border-left: 2px solid var(--highlight);
-  padding-left: 0.5rem;
-}
-
-.resources-submenu-button {
-  width: 100%;
-  padding: 0.3rem;
-  background: none;
-  border: none;
-  color: var(--highlight);
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.resources-submenu-button:hover {
-  background-color: var(--bg-hover);
-}
-
-.resources-link {
-  display: block;
   padding: 0.5rem;
-  color: var(--text);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: color 0.2s;
+}
+.togglesidebarbtn:hover {
+  color: #1fb6ff;
 }
 
-.resources-link:hover {
-  background-color: var(--bg-hover);
+/* ---------- HEADINGS ---------- */
+.heading-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.heading-button:hover {
+  color: #1fb6ff;
 }
 
-.resources-content {
+/* ---------- DROPDOWN LIST ---------- */
+.item-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.2rem 0 1rem;
+}
+
+.item-button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+.item-button:hover {
+  color: #1fb6ff;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main-content {
   flex: 1;
-  padding: 1rem;
-  background-color: var(--bg-main);
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.article-wrapper {
+  max-width: 800px;
+  margin: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.article-meta {
+  display: flex;
+  gap: 1.5rem;
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.article-tag {
+  background: #1fb6ff22;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  color: #1fb6ff;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+.article-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.article-content {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* ---------- PLACEHOLDER ---------- */
+.placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  padding: 4rem 0;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- SCROLLBAR STYLE ---------- */
+.sidebar::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb,
+.main-content::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
 }

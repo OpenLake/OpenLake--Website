@@ -51,6 +51,7 @@ import mentor from "./images/Mentor/mentor.svg";
 import event1 from "./images/events/event1.jpg"
 import event2 from "./images/events/event2.jpg"
 import event3 from "./images/events/event3.jpg"
+import sidebarbtn from "./images/layout-sidebar-inset.svg"
 export {
   downarrow,
   toparrow,
@@ -105,4 +106,5 @@ export {
   event1,
   event2,
   event3,
+  sidebarbtn,
 };
