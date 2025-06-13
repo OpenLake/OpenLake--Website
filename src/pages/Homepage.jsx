@@ -113,7 +113,7 @@ const Homepage = () => {
             id="grid1"
             className=" animate__animated animate__backInLeft  mt-10 md:mx-0 px-4 w-full mb-16 md:mb:0"
           >
-            <div className="  w-fit font-inter font-semibold h-fit md:w-[160px] md:h-[40px] text-[#28A9E2] text-[32px] align-middle tracking-[0] leading-[normal] bg-[#28A9E2] bg-opacity-20 px-1 py-2] rounded text-center">
+            <div className="w-fit font-inter font-semibold h-fit md:w-[160px] md:h-[40px] text-[#28A9E2] text-[32px] align-middle tracking-[0] leading-[normal] bg-[#28A9E2] bg-opacity-20 px-1 py-2] rounded text-center">
               Openlake
             </div>
             <div className="font-inter text-[#FFFFFF] text-[40px] font-semibold tracking-[0] leading-[52.6px] my-2">
