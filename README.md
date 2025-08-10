@@ -24,4 +24,4 @@ To run the deployment mode
 
 ### Maintainers
 
-- [Amay Dixit](https://github.com/amaydixit11)
+- [Bodike Chaithali](https://github.com/BodikeChaithali)
