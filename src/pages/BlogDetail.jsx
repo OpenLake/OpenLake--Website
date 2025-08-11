@@ -19,7 +19,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className=" md:mx-36 min-h-screen mt-4 md:mt-16 mx-4">
+    <div className=" md:mx-36 min-h-screen mt-4 md:mt-16 mx-4 ">
       <div className=" flex align-middle  text-white text-xl text-base font-semibold uppercase leading-tight">
         {article.author}
         <div className="pl-4 pt-2 text-center text-[#FFFFFF80] text-[13px] font-bold leading-none">
