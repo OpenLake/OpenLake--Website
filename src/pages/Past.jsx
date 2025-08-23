@@ -5,20 +5,17 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPerson, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faPerson, faUsers, faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { repoavatar } from "../assets";
 import "../assets/css/past.css";
 import { HeaderDot, RepoButton } from "../components";
-import { Coordinators, Mentors } from "../constants";
-// import "../components/css/Footer.css";
+import { Coordinators, Mentors, Maintainers } from "../constants"; 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Past = () => {
   const box1Ref = useRef(null);
-  
   // Get years in descending order (newest first)
   const years = Object.keys(Coordinators).sort((a, b) => b - a);
-
   return (
     <div className="min-h-screen">
       <div className="p-8">
@@ -40,18 +37,21 @@ const Past = () => {
             </a>
           </div>
         </div>
-
         <VerticalTimeline lineColor="#2B86AE">
           {years.map((year) => {
-            // For each year, create coordinator and mentor elements
             const nextYear = parseInt(year) + 1;
             const dateRange = `${year} - ${nextYear}`;
-            
+            // decide positions (first block 2024 = left, then alternate)
+            let baseIndex = years.indexOf(year) * 2; // each year has 2–3 blocks
+            const coordinatorPos = baseIndex % 2 === 0 ? "left" : "right";
+            const mentorPos = coordinatorPos === "left" ? "right" : "left";
+
             return (
               <React.Fragment key={year}>
                 {/* Coordinator Element */}
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
+                  position={coordinatorPos}
                   contentStyle={{ 
                     background: "linear-gradient(270deg, #161616 0%, #141C24 100%)", 
                     color: "#fff" 
@@ -95,10 +95,11 @@ const Past = () => {
                     ))}
                   </ul>
                 </VerticalTimelineElement>
-                
+
                 {/* Mentor Element */}
                 <VerticalTimelineElement
                   className="vertical-timeline-element--education"
+                  position={mentorPos}
                   contentStyle={{ 
                     background: "linear-gradient(270deg, #141C24 0%, #161616 100%)", 
                     color: "#fff" 
@@ -142,6 +143,56 @@ const Past = () => {
                     ))}
                   </ul>
                 </VerticalTimelineElement>
+
+                {/* Maintainer Element */}
+                {year === "2025" && (
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    position={mentorPos === "right" ? "right" : "left"} // alternate properly
+                    contentStyle={{ 
+                      background: "linear-gradient(270deg, #161616 0%, #141C24 100%)", 
+                      color: "#fff" 
+                    }}
+                    contentArrowStyle={{
+                      borderRight: "20px solid #2B86AE", 
+                    }}
+                    date={dateRange}
+                    iconStyle={{ background: "#141C24", color: "#fff" }}
+                    icon={<FontAwesomeIcon icon={faLaptop} />}
+                  >
+                    <h1 className="vertical-timeline-element-title">Maintainers</h1>
+                    <hr />
+                    <ul className="mt-4 space-y-3">
+                      {Maintainers[year].map((maintainer, index) => (
+                        <li className="vertical-timeline-element-subtitle flex items-center" key={index}>
+                          <span className="mr-2">{maintainer.name}</span>
+                          <div className="flex space-x-3 ml-2">
+                            {maintainer.github && (
+                              <a 
+                                href={maintainer.github} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-gray-300 hover:text-yellow-400 transition-colors"
+                              >
+                                <i className="fab fa-github social-icon"></i>
+                              </a>
+                            )}
+                            {maintainer.linkedln && (
+                              <a 
+                                href={maintainer.linkedln} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-gray-300 hover:text-yellow-400 transition-colors"
+                              >
+                                <i className="fab fa-linkedin-in social-icon"></i>
+                              </a>
+                            )}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </VerticalTimelineElement>
+                )}
               </React.Fragment>
             );
           })}

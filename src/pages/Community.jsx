@@ -1,143 +1,130 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { HeaderDot, RepoButton, MemberCard } from "../components";
-// import Xarrow, { Xwrapper } from "react-xarrows";
 import { repoavatar } from "../assets";
 import "../assets/css/community.css";
-import { Mentors, Coordinators } from "../constants";
+import { Mentors, Coordinators ,Maintainers, Outreachers, Designers } from "../constants";
+import { background } from "@chakra-ui/react";
+
 const Community = () => {
-  // const box1Ref = useRef(null);
-  // const box2Ref1 = useRef(null);
-  // const box2Ref2 = useRef(null);
   const [coordinators, setCoordinators] = useState([]);
   const [mentors, setMentors] = useState([]);
-  const firstRowMentors = mentors.slice(0, 6);
-  const secondRowMentors = mentors.slice(6, 10);
+  const [maintainers, setMaintainers] = useState([]);
+  const [outreachers, setOutreachers] = useState([]);
+  const [designers, setDesigners] = useState([]);
+
   useEffect(() => {
-    setMentors(Mentors[2023]);
+    setMentors(Mentors[2025]);
+  }, []);
+
+  useEffect(() => {
+    setCoordinators(Coordinators[2025]);
   }, []);
   useEffect(() => {
-    setCoordinators(Coordinators[2023]);
+    setMaintainers(Maintainers[2025]);
+  }, []);
+  useEffect(() => {
+    setOutreachers(Outreachers[2025]);
+  }, []);
+  useEffect(() => {
+    setDesigners(Designers[2025]);
   }, []);
 
   return (
-    <div className="min-h-screen ">
-      <div className="p-8">
-        <div className=" flex flex-col md:flex-row justify-between gap-6 sm:gap-20 px-0 md:py-4 md:px-8">
+    <div className="min-h-screen flex flex-col items-center">
+      <div className="p-8 w-full max-w-7xl">
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-20">
           <div className="flex flex-row gap-6 items-center">
-            <div className="w-fit" >
+            <div className="w-fit">
               <HeaderDot />
             </div>
-            <div className="flex flex-row sm:justify-evenly md:justify-start gap-2">
+            <div className="flex flex-row gap-2 items-center">
               <img src={repoavatar} alt="repoavatar" className="w-8 md:w-10" />
-              <h1 className=" text-white text-[20px] md:text-[40px] font-semibold md:leading-10 uppercase">
+              <h1 className="text-white text-[20px] md:text-[40px] font-semibold md:leading-10 uppercase">
                 Community
               </h1>
             </div>
           </div>
-          <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
+          <div className="buttons flex flex-col sm:flex-row sm:justify-center">
             <a href={"https://github.com/OpenLake"} className="my-2 w-fit">
               <RepoButton ButtonName={"Openlake Github"} />
             </a>
           </div>
         </div>
-        <div className="relative flex flex-row  sm:ml-2 md:ml-0 gap-6 sm:gap-16 py-4 px-8">
-          {/* <Xwrapper>
-            <Xarrow
-              start={box1Ref}
-              end={box2Ref1}
-              color="#2B86AE"
-              strokeWidth={2}
-              headSize={15}
-              tailSize={15}
-              showHead={false}
-              startAnchor="bottom"
-              endAnchor="left"
-              path="smooth"
-              edge={5}
-              zIndex={0}
-              lineColor="#2B86AE"
-              pathColor="#2B86AE"
-              startEdge={5}
-              endEdge={5}
-            /> */}
-            <div className="box">
-              <div className="rectangle-wrapper">
-                <div
-                  className="rectangle flex flex-col items-center gap-6"
-                >
-                  <div className="timeline flex flex-row justify-center content-center">
-                    2023-24
-                  </div>
-                  <div className="text-center">
-                    <span className="text-white text-lg font-normal leading-normal">
-                      Take a look at our{" "}
-                    </span>
-                    <span className="text-sky-500 text-lg font-normal leading-normal">
-                      Organization's
-                    </span>
-                    <span className="text-white text-lg font-normal leading-normal">
-                      {" "}
-                      people
-                    </span>
-                  </div>
-                  <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-8 mb-10">
-                    {coordinators.map((mentor) => (
-                      <MemberCard
-                        className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
-                        key={mentor.id}
-                        mentor={mentor}
-                      />
+
+        {/* Body Section */}
+        <div className="relative flex justify-center py-8">
+          <div className="box w-full max-w-6xl">
+            <div className="rectangle-wrapper flex justify-center">
+              <div className="rectangle flex flex-col items-center gap-6 w-full">
+                <div className="timeline w-full flex justify-center text-center text-xl font-semibold">2025-26</div>
+                <div className="text-center">
+                  <span className="text-white text-lg font-normal leading-normal">
+                    Take a look at our{" "}
+                  </span>
+                  <span className="text-sky-500 text-lg font-normal leading-normal">
+                    Organization's
+                  </span>
+                  <span className="text-white text-lg font-normal leading-normal">
+                    {" "}
+                    people
+                  </span>
+                </div>
+                {/*<h2 className="text-white text-2xl font-semibold text-center">
+                  Corrdinator
+                </h2>*/}
+                <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-10 mb-2">
+                  {coordinators.map((mentor) => (
+                    <MemberCard key={mentor.id} member={mentor} />
+                  ))}
+                </div>
+                <h2 className="text-white text-2xl font-semibold text-center">
+                  Mentors
+                </h2>
+                <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-10 mb-2">
+                  {mentors.map((mentor) => (
+                    <MemberCard key={mentor.name} member={mentor} />
                     ))}
-                  </div>
-                  <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center w-fit md:w-max gap-8 mb-10">
-                    {firstRowMentors.map((mentor) => (
-                      <MemberCard
-                        className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
-                        key={mentor.id}
-                        mentor={mentor}
-                      />
+                </div>
+                <h2 className="text-white text-2xl font-semibold text-center">
+                  Maintainers
+                </h2>
+                <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-10 mb-2">
+                  {maintainers.map((maintainer) => (
+                    <MemberCard key={maintainer.name} member={maintainer} />
                     ))}
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 ">
+                  <div>
+                    <h2 className="text-white text-2xl font-semibold text-center mb-4">
+                      Outreach
+                    </h2>
+                    <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-10">
+                      {outreachers.map((outreach) => (
+                        <MemberCard key={outreach.name} member={outreach} showSocials={false}/>
+                        ))}
+                    </div>
                   </div>
-                  <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-8 mb-10">
-                    {secondRowMentors.map((mentor) => (
-                      <MemberCard
-                        className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2"
-                        key={mentor.id}
-                        mentor={mentor}
-                      />
-                    ))}
+                  <div class="pl-20">
+                    <h2 className="text-white text-2xl font-semibold text-center mb-4">
+                      Designer
+                    </h2>
+                    <div className="animate__animated animate__fadeIn animate__delay-0.5s flex flex-wrap justify-center gap-10">
+                      {designers.map((designer) => (
+                        <MemberCard key={designer.name} member={designer} showSocials={false}/>
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          {/* </Xwrapper> */}
-        </div>
-        {/* <Xwrapper>
-          <Xarrow
-            start={box1Ref}
-            end={box2Ref2}
-            color="#2B86AE"
-            strokeWidth={2}
-            headSize={15}
-            tailSize={15}
-            showHead={false}
-            startAnchor="bottom"
-            endAnchor="left"
-            path="smooth"
-            edge={5}
-            zIndex={0}
-            lineColor="#2B86AE"
-            pathColor="#2B86AE"
-            startEdge={5}
-            endEdge={5}
-          /> */}
-          <div className=" buttons flex flex-col ml-10 sm:flex-row sm:justify-center ">
-            <a  href={"/past-community"} className="my-2 w-fit">
-              <RepoButton ButtonName={"Past Community"} />
-            </a>
           </div>
-        {/* </Xwrapper> */}
-
+        </div>
+        <div className="buttons flex flex-col sm:flex-row sm:justify-center mt-10">
+          <a href={"/past-community"} className="my-2 w-fit">
+            <RepoButton ButtonName={"Past Community"} />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,56 +1,89 @@
-import {mentor,Sudeep,Siddhi,Shubham,Roshan,Rohit,Arya,Aditya,Javed,Ayush,Arnav,} from "../assets"
+import {mentor,Sudeep,Siddhi,Shubham,Roshan,Rohit,Arya,Aditya,Javed,Ayush,Arnav,Divyansh,Harshit,Sakshi,Saurav,Rajeev,Slok,Aviral_saxena,Harshita,Sumagna_das,Ashish,Varshit, github, linkedin} from "../assets"
 const Mentors = {
   2025: [
     {
       name: "Divyansh Dubey",
       designation: "Mentor",
-      image: mentor,
+      image: Divyansh,
       github: "https://github.com/divyansh1705",
       linkedln: "https://www.linkedin.com/in/divyansh-dubey-b55a49280"
     },
     {
       name: "Harshit Kandpal",
       designation: "Mentor",
-      image: mentor,
+      image: Harshit,
       github: "https://github.com/HarK-github",
       linkedln: "https://www.linkedin.com/in/harshit-k-a746a1310/",
     },
     {
       name: "Sakshi Shamrao Jadhav",
       designation: "Mentor",
-      image: mentor,
+      image: Sakshi,
       github: "https://github.com/sakshi1755",
       linkedln: "https://www.linkedin.com/in/sakshi-jadhav-020925282"
     },
     {
       name: "Saurav Gupta",
       designation: "Mentor",
-      image: mentor,
+      image: Saurav,
       github: "https://github.com/Saurav1375",
       linkedln: "https://www.linkedin.com/in/saurav1375/"
     },
     {
       name: "Rajeev Kumar",
       designation: "Mentor",
-      image: mentor,
+      image: Rajeev,
       github: "https://github.com/rajeev-sr",
       linkedln: "https://www.linkedin.com/in/rajeev-kumar-bb143a289"
     },
     {
       name: "Slok Tulsyan",
       designation: "Mentor",
-      image: mentor,
+      image: Slok,
       github: "https://github.com/Slok9931",
       linkedln: "https://www.linkedin.com/in/slok-tulsyan-003786293"
     },
     {
+      name : "Aviral saxena",
+      designation: "Mentor",
+      image: Aviral_saxena,
+      github: "https://github.com/aviralsaxena16",
+      linkedln: "https://www.linkedin.com/in/aviral-saxena-528598320/"
+    },
+    {
+      name : "Harshita Patidar",
+      designation: "Mentor",
+      image: Harshita,
+      github: "https://github.com/harshitap1305",
+      linkedln: "https://github.com/harshitap1305"
+    },
+    {
+      name : "Sumagna Das",
+      designation: "Mentor",
+      image: Sumagna_das,
+      github: "https://www.github.com/sumagnadas",
+      linkedln: "https://www.github.com/sumagnadas"
+    },
+    {
+      name : "Ashish Kumar Dash",
+      designation: "Mentor",
+      image: Ashish,
+      github: "https://github.com/Ashish-Kumar-Dash",
+      linkedln: "https://github.com/Ashish-Kumar-Dash"
+    },
+    {
+      name : "Sri Varshith Nimmagadda",
+      designation: "Mentor",
+      image: Varshit,
+      github: "https://github.com/Sri-Varshith",
+      linkedln: "https://github.com/Sri-Varshith"
+    },{
       name: "Thanmaie Nagineni",
       designation: "Mentor",
       image: mentor,
       github: "https://github.com/naginenithanmaie",
       linkedln: "https://www.linkedin.com/in/thanmaie-nagineni-454a79321/"
-    }    
-    
+    }  
   ],
   2024: [
     {
