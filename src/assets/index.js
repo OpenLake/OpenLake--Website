@@ -34,9 +34,30 @@ import eventsimage from "./images/eventsimage.png";
 import toparrow from "./images/toparrow.svg";
 import downarrow from "./images/downarrow.svg";
 import foss from "./images/foss.svg";
-import coordinator  from "./images/Coordinators/Coordinator.svg";
+import coordinator  from "./images/Coordinators/Amay_dixit.jpeg";
 import Madhur from "./images/Coordinators/Madhur.png";
 import Tushar from "./images/Coordinators/Tushar.png";
+import Divyansh from "./images/Mentor/Divyansh.jpeg";
+import Harshit from "./images/Mentor/Harshit.jpeg"
+import Sakshi from "./images/Mentor/Sakshi.jpeg"
+import Saurav from "./images/Mentor/Saurav.jpeg"
+import Rajeev from "./images/Mentor/Rajeev.jpeg"
+import Slok from "./images/Mentor/Slok.jpeg"
+import Aviral_saxena from "./images/Mentor/Aviral_saxena.jpeg"
+import Harshita from "./images/Mentor/Harshita.jpeg"
+import Sumagna_das from "./images/Mentor/Sumagna_das.jpeg"
+import Ashish from "./images/Mentor/Ashish.jpeg"
+import Varshit from "./images/Mentor/Varshit.jpeg"
+import Rahul_raj from "./images/Maintainer/Rahul_raj.jpeg";
+import Upam_Utkarsh from "./images/Maintainer/Upam_Utkarsh.jpeg"
+import Chaithali from "./images/Maintainer/Chaithali.jpeg"
+import Jagath from "./images/Maintainer/Jagath.jpeg"
+import khushagra from "./images/Maintainer/Khushagra.jpeg"
+import Neil from "./images/Maintainer/Neil.jpeg"
+import Kushaal from "./images/Maintainer/Kushaal.jpeg"
+import Anushka from "./images/Outreach/Anushka.jpeg";
+import Jayanshi from "./images/Outreach/Jayanshi.jpeg"
+import Thanmaie from "./images/Designer/Thanmaie.jpeg";
 import Sudeep from "./images/Mentor/Sudeep.png"
 import Siddhi from "./images/Mentor/Siddhi.png"
 import Shubham from "./images/Mentor/Shubham.png"
@@ -47,7 +68,7 @@ import Arya from "./images/Mentor/Arya.png"
 import Aditya from "./images/Mentor/Aditya.png"
 import Ayush from "./images/Mentor/Ayush.png"
 import Arnav from "./images/Mentor/Arnav.png"
-import mentor from "./images/Mentor/mentor.svg";
+import mentor from "./images/Designer/Thanmaie.jpeg";
 import event1 from "./images/events/event1.jpg"
 import event2 from "./images/events/event2.jpg"
 import event3 from "./images/events/event3.jpg"
@@ -92,6 +113,27 @@ export {
   foss,
   Madhur,
   Tushar,
+  Divyansh,
+  Harshit,
+  Sakshi,
+  Saurav,
+  Rajeev,
+  Slok,
+  Aviral_saxena,
+  Harshita,
+  Sumagna_das,
+  Ashish,
+  Varshit,
+  Rahul_raj,
+  Upam_Utkarsh,
+  Chaithali,
+  Jagath,
+  khushagra,
+  Neil,
+  Kushaal,
+  Anushka,
+  Jayanshi,
+  Thanmaie,
   Sudeep,
   Siddhi,
   Shubham,

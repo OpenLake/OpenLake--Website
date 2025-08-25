@@ -17,7 +17,7 @@
 .box .rectangle {
   -webkit-backdrop-filter: blur(42px) brightness(100%);
   height: max-content;
-  width: 55vw;
+  width: 70vw;
   padding: 10px;
   border-radius: 18px;
   background: linear-gradient(
