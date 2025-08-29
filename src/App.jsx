@@ -13,7 +13,7 @@ import Past from "./pages/Past";
 // import GLOBE from "vanta/src/vanta.globe";
 import BlogDetail from "./pages/BlogDetail";
 // import LoadingPage from "./components/LoadingPage";
-
+import Resource from "./pages/Resources";
 function App() {
   // const [loading, setLoading] = useState(true);
   // const location = useLocation();
@@ -67,6 +67,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/blogs/:id" element={<BlogDetail />}></Route>
           <Route path="/past-community" element={<Past />}></Route>
+          <Route path="/resources" element={<Resource />}></Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
