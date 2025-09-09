@@ -45,6 +45,10 @@ const Footer = () => {
                 <a href="/events" className="section-link">
                     Events
                 </a>
+
+                <a href="/Resource" className="section-link">
+                    Resources
+                </a>
             </div>
         </footer>
     );

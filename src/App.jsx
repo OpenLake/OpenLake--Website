@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import Community from "./pages/Community";
 import Projects from "./pages/Projects";
 import ProjectPage from "./pages/ProjectPage";
+import Resource from "./pages/Resource";
 import Programs from "./pages/Programs";
 import Blogs from "./pages/Blogs";
 import Error from "./pages/Error";
@@ -67,6 +68,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/blogs/:id" element={<BlogDetail />}></Route>
           <Route path="/past-community" element={<Past />}></Route>
+          <Route path="/Resource" element={<Resource />}></Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
