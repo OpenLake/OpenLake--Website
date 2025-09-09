@@ -50,6 +50,9 @@ const Navbar = () => {
           <a href="/programs" className="navbar__link">
             Events
           </a>
+          <a href="/Resource" className="navbar__link">
+            Resources
+          </a>
           <a href="/blogs">
             <button className="navbar__button">BLOGS</button>
           </a>
@@ -58,6 +61,7 @@ const Navbar = () => {
           <div
             className={`navbar__hamburger ${isMobileMenuOpen ? "open" : ""}`}
           />
+          <div className={"ham_bar"}></div>
           <div className={"ham_bar"}></div>
           <div className={"ham_bar"}></div>
           <div className={"ham_bar"}></div>
