@@ -42,7 +42,7 @@ const Footer = () => {
                     Community
                 </a>
 
-                <a href="/events" className="section-link">
+                <a href="/programs" className="section-link">
                     Events
                 </a>
 
