@@ -14,6 +14,11 @@ import Past from "./pages/Past";
 // import GLOBE from "vanta/src/vanta.globe";
 import BlogDetail from "./pages/BlogDetail";
 // import LoadingPage from "./components/LoadingPage";
+import GettingStarted from "./pages/GettingStarted"
+import ContributorPathways from "./pages/ContributorPathways"
+import ExternalResources from "./pages/ExternalResources"
+import IssueHunting from "./pages/IssueHunting"
+import Glossary from "./pages/Glossary"
 
 function App() {
   // const [loading, setLoading] = useState(true);
@@ -69,6 +74,11 @@ function App() {
           <Route path="/blogs/:id" element={<BlogDetail />}></Route>
           <Route path="/past-community" element={<Past />}></Route>
           <Route path="/Resource" element={<Resource />}></Route>
+          <Route path="/getting-started" element={<GettingStarted />} />
+          <Route path="/Contributor-pathways" element={<ContributorPathways />} />
+          <Route path="/Issue-hunting" element={<IssueHunting />} />
+          <Route path="/Curated-extrenal-resources" element={<ExternalResources/>} />
+          <Route path="/Glossary" element={<Glossary />} />
           <Route path="*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
