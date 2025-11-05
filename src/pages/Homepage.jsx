@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import useStats from "../hooks/useStats";
-
+import { programs } from "../constants/Events";
 import {
   image,
   secimage,
@@ -25,50 +25,6 @@ import { useSnapCarousel } from "react-snap-carousel";
 import { slideIn } from "../utils/motion";
 import { useProjects } from "../hooks/useProjects";
 
-const programs = [
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    content:
-      "Well get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    content:
-      "Well get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    content:
-      "Well get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    content:
-      "Well get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    content:
-      "Well get you directly seated and inside for you to enjoy the show.",
-  },
-  {
-    date: "Apr 14",
-    image: carimage,
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    content:
-      "We will get you directly seated and inside for you to enjoy the show.",
-  },
-];
 
 
 
@@ -472,10 +428,10 @@ const Homepage = () => {
                       <div className="flex gap-4 w-[308px] justify-between px-4 py-2 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
                         <div className="align-middle items-center">
                           <div className="text-center py-2 text-cyan-400 text-xl font-bold">
-                            APR
+                            {program.mon}
                           </div>
                           <div className="text-white text-2xl font-bold">
-                            14
+                            {program.date}
                           </div>
                         </div>
                         <div>

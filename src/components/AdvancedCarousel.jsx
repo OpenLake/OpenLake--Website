@@ -1,33 +1,7 @@
 import React from "react";
 import { useSnapCarousel } from "react-snap-carousel";
-import { carimage, eventsimage,event1,event2,event3 } from "../assets";
+import { programs } from "../constants/Events.js";
 import "./css/AdvancedCarousel.css";
-const programs = [
-  {
-    date: "14",
-    month: "Jun",
-    image: event1,
-    title: "Web Wave",
-    content:
-      "Hackathon to make the openlake website and to learn about webdev.",
-  },
-  {
-    date: "19",
-    month: "Aug",
-    image: event2,
-    title: "Workshop on Git",
-    content:
-      "Worshop and handson tutorial on git and github basics.",
-  },
-  {
-    date: "14",
-    month: "Jun",
-    image: event3,
-    title: "How to open source",
-    content:
-      "Learn and get intro about the basics of open source",
-  },
-];
 
 const AdvancedCarousel = () => {
   // useEffect(() => {
@@ -54,7 +28,7 @@ const AdvancedCarousel = () => {
               <div className="flex w-[308px] justify-between px-4 py-2 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
                 <div className="mx-2 px-2">
                   <div className="text-center py-2 text-cyan-400 text-xl font-bold">
-                    {program.month}
+                    {program.mon}
                   </div>
                   <div className="text-white text-xl font-bold">
                     {program.date}

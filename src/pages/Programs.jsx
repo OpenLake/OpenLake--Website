@@ -1,6 +1,7 @@
 import React from "react";
 import { AdvancedCarousel } from "../components";
-import { eventsimage, foss } from "../assets";
+import {  foss } from "../assets";
+import eventimage  from "../assets/images/eventimage.png";
 import "../assets/css/programs.css";
 import MyCarousel from "../components/Carousel";
 import { sharearrow } from "../assets";
@@ -81,32 +82,32 @@ function Programs() {
         <div className="md:mx-8 md:mt-16 mt-8 ">
           <div className="md:flex flex-row md:gap-20">
             <div className="md:w-[590px] animate__animated animate__fadeInLeft animate__delay-2s mx-auto w-[280px]">
-              <img className="md:h-[590px] h-auto" src={eventsimage} alt="" />
-              <div className="flex md:w-[590px] w-[280px] gap-5 align-middle content-center px-2 md:px-4 py-3 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
+              <img className="md:h-[590px] h-auto" src={eventimage} alt="" />
+              <div className="flex md:w-[476px] w-[280px] gap-5 align-middle content-center px-2 md:px-4 py-3 bg-gradient-to-l from-neutral-900 to-gray-900 rounded">
                 <div>
                   <div className="text-center py-2 text-cyan-400 text-xl md:text-[25px] font-bold">
-                    SEP
+                    TBA
                   </div>
                   <div className="text-white text-center text-xl md:text-[50px] font-bold">
-                    14
+                    
                   </div>
                 </div>
                 <div className="animate__animated animate__fadeInRight animate__delay-2s">
                   <div className="text-white text-xl md:text-[25px] font-bold">
-                    WEB HACKATHON
+                    FOSS OVERFLOW
                   </div>
                   <div className="text-gray-400 text-[0.75rem] md:text-lg font-normal">
-                    Long hackathon to build websites.
+                    OverFlow into Open Source with India's Largest Open Source Hackathon.
                   </div>
                 </div>
               </div>
             </div>
             <div className="md:mx-16 md:mt-24 align-middle items-center mx-4">
               <div className="text-white text-[25px] mt-2 md:mt-0 md:text-[50px] font-bold leading-tight">
-                Web Hackathon
+                FOSS OVERFLOW
               </div>
               <div className="text-gray-400 text-[15px] leading-2 md:text-[20px] font-normal md:leading-[33.42px]">
-                This will be a 6 hour long based hackathon where participanmts has to make a website on any framework of their choice.
+                OverFlow into Open Source with India's Largest Open Source Hackathon. Join us for an exhilarating experience where innovation meets collaboration. Whether you're a seasoned developer or just starting your coding journey, FOSS OVERFLOW offers a platform to showcase your skills, learn from industry experts, and contribute to impactful open-source projects. Don't miss this opportunity to be part of a vibrant community driving change through technology.
               </div>
               <div className="flex align-middle mt-8 gap-1">
                 <div className="button_bg flex gap-1 align-middle text-white w-fit rounded-xl text-lg px-4 py-2 bg-blue-500 font-semibold  cursor-pointer">
