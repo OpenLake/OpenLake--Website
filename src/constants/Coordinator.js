@@ -72,6 +72,36 @@ const Coordinators = {
       github: "www.github.com",
       linkedln: "www.linkedln.com",
     },
+  ],
+  "2020": [
+    {
+      "name": "Anand Panchbhai",
+      "designation": "Founder",
+      "image": coordinator,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    },
+    {
+      "name": "Rachuri Sri Pramodh",
+      "designation": "Founder",
+      "image": coordinator,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    },
+    {
+      "name": "Anees Ahmed",
+      "designation": "Founder",
+      "image": coordinator,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    },
+    {
+      "name": "Yatendra Singh",
+      "designation": "Founder",
+      "image": coordinator,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    }
   ]
 }
 export { Coordinators };
