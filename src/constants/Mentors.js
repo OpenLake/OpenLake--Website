@@ -366,6 +366,29 @@ const Mentors = {
       github: "www.github.com",
       linkedln: "www.linkedln.com",
     },
+  ],
+  "2020": [
+    {
+      "name": "Meghana Varanasi",
+      "designation": "Mentor",
+      "image": Aditya,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    },
+    {
+      "name": "Kumar Shivendu",
+      "designation": "Mentor",
+      "image": Aditya,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    },
+    {
+      "name": "Ambar Mutha",
+      "designation": "Mentor",
+      "image": Aditya,
+      "github": "www.github.com",
+      "linkedln": "www.linkedln.com"
+    }
   ]
 }
 export {Mentors};
