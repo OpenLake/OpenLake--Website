@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 import type { CSSProperties } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
