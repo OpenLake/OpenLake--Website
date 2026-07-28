@@ -166,7 +166,7 @@ export function Footer() {
             <Link href="/">
               <Image
                 src="/assets/openlake.svg"
-                alt="Hack Club"
+                alt="OpenLake"
                 width={200}
                 height={70}
                 style={{ display: "block", objectFit: "contain" }}
@@ -186,8 +186,8 @@ export function Footer() {
             Turning ideas into open source.
           </p>
           <a
-            href="tel:18556254225"
-            aria-label="Call Hack Club toll-free at 1-855-625-4225"
+            href="mailto:openlake@iitbhilai.ac.in"
+            aria-label="Email OpenLake at openlake@iitbhilai.ac.in"
             style={{
               fontWeight: 400,
               fontSize: 20,
