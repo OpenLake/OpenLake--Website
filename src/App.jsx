@@ -1,24 +1,24 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
-import Community from "./pages/Community";
-import Projects from "./pages/Projects";
-import ProjectPage from "./pages/ProjectPage";
-import Resource from "./pages/Resource";
-import Programs from "./pages/Programs";
-import Blogs from "./pages/Blogs";
-import Error from "./pages/Error";
+import Homepage from "./views/Homepage";
+import Community from "./views/Community";
+import Projects from "./views/Projects";
+import ProjectPage from "./views/ProjectPage";
+import Resource from "./views/Resource";
+import Programs from "./views/Programs";
+import Blogs from "./views/Blogs";
+import Error from "./views/Error";
 import { Navbar } from "./components";
 import { Footer } from "./components";
-import Past from "./pages/Past";
+import Past from "./views/Past";
 // import GLOBE from "vanta/src/vanta.globe";
-import BlogDetail from "./pages/BlogDetail";
+import BlogDetail from "./views/BlogDetail";
 // import LoadingPage from "./components/LoadingPage";
-import GettingStarted from "./pages/GettingStarted"
-import ContributorPathways from "./pages/ContributorPathways"
-import ExternalResources from "./pages/ExternalResources"
-import IssueHunting from "./pages/IssueHunting"
-import Glossary from "./pages/Glossary"
+import GettingStarted from "./views/GettingStarted"
+import ContributorPathways from "./views/ContributorPathways"
+import ExternalResources from "./views/ExternalResources"
+import IssueHunting from "./views/IssueHunting"
+import Glossary from "./views/Glossary"
 
 function App() {
   // const [loading, setLoading] = useState(true);
