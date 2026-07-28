@@ -1,51 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { headers } from "next/headers";
-import { redirect } from "next/navigation";
 import type { CSSProperties } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { Game } from "../components/not-found/Game";
 
-async function findV3Redirect(pathname: string, search: string): Promise<string | null> {
-  if (!pathname || pathname === "/" || pathname.startsWith("/_next")) {
-    return null;
-  }
-
-  let target: URL;
-  try {
-    target = new URL(pathname.replace(/^\/+/, ""), "https://v3.hackclub.com/");
-  } catch {
-    return null;
-  }
-
-  if (target.origin !== "https://v3.hackclub.com" || target.pathname === "/") {
-    return null;
-  }
-
-  if (search) {
-    target.search = search;
-  }
-
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 3000);
-
-    const res = await fetch(target, {
-      method: "HEAD",
-      redirect: "follow",
-      signal: controller.signal,
-    });
-
-    clearTimeout(timeout);
-
-    if (res.status >= 200 && res.status < 300) {
-      return target.toString();
-    }
-  } catch {
-    // fall through to the 404 page.
-  }
-
+async function findV3Redirect(_pathname: string, _search: string): Promise<string | null> {
   return null;
 }
 
@@ -62,7 +23,7 @@ const base: CSSProperties = {
   lineHeight: 1,
 };
 
-const src = Array.from({ length: 11 }, (_, i) => `/assets/hero_sticker${i + 1}.webp`);
+const src = [1, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((n) => `/assets/hero_sticker${n}.webp`);
 
 function create(count: number) {
   let seed = 404404;
@@ -196,7 +157,7 @@ export default async function NotFound() {
             have moved around. If you think something should be here that isn&apos;t, let us know by
             filing an issue on our{" "}
             <a
-              href="https://github.com/hackclub/site/issues"
+              href="https://github.com/OpenLake/OpenLake--Website/issues"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--muted)", textDecoration: "underline" }}
