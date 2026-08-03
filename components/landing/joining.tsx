@@ -638,7 +638,7 @@ export function JoiningSection() {
                 people we really wanted to talk to, so we just invited them.
               </p>
               {/* CTA Button */}
-              <CardCta href="https://slack.hackclub.com/">Join the Slack</CardCta>
+              <CardCta href="https://discord.gg/A2J9z92qzd">Join the discord server</CardCta>
             </div>
 
             {/* Slack stats badges — overflow off right edge, hidden on mobile */}
