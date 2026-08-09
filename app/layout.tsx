@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/seo";
 import { phantomSans, zarathustra } from "./fonts";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://openlake.in"),
@@ -50,6 +51,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full">
+        {children}
+        <Script
+          src="https://compass-ai-widget.vercel.app/compass-widget.js"
+          strategy="afterInteractive"
+        />
         <PlausibleProvider src="https://plausible.io/js/pa-Fxh-6GHJlpUS4AXISXi-C.js">
           <SkipToMainLink />
           {children}
