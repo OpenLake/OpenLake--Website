@@ -51,7 +51,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full">
-        {children}
         <Script
           src="https://compass-ai-widget.vercel.app/compass-widget.js"
           strategy="afterInteractive"

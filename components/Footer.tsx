@@ -259,8 +259,7 @@ export function Footer() {
             marginLeft: '100px'
           }}
         >
-          © 2026 OpenLake. Built with ❤️ by students at IIT Bhilai. Open source
-          on GitHub.
+          © 2026 OpenLake. Built with 💙 by students at IIT Bhilai.
         </p>
         <ThemeToggle variant="footer" />
       </div>
