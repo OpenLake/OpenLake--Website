@@ -6,10 +6,4 @@ export type BotIdProtectedRoute = {
   };
 };
 
-export const botIdProtectedRoutes: BotIdProtectedRoute[] = [
-  {
-    path: "/api/parents-signup",
-    method: "POST",
-    advancedOptions: { checkLevel: "basic" },
-  },
-];
+export const botIdProtectedRoutes: BotIdProtectedRoute[] = [];

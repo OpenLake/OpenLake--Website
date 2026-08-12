@@ -4,7 +4,6 @@ import { ProjectsSection } from "../components/landing/projects";
 import { EventsSection } from "../components/landing/events";
 import { HerePhotosSection } from "../components/landing/photos";
 import { VideoSection } from "../components/landing/video";
-import { DonorsSection } from "../components/landing/donors";
 import { JoiningSection } from "../components/landing/joining";
 import { ReadySection } from "../components/landing/ready";
 import { Footer } from "../components/Footer";
