@@ -353,7 +353,7 @@ export default function TeamPageClient({
               name="Aditya Kumar Gautam"
               boardRole=""
               github="https://github.com/aditya-91O2"
-              linkedin="https://github.com/aditya-91O2"
+              linkedin=""
             />
             <BoardCard
               img="/team/Rudra.jpg"
@@ -411,7 +411,7 @@ export default function TeamPageClient({
               name="Umap Utkarsh Sharad"
               boardRole=""
               github="https://github.com/UtkarshUmap"
-              linkedin="https://github.com/UtkarshUmap"
+              linkedin=""
             />
             <BoardCard
               img="/team/Eashan.jpg"
@@ -466,7 +466,7 @@ export default function TeamPageClient({
               img="/team/img.jpeg"
               name="Harshit Kandpal"
               boardRole=""
-              github="https://www.linkedin.com/in/harshit-k-a746a1310/"
+              github="https://github.com/HarK-github"
               linkedin="https://www.linkedin.com/in/harshit-k-a746a1310/"
             />
             <BoardCard

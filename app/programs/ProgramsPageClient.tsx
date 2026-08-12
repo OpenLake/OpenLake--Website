@@ -315,10 +315,6 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
   const buttonRadius = s?.buttonBorderRadius ?? 44;
   const buttonBorderWidth = s?.buttonBorderWidth ?? 0;
   const buttonBorderColor = s?.buttonBorderColor ?? "var(--foreground)";
-  const slackChannel = s?.slackChannel ?? null;
-  const slackUrl = slackChannel
-    ? `https://hackclub.slack.com/channels/${slackChannel.replace(/^#/, "")}`
-    : null;
   const projectTypes = s?.projectTypes ?? [];
   const format = s?.format ?? null;
   const description = s?.description ?? null;
@@ -549,7 +545,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
             display: "flex",
             flexWrap: "wrap",
             gap: 10,
-            marginBottom: slackChannel ? 6 : 0,
+            marginBottom: 0,
           }}
         >
           {program.websiteUrl && (
@@ -622,36 +618,6 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
         )}
          </div>
 
-        {/* Slack channel */}
-        {slackChannel && (
-          <p
-            style={{
-              position: "relative",
-              zIndex: 1,
-              fontFamily: "var(--font-phantom)",
-              fontStyle: "italic",
-              fontSize: 16,
-              color: textColor,
-              margin: 0,
-              lineHeight: 1.2,
-              paddingRight: 110,
-            }}
-          >
-            <a
-              href={slackUrl ?? "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: accentColor,
-                textDecoration: "none",
-                display: "inline-block",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {slackChannel}
-            </a>
-          </p>
-        )}
       </div>
     </div>
   );
