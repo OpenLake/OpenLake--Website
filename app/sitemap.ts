@@ -2,13 +2,8 @@ import type { MetadataRoute } from "next";
 import { readdirSync } from "node:fs";
 import path from "node:path";
 import { connection } from "next/server";
-import {
-  DIRECTORY_CATEGORIES,
-  FISCAL_REGIONS,
-  getClimateRegionParam,
-} from "@/lib/fiscal-sponsorship-config";
 
-const SITE_URL = "https://hackclub.com";
+const SITE_URL = "https://openlake.in";
 const APP_DIR = path.join(process.cwd(), "app");
 const EXCLUDED_PAGE_ROUTES = new Set(["/programs/edit"]);
 
@@ -45,29 +40,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   await connection();
 
   const staticRoutes = collectStaticRoutes();
-  const urls = staticRoutes.map((route) => ({
+
+  return staticRoutes.map((route) => ({
     url: `${SITE_URL}${route}`,
   }));
-
-  for (const category of DIRECTORY_CATEGORIES) {
-    urls.push({
-      url: `${SITE_URL}/fiscal-sponsorship/directory/${encodeURIComponent(category.id)}`,
-    });
-  }
-
-  for (const region of FISCAL_REGIONS) {
-    urls.push({
-      url: `${SITE_URL}/fiscal-sponsorship/climate/${encodeURIComponent(getClimateRegionParam(region))}`,
-    });
-  }
-
-  for (const category of DIRECTORY_CATEGORIES) {
-    for (const region of FISCAL_REGIONS) {
-      urls.push({
-        url: `${SITE_URL}/fiscal-sponsorship/directory/${encodeURIComponent(category.id)}/${encodeURIComponent(region.slug)}`,
-      });
-    }
-  }
-
-  return urls;
 }
