@@ -767,7 +767,7 @@ export function HeroSection() {
           {/* <span style={{ color: magHover === "in" ? "#ffffff" : "#ec3750" }}>✦</span> */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://cdn.hackclub.com/019e7ad9-26a3-75ba-afcb-2f384110ea6c/star.svg"
+            src="/assets/foss-star.svg"
             alt=""
             width={177}
             height={222}
