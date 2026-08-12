@@ -10,8 +10,7 @@ export async function GET() {
   try {
     const programs = await fetchProgramsFresh();
     return NextResponse.json(programs);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    return NextResponse.json({ error: message }, { status: 502 });
+  } catch {
+    return NextResponse.json({ error: "Failed to fetch programs" }, { status: 502 });
   }
 }

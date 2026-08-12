@@ -24,14 +24,18 @@ async function getSlackId(req: NextRequest): Promise<string | null> {
   const token = req.cookies.get("hc_access_token")?.value;
   if (!token) return null;
 
-  const meRes = await fetch("https://auth.hackclub.com/api/v1/me", {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-  if (!meRes.ok) return null;
+  try {
+    const meRes = await fetch("https://auth.hackclub.com/api/v1/me", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (!meRes.ok) return null;
 
-  const me = await meRes.json();
-  const slackId = me.identity?.slack_id ?? null;
-  return isValidSlackId(slackId) ? slackId : null;
+    const me = await meRes.json();
+    const slackId = me.identity?.slack_id ?? null;
+    return isValidSlackId(slackId) ? slackId : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Return true if the given Slack ID is in the Site Admins table. */
@@ -45,10 +49,14 @@ async function isAdmin(slackId: string): Promise<boolean> {
   url.searchParams.set("filterByFormula", `{slack_id}="${slackId}"`);
   url.searchParams.append("fields[]", "slack_id");
 
-  const res = await fetch(url.toString(), { headers: siteAuthHeaders(siteKey) });
-  if (!res.ok) return false;
-  const data = await res.json();
-  return (data.records ?? []).length > 0;
+  try {
+    const res = await fetch(url.toString(), { headers: siteAuthHeaders(siteKey) });
+    if (!res.ok) return false;
+    const data = await res.json();
+    return (data.records ?? []).length > 0;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -83,36 +91,40 @@ async function ownsProgram(slackId: string, programName: string): Promise<boolea
 
   const ywswHeaders = { Authorization: `Bearer ${apiKey}` };
 
-  // Find the YSWS Authors record for this Slack ID
-  const authorsUrl = new URL(
-    `https://api.airtable.com/v0/${YSWS_BASE}/${encodeURIComponent(AUTHORS_TABLE)}`,
-  );
-  authorsUrl.searchParams.set("filterByFormula", `{Slack ID}="${slackId}"`);
-  authorsUrl.searchParams.append("fields[]", "Current YSWS Programs");
+  try {
+    // Find the YSWS Authors record for this Slack ID
+    const authorsUrl = new URL(
+      `https://api.airtable.com/v0/${YSWS_BASE}/${encodeURIComponent(AUTHORS_TABLE)}`,
+    );
+    authorsUrl.searchParams.set("filterByFormula", `{Slack ID}="${slackId}"`);
+    authorsUrl.searchParams.append("fields[]", "Current YSWS Programs");
 
-  const authorsRes = await fetch(authorsUrl.toString(), { headers: ywswHeaders });
-  if (!authorsRes.ok) return false;
+    const authorsRes = await fetch(authorsUrl.toString(), { headers: ywswHeaders });
+    if (!authorsRes.ok) return false;
 
-  const authorsData = await authorsRes.json();
-  const ids = authorsData.records?.[0]?.fields?.["Current YSWS Programs"];
-  const programRecordIds = Array.isArray(ids) ? ids.filter(isValidAirtableRecordId) : [];
-  if (programRecordIds.length === 0) return false;
+    const authorsData = await authorsRes.json();
+    const ids = authorsData.records?.[0]?.fields?.["Current YSWS Programs"];
+    const programRecordIds = Array.isArray(ids) ? ids.filter(isValidAirtableRecordId) : [];
+    if (programRecordIds.length === 0) return false;
 
-  // Resolve those record IDs to program names
-  const formula = `OR(${programRecordIds.map((id) => `RECORD_ID()="${id}"`).join(",")})`;
-  const programsUrl = new URL(
-    `https://api.airtable.com/v0/${YSWS_BASE}/${encodeURIComponent(PROGRAMS_TABLE)}`,
-  );
-  programsUrl.searchParams.set("filterByFormula", formula);
-  programsUrl.searchParams.append("fields[]", "Name");
+    // Resolve those record IDs to program names
+    const formula = `OR(${programRecordIds.map((id) => `RECORD_ID()="${id}"`).join(",")})`;
+    const programsUrl = new URL(
+      `https://api.airtable.com/v0/${YSWS_BASE}/${encodeURIComponent(PROGRAMS_TABLE)}`,
+    );
+    programsUrl.searchParams.set("filterByFormula", formula);
+    programsUrl.searchParams.append("fields[]", "Name");
 
-  const programsRes = await fetch(programsUrl.toString(), { headers: ywswHeaders });
-  if (!programsRes.ok) return false;
+    const programsRes = await fetch(programsUrl.toString(), { headers: ywswHeaders });
+    if (!programsRes.ok) return false;
 
-  const programsData = await programsRes.json();
-  const editableNames: string[] = (programsData.records ?? [])
-    .map((r: { fields: { Name?: string } }) => r.fields.Name ?? "")
-    .filter(Boolean);
+    const programsData = await programsRes.json();
+    const editableNames: string[] = (programsData.records ?? [])
+      .map((r: { fields: { Name?: string } }) => r.fields.Name ?? "")
+      .filter(Boolean);
 
-  return editableNames.includes(programName);
+    return editableNames.includes(programName);
+  } catch {
+    return false;
+  }
 }

@@ -13,6 +13,32 @@ function apiKey() {
   return process.env.HACK_CLUB_SITE_AIRTABLE_KEY;
 }
 
+// Verify a file's leading bytes match an expected image format's magic signature
+function matchesMagicBytes(mime: string, bytes: Uint8Array): boolean {
+  const startsWith = (sig: number[]) => sig.every((b, i) => bytes[i] === b);
+  switch (mime) {
+    case "image/png":
+      return startsWith([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+    case "image/jpeg":
+      return startsWith([0xff, 0xd8, 0xff]);
+    case "image/gif":
+      return (
+        startsWith([0x47, 0x49, 0x46, 0x38, 0x37, 0x61]) ||
+        startsWith([0x47, 0x49, 0x46, 0x38, 0x39, 0x61])
+      );
+    case "image/webp":
+      return (
+        startsWith([0x52, 0x49, 0x46, 0x46]) &&
+        bytes[8] === 0x57 &&
+        bytes[9] === 0x45 &&
+        bytes[10] === 0x42 &&
+        bytes[11] === 0x50
+      );
+    default:
+      return false;
+  }
+}
+
 // Find or create a record by program name
 async function findOrCreate(programName: string, key: string): Promise<string> {
   const listRes = await fetch(`${siteBaseUrl()}?fields[]=Name`, {
@@ -76,6 +102,15 @@ export async function POST(req: NextRequest) {
   }
   if (file.size > MAX_BYTES) {
     return NextResponse.json({ error: "File too large (max 8 MB)" }, { status: 413 });
+  }
+
+  // Verify magic bytes match the declared MIME type; file.type is client-controlled
+  const head = new Uint8Array(await file.slice(0, 16).arrayBuffer());
+  if (!matchesMagicBytes(mime, head)) {
+    return NextResponse.json(
+      { error: "File contents do not match the declared image type." },
+      { status: 415 },
+    );
   }
 
   // Authorization — must own this program (or be admin)

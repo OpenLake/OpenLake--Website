@@ -39,12 +39,16 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL("/programs/edit?auth_error=1", req.url));
   }
 
-  const { access_token } = await tokenRes.json();
+  const data = (await tokenRes.json()) as { access_token?: unknown };
+  const accessToken = typeof data.access_token === "string" && data.access_token ? data.access_token : null;
+  if (!accessToken) {
+    return NextResponse.redirect(new URL("/programs/edit?auth_error=1", req.url));
+  }
 
   const response = NextResponse.redirect(new URL("/programs/edit", req.url));
   // Clear the one-time state cookie
   response.cookies.set("oauth_state", "", { maxAge: 0, path: "/" });
-  response.cookies.set("hc_access_token", access_token, {
+  response.cookies.set("hc_access_token", accessToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
