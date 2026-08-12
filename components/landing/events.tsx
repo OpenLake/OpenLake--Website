@@ -39,10 +39,6 @@ function EventCard({ program }: { program: AirtableProgram }) {
   const buttonRadius = s?.buttonBorderRadius ?? 44;
   const buttonBorderWidth = s?.buttonBorderWidth ?? 0;
   const buttonBorderColor = s?.buttonBorderColor ?? "var(--foreground)";
-  const slackChannel = s?.slackChannel ?? null;
-  const slackUrl = slackChannel
-    ? `https://hackclub.slack.com/channels/${slackChannel.replace(/^#/, "")}`
-    : null;
   const description = s?.description ?? null;
 
   const irlStart = s?.inPersonStart ?? null;
@@ -232,45 +228,12 @@ function EventCard({ program }: { program: AirtableProgram }) {
               color: buttonTextColor,
               textDecoration: "none",
               whiteSpace: "nowrap",
-              marginBottom: slackChannel ? 6 : 0,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
             onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
           >
             Start now <BtnArrow />
           </a>
-        )}
-
-        {/* Slack channel */}
-        {slackChannel && (
-          <p
-            style={{
-              position: "relative",
-              zIndex: 1,
-              fontFamily: "var(--font-phantom)",
-              fontStyle: "italic",
-              fontSize: 16,
-              color: textColor,
-              margin: 0,
-              lineHeight: 1.2,
-              paddingRight: 110,
-            }}
-          >
-            Join the discussion in{" "}
-            <a
-              href={slackUrl ?? "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: accentColor,
-                textDecoration: "none",
-                display: "inline-block",
-                whiteSpace: "nowrap",
-              }}
-            >
-              #{slackChannel.replace(/^#/, "")}
-            </a>
-          </p>
         )}
 
         {/* Badge */}
