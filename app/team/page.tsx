@@ -10,5 +10,5 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function TeamPage() {
-  return <TeamPageClient hqGroups={[]} hcbGroups={[]} communityPods={[]} />;
+  return <TeamPageClient />;
 }
