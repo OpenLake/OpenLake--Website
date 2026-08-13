@@ -72,9 +72,7 @@ function emailHref(email?: string) {
     return null;
   }
 
-  return email.includes("@")
-    ? `mailto:${email}`
-    : `mailto:${email}@hackclub.com`;
+  return email.includes("@") ? `mailto:${email}` : `mailto:${email}@openlake.iitbhilai.ac.in`;
 }
 
 function BoardCard({
@@ -101,7 +99,7 @@ function BoardCard({
   const mailHref = email
     ? email.includes("@")
       ? `mailto:${email}`
-      : `mailto:${email}@hackclub.com`
+      : `mailto:${email}@openlake.iitbhilai.ac.in`
     : null;
   const card = (
     <article className={`board-card${href ? " board-card--linked" : ""}`}>
@@ -123,7 +121,7 @@ function BoardCard({
           className="board-card__pill"
           onClick={(e) => e.stopPropagation()}
         >
-          {email!.includes("@") ? email : `${email}@hackclub.com`}
+          {email!.includes("@") ? email : `${email}@openlake.iitbhilai.ac.in`}
         </a>
       )} */}
       <div
@@ -363,29 +361,6 @@ export default function TeamPageClient({
               linkedin="https://www.linkedin.com/in/rdudhat-iitbhilai"
             />
           </div>
-          {/* <div className="board-grid board-grid--advisors">
-            <BoardCard
-              img="https://cdn.hackclub.com/019da8a0-de67-721b-911c-5a4cf1a2ad4a/p.webp"
-              name="Tom Preston-Werner"
-              boardRole="Board Member"
-              subrole="Co-Founder, GitHub"
-              href="https://github.com/mojombo"
-            />
-            <BoardCard
-              img="https://cdn.hackclub.com/019da8a1-7997-71bd-a69c-84970e8a238d/sqs.webp"
-              name="Quinn Slack"
-              boardRole="Board Member"
-              subrole="Co-Founder and CEO, AMP"
-              href="https://github.com/sqs"
-            />
-            <BoardCard
-              img="https://cdn.hackclub.com/019da8a1-fcce-73eb-9e9e-e7f4ae1d2677/john.webp"
-              name="John Abele"
-              boardRole="Board Advisor"
-              subrole="Founder, Boston Scientific"
-              href="https://en.wikipedia.org/wiki/John_Abele"
-            />
-          </div> */}
         </div>
       </section>
       <section className="team-shell board-section">
