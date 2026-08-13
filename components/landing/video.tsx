@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { YouTubeEmbed } from "../YouTubeEmbed";
 
 // Community back-img photos — repeated to fill taller section
