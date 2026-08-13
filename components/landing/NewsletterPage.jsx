@@ -21,7 +21,7 @@ import { BtnArrowSvg } from "./btn-arrow";
 //                   https:// URL. Leave null for no image.
 //    readUrl      - the "Read issue" button links here
 //    tags         - array of short strings, e.g. ["Open Source", "Events"]
-//    accentColor  - optional; defaults to the OpenLake red (#ec3750)
+//    accentColor  - optional; defaults to the OpenLake red (var(--red))
 // ════════════════════════════════════════════════════════════════════════════
 const NEWSLETTERS = [
   {
@@ -34,7 +34,7 @@ const NEWSLETTERS = [
     coverImageUrl: null, // e.g. "/assets/newsletter-issue2.webp"
     readUrl: "",
     tags: ["Open Source", "Community", "Events"],
-    accentColor: "#ec3750",
+    accentColor: "var(--red)",
   },
   {
     id: "2",
@@ -46,7 +46,7 @@ const NEWSLETTERS = [
     coverImageUrl: null, // e.g. "/assets/newsletter-issue1.webp"
     readUrl: "",
     tags: ["Welcome", "Open Source"],
-    accentColor: "#ec3750",
+    accentColor: "var(--red)",
   },
   // ── Copy the block above, paste it here, and change the values ──
 ];
@@ -66,7 +66,7 @@ function formatDate(iso) {
 // ── A single newsletter card ────────────────────────────────────────────────
 function NewsletterCard({ item }) {
   const wrapperRef = useRef(null);
-  const accent = item.accentColor ?? "#ec3750";
+  const accent = item.accentColor ?? "var(--red)";
   const coverImageUrl = item.coverImageUrl ?? null;
   const tags = item.tags ?? [];
 
@@ -339,7 +339,7 @@ export default function NewsletterPage() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(236,55,80,0.18) 0%, rgba(236,55,80,0.04) 20%, transparent 40%)",
+            "linear-gradient(180deg, rgba(11, 95, 176,0.18) 0%, rgba(11, 95, 176,0.04) 20%, transparent 40%)",
           pointerEvents: "none",
           zIndex: 0,
         }}
@@ -436,7 +436,7 @@ export default function NewsletterPage() {
               background: "var(--surface)",
               borderRadius: 9999,
               height: 64,
-              border: "2.5px solid #ec3750",
+              border: "2.5px solid var(--red)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -498,7 +498,7 @@ export default function NewsletterPage() {
                 paddingRight: 24,
                 borderRadius: 9999,
                 border: "none",
-                background: "#ec3750",
+                background: "var(--red)",
                 fontFamily: "var(--font-phantom)",
                 fontWeight: "bold",
                 fontSize: 18,
@@ -551,7 +551,7 @@ export default function NewsletterPage() {
               margin: 0,
             }}
           >
-            <Link href="/programs" style={{ color: "#ec3750", textDecoration: "none" }}>
+            <Link href="/programs" style={{ color: "var(--red)", textDecoration: "none" }}>
             </Link>
 
           </p>

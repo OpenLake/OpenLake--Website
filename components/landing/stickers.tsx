@@ -42,7 +42,7 @@ export function StickerEnvelopeLink() {
           borderRadius: 10,
           // Airmail edging — diagonal red/blue stripes
           background:
-            "repeating-linear-gradient(45deg, #ec3750 0 7px, #fffdf8 7px 14px, #338eda 14px 21px, #fffdf8 21px 28px)",
+            "repeating-linear-gradient(45deg, var(--red) 0 7px, #fffdf8 7px 14px, #338eda 14px 21px, #fffdf8 21px 28px)",
           padding: 8,
           aspectRatio: "10 / 6.2",
         }}
@@ -96,7 +96,7 @@ export function StickerEnvelopeLink() {
               style={{
                 width: "100%",
                 height: "100%",
-                background: "linear-gradient(150deg, #f04a61 0%, #ec3750 45%, #d92c44 100%)",
+                background: "linear-gradient(150deg, #3fa9f0 0%, var(--red) 45%, #1f6fb8 100%)",
                 borderRadius: 1,
                 display: "flex",
                 alignItems: "center",
@@ -216,7 +216,7 @@ export function StickerEnvelopeLink() {
           fontFamily: "var(--font-phantom)",
           fontSize: 16,
           whiteSpace: "nowrap",
-          boxShadow: "0 5px 16px rgba(236,55,80,0.40), 0 2px 5px rgba(23,23,29,0.14)",
+          boxShadow: "0 5px 16px rgba(11, 95, 176,0.40), 0 2px 5px rgba(23,23,29,0.14)",
         }}
       >
         Get free stickers

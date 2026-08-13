@@ -439,7 +439,7 @@ export function Game() {
             .game-overlay__wash {
               position: absolute;
               inset: 0;
-              background: radial-gradient(circle at center, rgba(236, 55, 80, 0.06), transparent 40%);
+              background: radial-gradient(circle at center, rgba(11, 95, 176, 0.06), transparent 40%);
               pointer-events: none;
             }
 
@@ -562,8 +562,8 @@ export function Game() {
             }
 
             .game-exit:hover {
-              background: rgba(236, 55, 80, 0.14);
-              border-color: rgba(236, 55, 80, 0.28);
+              background: rgba(11, 95, 176, 0.14);
+              border-color: rgba(11, 95, 176, 0.28);
             }
 
             .game-overlay__panel {
@@ -725,7 +725,7 @@ export function Game() {
         }
 
         .glitch-trigger:focus-visible {
-          outline: 3px solid rgba(236, 55, 80, 0.32);
+          outline: 3px solid rgba(11, 95, 176, 0.32);
           outline-offset: 12px;
           border-radius: 24px;
         }
@@ -748,7 +748,7 @@ export function Game() {
         }
 
         .glitch-layer.red {
-          color: #ec3750;
+          color: var(--red);
           transform: translate(2px, 0);
           clip-path: inset(54% 0 12% 0);
           animation: red 2.2s steps(2, jump-end) infinite alternate;
@@ -778,7 +778,7 @@ export function Game() {
         }
 
         .arming-dot.active {
-          background: #ec3750;
+          background: var(--red);
         }
 
         @keyframes arming-enter {

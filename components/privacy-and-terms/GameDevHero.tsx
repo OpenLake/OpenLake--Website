@@ -7,7 +7,7 @@ export default function GameDevHero() {
       style={{
         padding: "100px 24px 80px",
         background:
-          "linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #eef2ff 100%)",
+          "linear-gradient(135deg, var(--surface) 0%, var(--background) 50%, var(--surface) 100%)",
       }}
     >
       <div
@@ -22,7 +22,7 @@ export default function GameDevHero() {
       >
         <span
           style={{
-            background: "#ec3750",
+            background: "var(--red)",
             color: "#fff",
             padding: "8px 18px",
             borderRadius: "999px",
@@ -38,13 +38,13 @@ export default function GameDevHero() {
           style={{
             fontSize: "clamp(42px, 7vw, 72px)",
             fontWeight: 700,
-            color: "#17171d",
+            color: "var(--foreground)",
             margin: 0,
             lineHeight: 1.1,
             maxWidth: "900px",
           }}
         >
-          Learn <span style={{ color: "#ec3750" }}>Game Development</span>
+          Learn <span style={{ color: "var(--red)" }}>Game Development</span>
           <br />
           with the Best Free Resources
         </h1>
@@ -55,7 +55,7 @@ export default function GameDevHero() {
             maxWidth: "720px",
             fontSize: "20px",
             lineHeight: 1.7,
-            color: "#555",
+            color: "var(--muted)",
           }}
         >
           Learn game development using Unity, Unreal Engine, Godot, Blender,

@@ -91,7 +91,7 @@ function Member({
         display: "flex",
         alignItems: "center",
         padding: "12px 20px",
-        borderBottom: "1px solid #e5e7eb",
+        borderBottom: "1px solid var(--border)",
         justifyContent: "space-between",
       }}
     >
@@ -99,7 +99,7 @@ function Member({
         style={{
           fontSize: "17px",
           fontWeight: 600,
-          color: "#1f2937",
+          color: "var(--foreground)",
         }}
       >
         {name}
@@ -116,7 +116,7 @@ function Member({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#111827" }}
+            style={{ color: "var(--foreground)" }}
           >
             <FaGithub size={20} />
           </a>
@@ -127,7 +127,7 @@ function Member({
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#111827" }}
+            style={{ color: "var(--foreground)" }}
           >
             <FaLinkedin size={20} />
           </a>
@@ -489,7 +489,7 @@ function Member2024({
         display: "flex",
         alignItems: "center",
         padding: "16px 20px",
-        borderBottom: "1px solid #e5e7eb",
+        borderBottom: "1px solid var(--border)",
       }}
     >
       {/* Name */}
@@ -498,7 +498,7 @@ function Member2024({
           width: "280px",
           fontSize: "18px",
           fontWeight: 600,
-          color: "#1f2937",
+          color: "var(--foreground)",
           marginLeft: "110px",
         }}
       >
@@ -539,7 +539,7 @@ function Coordinator2024({
         display: "flex",
         alignItems: "center",
         padding: "16px 40px",
-        borderBottom: "1px solid #e5e7eb",
+        borderBottom: "1px solid var(--border)",
       }}
     >
       {/* Name */}
@@ -548,7 +548,7 @@ function Coordinator2024({
           width: "380px",
           fontSize: "18px",
           fontWeight: 600,
-          color: "#1f2937",
+          color: "var(--foreground)",
           marginLeft: "20px",
         }}
       >
@@ -582,7 +582,7 @@ export default function PastCommunityPageClient() {
 
       <main
         style={{
-          background: "#ffffff",
+          background: "var(--background)",
           minHeight: "100vh",
         }}
       >
@@ -591,9 +591,9 @@ export default function PastCommunityPageClient() {
           style={{
             padding: "140px 24px 90px",
             textAlign: "center",
-            borderBottom: "1px solid #e5e7eb",
+            borderBottom: "1px solid var(--border)",
             background:
-  "linear-gradient(120deg, #bae6fd 0%, #bfdbfe 45%, #a5b4fc 100%)",
+  "linear-gradient(120deg, color-mix(in srgb, var(--red) 16%, var(--background)) 0%, color-mix(in srgb, var(--orange) 12%, var(--background)) 100%)",
           }}
         >
           <div
@@ -607,7 +607,7 @@ export default function PastCommunityPageClient() {
                 fontSize: "64px",
                 fontWeight: 700,
                 lineHeight: 1.1,
-                color: "#111827",
+                color: "var(--foreground)",
                 marginBottom: "24px",
               }}
             >
@@ -619,7 +619,7 @@ export default function PastCommunityPageClient() {
             <p
               style={{
                 fontSize: "22px",
-                color: "#475569",
+                color: "var(--muted)",
                 lineHeight: 1.7,
               }}
             >
@@ -632,7 +632,7 @@ export default function PastCommunityPageClient() {
         <div
           style={{
             background:
-  "linear-gradient(180deg, #e0f2fe 0%, #f8fbff 35%, #ffffff 100%)",
+  "linear-gradient(180deg, color-mix(in srgb, var(--orange) 10%, var(--background)) 0%, var(--background) 60%)",
           }}
         >
 
@@ -651,7 +651,7 @@ export default function PastCommunityPageClient() {
               fontSize: "52px",
               fontWeight: 800,
               marginBottom: "20px",
-              color: "#111827",
+              color: "var(--foreground)",
             }}
           >
             2025 – 2026
@@ -666,10 +666,10 @@ export default function PastCommunityPageClient() {
           >
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -700,10 +700,10 @@ export default function PastCommunityPageClient() {
             {/* Mentors */}
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -725,10 +725,10 @@ export default function PastCommunityPageClient() {
             {/* Maintainers */}
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
                 alignSelf: "start",
               }}
             >
@@ -765,7 +765,7 @@ export default function PastCommunityPageClient() {
               fontSize: "52px",
               fontWeight: 800,
               marginBottom: "20px",
-              color: "#111827",
+              color: "var(--foreground)",
             }}
           >
             2024 – 2025
@@ -780,10 +780,10 @@ export default function PastCommunityPageClient() {
           >
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -813,10 +813,10 @@ export default function PastCommunityPageClient() {
               style={{
                 width: "60%",
                 margin: "0 auto",
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -852,7 +852,7 @@ export default function PastCommunityPageClient() {
               fontSize: "52px",
               fontWeight: 800,
               marginBottom: "20px",
-              color: "#111827",
+              color: "var(--foreground)",
             }}
           >
             2023 – 2024
@@ -867,10 +867,10 @@ export default function PastCommunityPageClient() {
           >
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -900,10 +900,10 @@ export default function PastCommunityPageClient() {
               style={{
                 width: "60%",
                 margin: "0 auto",
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -939,7 +939,7 @@ export default function PastCommunityPageClient() {
               fontSize: "52px",
               fontWeight: 800,
               marginBottom: "20px",
-              color: "#111827",
+              color: "var(--foreground)",
             }}
           >
             2022 – 2023
@@ -954,10 +954,10 @@ export default function PastCommunityPageClient() {
           >
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -987,10 +987,10 @@ export default function PastCommunityPageClient() {
               style={{
                 width: "60%",
                 margin: "0 auto",
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -1026,7 +1026,7 @@ export default function PastCommunityPageClient() {
               fontSize: "52px",
               fontWeight: 800,
               marginBottom: "20px",
-              color: "#111827",
+              color: "var(--foreground)",
             }}
           >
             2021 – 2022
@@ -1041,10 +1041,10 @@ export default function PastCommunityPageClient() {
           >
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -1074,10 +1074,10 @@ export default function PastCommunityPageClient() {
               style={{
                 width: "60%",
                 margin: "0 auto",
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -1111,7 +1111,7 @@ export default function PastCommunityPageClient() {
               fontSize: "52px",
               fontWeight: 800,
               marginBottom: "20px",
-              color: "#111827",
+              color: "var(--foreground)",
             }}
           >
             2020 – 2021
@@ -1126,10 +1126,10 @@ export default function PastCommunityPageClient() {
           >
             <div
               style={{
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3
@@ -1159,10 +1159,10 @@ export default function PastCommunityPageClient() {
               style={{
                 width: "60%",
                 margin: "0 auto",
-                background: "#f9fafb",
+                background: "var(--surface)",
                 borderRadius: "18px",
                 padding: "28px",
-                border: "1px solid #e5e7eb",
+                border: "1px solid var(--border)",
               }}
             >
               <h3

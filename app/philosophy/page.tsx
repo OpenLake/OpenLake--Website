@@ -22,7 +22,7 @@ const ROWS = [
   {
     id: "superpower",
     title: "Coding is a superpower.",
-    accent: "#ec3750",
+    accent: "var(--red)",
     body: "Learning to code converts you from a consumer to a creator. Suddenly, computers become a tool for making things instead of just using them.",
   },
   {
@@ -58,7 +58,7 @@ const ROWS = [
   },
 ];
 
-const ACCENT = "#ec3750";
+const ACCENT = "var(--red)";
 
 export default function Page() {
   return (
@@ -98,7 +98,7 @@ export default function Page() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(236,55,80,0.18) 0%, rgba(236,55,80,0.04) 20%, transparent 40%)",
+            "linear-gradient(180deg, rgba(11, 95, 176,0.18) 0%, rgba(11, 95, 176,0.04) 20%, transparent 40%)",
           pointerEvents: "none",
           zIndex: 0,
         }}

@@ -71,7 +71,7 @@ export default async function NotFound() {
           minHeight: "100vh",
           overflow: "hidden",
           background:
-            "linear-gradient(180deg, rgba(236,55,80,0.40) 60%, rgba(236,55,80,0.04) 100%)",
+            "linear-gradient(180deg, rgba(11, 95, 176,0.40) 60%, rgba(11, 95, 176,0.04) 100%)",
         }}
       >
         <Navbar />

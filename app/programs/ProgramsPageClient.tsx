@@ -303,7 +303,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
   const logoUrl = s?.logoUrl ?? null;
   const logoSize = s?.logoSize ?? 48;
   const bgImageUrl = s?.bgType === "image" ? (s?.bgImageUrl ?? null) : null;
-  const buttonColor = s?.buttonColor ?? "#ec3750";
+  const buttonColor = s?.buttonColor ?? "var(--red)";
   const buttonTextColor = s?.buttonTextColor ?? "#ffffff";
   const buttonRadius = s?.buttonBorderRadius ?? 44;
   const buttonBorderWidth = s?.buttonBorderWidth ?? 0;
@@ -387,7 +387,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
               left: 0,
               width: 36,
               height: 36,
-              background: "#ec3750",
+              background: "var(--red)",
               borderBottomRightRadius: 8,
               display: "flex",
               alignItems: "center",
@@ -677,7 +677,7 @@ export default function ProgramsPage({
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(236,55,80,0.18) 0%, rgba(236,55,80,0.04) 20%, transparent 40%)",
+            "linear-gradient(180deg, rgba(11, 95, 176,0.18) 0%, rgba(11, 95, 176,0.04) 20%, transparent 40%)",
           pointerEvents: "none",
           zIndex: 0,
         }}
@@ -828,7 +828,7 @@ export default function ProgramsPage({
               href="https://github.com/orgs/OpenLake/repositories"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#ec3750", textDecoration: "none" }}
+              style={{ color: "var(--red)", textDecoration: "none" }}
             >
               GitHub
             </a>

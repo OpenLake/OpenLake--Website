@@ -271,8 +271,8 @@ export default function TeamPageClient() {
       <style>{`
         .team-page {
           background:
-            radial-gradient(circle at top left, rgba(255, 140, 55, 0.24), transparent 34%),
-            radial-gradient(circle at top right, rgba(236, 55, 80, 0.18), transparent 28%),
+            radial-gradient(circle at top left, rgba(40, 169, 226, 0.24), transparent 34%),
+            radial-gradient(circle at top right, rgba(11, 95, 176, 0.18), transparent 28%),
             var(--background);
           color: var(--foreground);
         }

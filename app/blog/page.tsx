@@ -258,7 +258,7 @@ export default function BlogPage() {
           position: "relative",
           overflow: "hidden",
           background:
-            "radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.18), transparent 30%), linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 46%, var(--red) 120%)",
+            "radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.18), transparent 30%), linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 46%, var(--accent-ink) 120%)",
           padding: "clamp(120px, 18vh, 170px) 0 clamp(56px, 8vh, 90px)",
           color: "var(--paper)",
         }}
@@ -317,7 +317,7 @@ export default function BlogPage() {
             <span
               style={{
                 fontStyle: "italic",
-                background: "linear-gradient(100deg, #ff8c37 0%, var(--red) 55%, #ff8c37 100%)",
+                background: "linear-gradient(100deg, var(--orange) 0%, var(--accent-ink) 55%, var(--orange) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",

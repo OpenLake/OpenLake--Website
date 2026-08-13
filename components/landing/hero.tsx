@@ -396,7 +396,7 @@ export function HeroSection() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        background: "linear-gradient(180deg, rgba(236,55,80,0.04) 60%, #28a9e2 100%)",
+        background: "linear-gradient(180deg, rgba(11, 95, 176,0.04) 60%, #28a9e2 100%)",
       }}
     >
       {/*
@@ -762,7 +762,7 @@ export function HeroSection() {
             setMagHover(magHover === "in" ? "out" : "idle");
           }}
         >
-          {/* <span style={{ color: magHover === "in" ? "#ffffff" : "#ec3750" }}>✦</span> */}
+          {/* <span style={{ color: magHover === "in" ? "#ffffff" : "var(--red)" }}>✦</span> */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/foss-star.svg"
@@ -794,7 +794,7 @@ export function HeroSection() {
           <span
             style={{
               background:
-                "repeating-linear-gradient(105deg, #ec3750 0%, #ff8c37 16%, #f1c40f 32%, #33d6a6 48%, #338eda 64%, #a633d6 80%, #ec3750 100%)",
+                "repeating-linear-gradient(105deg, var(--red) 0%, var(--orange) 16%, #f1c40f 32%, #33d6a6 48%, #338eda 64%, #a633d6 80%, var(--red) 100%)",
               backgroundSize: "200% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",

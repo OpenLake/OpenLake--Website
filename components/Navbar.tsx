@@ -107,9 +107,9 @@ function DropdownMenu({ items, menuId }: { items: Item[]; menuId: string }) {
         }
         :global(.dd-link:hover) {
           background-color: var(--dd-hover);
-          color: #ec3750;
+          color: var(--red);
           padding-left: 26px;
-          box-shadow: 0 4px 12px rgba(236, 55, 80, 0.12);
+          box-shadow: 0 4px 12px rgba(11, 95, 176, 0.12);
         }
         @keyframes ddIn {
           from {

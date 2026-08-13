@@ -24,10 +24,10 @@ export default function ResourceCard({
       style={{
         display: "flex",
         flexDirection: "column",
-        background: "#fff",
+        background: "var(--surface)",
         borderRadius: "18px",
         overflow: "hidden",
-        border: "1px solid #e5e7eb",
+        border: "1px solid var(--border)",
         boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
         maxWidth: "360px",
         width: "100%",
@@ -36,7 +36,7 @@ export default function ResourceCard({
     >
       <div
         style={{
-          background: "#f8fafc",
+          background: "var(--surface-hover)",
           padding: "20px",
         }}
       >
@@ -70,7 +70,7 @@ export default function ResourceCard({
         >
           <span
             style={{
-              background: "#ec3750",
+              background: "var(--red)",
               color: "#fff",
               padding: "6px 12px",
               borderRadius: "999px",
@@ -87,7 +87,7 @@ export default function ResourceCard({
           style={{
             margin: 0,
             marginBottom: "12px",
-            color: "#17171d",
+            color: "var(--foreground)",
             fontSize: "24px",
           }}
         >
@@ -96,7 +96,7 @@ export default function ResourceCard({
 
         <p
           style={{
-            color: "#6b7280",
+            color: "var(--muted)",
             lineHeight: 1.6,
             margin: 0,
             flex: 1,
@@ -118,7 +118,7 @@ export default function ResourceCard({
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              color: "#ec3750",
+              color: "var(--red)",
               textDecoration: "none",
               fontWeight: 700,
               fontSize: "16px",
