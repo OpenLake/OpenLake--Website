@@ -312,8 +312,8 @@ export default function Page() {
             }}
           >
             Want the monthly recap? Read the{" "}
-            <Link href="/newsletterpage" style={{ color: ACCENT, textDecoration: "none" }}>
-              newsletter
+            <Link href="/blog" style={{ color: ACCENT, textDecoration: "none" }}>
+              blog
             </Link>
             .
           </p>
