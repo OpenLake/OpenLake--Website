@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { YouTubeEmbed } from "../YouTubeEmbed";
-import { EmailSignupInput } from "./email-signup";
 
 // Community back-img photos — repeated to fill taller section
 const backImgsBase = [

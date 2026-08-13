@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { EmailSignupInput } from "./email-signup";
 import { BtnArrow } from "./btn-arrow";
 
 export function ReadySection() {
@@ -42,7 +41,6 @@ export function ReadySection() {
         </h2> */}
 
         {/* Email pill */}
-        {/* <EmailSignupInput variant="ready" /> */}
 
         {/* "Get started" body copy */}
         <p
