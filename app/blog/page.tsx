@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
@@ -21,9 +22,23 @@ type Post = {
   readTime: string;
   excerpt: string;
   tags: string[];
+  internal?: boolean;
 };
 
 const POSTS: Post[] = [
+  {
+    title:
+      "We ran a summer bootcamp for 150 students with no budget and a lot of WhatsApp",
+    url: "/blog/devlabs-2",
+    internal: true,
+    image: "/assets/blog/devlabs-2/showcase.jpeg",
+    author: "Ashish Kumar Dash",
+    date: "Aug 2026",
+    readTime: "8 min read",
+    excerpt:
+      "Notes from DevLabs 2.0: what worked, what quietly fell apart, and what we would tell any student community thinking about doing this. 150 registered, 25 finished — including the number most recap posts leave out.",
+    tags: ["DevLabs", "Mentorship", "Community", "OpenLake"],
+  },
   {
     title: "Summer Mentorships 2026: LFX Mentorship Mid-Term Report",
     url: "https://openmainframeproject.org/blog/summer-mentorships-2026-lfx-mentorship-mid-term-report/",
@@ -78,6 +93,25 @@ function ExternalArrow() {
   );
 }
 
+function InternalArrow() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14" />
+      <path d="M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 function Tag({ children }: { children: string }) {
   return (
     <span
@@ -100,24 +134,20 @@ function Tag({ children }: { children: string }) {
 }
 
 function PostCard({ post }: { post: Post }) {
-  return (
-    <a
-      href={post.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="blog-card"
-      style={{
-        display: "grid",
-        background: "var(--surface)",
-        borderRadius: 24,
-        border: "1px solid var(--border)",
-        boxShadow: "0 20px 48px rgba(23, 23, 29, 0.06)",
-        textDecoration: "none",
-        color: "inherit",
-        overflow: "hidden",
-        transition: "transform 0.22s ease-out, box-shadow 0.22s ease-out, border-color 0.22s ease-out",
-      }}
-    >
+  const cardStyle: CSSProperties = {
+    display: "grid",
+    background: "var(--surface)",
+    borderRadius: 24,
+    border: "1px solid var(--border)",
+    boxShadow: "0 20px 48px rgba(23, 23, 29, 0.06)",
+    textDecoration: "none",
+    color: "inherit",
+    overflow: "hidden",
+    transition: "transform 0.22s ease-out, box-shadow 0.22s ease-out, border-color 0.22s ease-out",
+  };
+
+  const body = (
+    <>
       <div className="blog-card__media" style={{ position: "relative", lineHeight: 0 }}>
         <Image
           src={post.image}
@@ -216,11 +246,27 @@ function PostCard({ post }: { post: Post }) {
           >
             Read post
             <span style={{ display: "inline-flex", transition: "transform 0.2s ease" }}>
-              <ExternalArrow />
+              {post.internal ? <InternalArrow /> : <ExternalArrow />}
             </span>
           </span>
         </div>
       </div>
+    </>
+  );
+
+  return post.internal ? (
+    <Link href={post.url} className="blog-card" style={cardStyle}>
+      {body}
+    </Link>
+  ) : (
+    <a
+      href={post.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="blog-card"
+      style={cardStyle}
+    >
+      {body}
     </a>
   );
 }
