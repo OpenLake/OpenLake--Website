@@ -20,11 +20,6 @@ const sectionHeadingStyles = {
   marginBottom: 16,
   lineHeight: 1.2,
 } as const;
-const u = {
-  color: "var(--paper)",
-  textDecoration: "underline",
-  textUnderlineOffset: 2,
-} as const;
 
 const hcLinks = [
   { label: "Philosophy", href: "/philosophy" },
@@ -49,8 +44,6 @@ const icons = [
   },
   { label: "Email", href: "mailto:openlake@iitbhilai.ac.in", glyph: "email" },
 ];
-
-const sha = process.env.NEXT_PUBLIC_COMMIT_SHA ?? "dev";
 
 function isExternal(href: string) {
   return href.startsWith("http");
@@ -105,8 +98,6 @@ function LinkCol({
 }
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer
       className="site-footer"

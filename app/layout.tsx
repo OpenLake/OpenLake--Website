@@ -21,7 +21,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "OpenLake",
   url: "https://openlake.in",
-  logo: "https://assets.hackclub.com/flag-standalone.png",
+  logo: "https://openlake.in/assets/openlake.svg",
   sameAs: [
     "https://github.com/OpenLake",
     "https://www.youtube.com/@openlakeiitbhilai1724",

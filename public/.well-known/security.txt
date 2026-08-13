@@ -1,5 +1,5 @@
-Contact: mailto:security@hackclub.com
-Expires: 2026-12-31T11:59:00Z
-Preferred-Languages: en-US
-Policy: https://security.hackclub.com
-Canonical: https://hackclub.com/.well-known/security.txt
+Contact: mailto:openlake@iitbhilai.ac.in
+Contact: https://github.com/OpenLake/OpenLake--Website/issues
+Expires: 2027-12-31T11:59:00Z
+Preferred-Languages: en
+Canonical: https://openlake.in/.well-known/security.txt

@@ -1,48 +1,48 @@
 # Imprint (Legal Notice)
 
-Legal notice and contact details for Hack Club (The Hack Foundation).
+Legal notice and contact details for OpenLake.
 
 ## Operator
 
-The Hack Foundation ("Hack Club")
-Non-profit corporation (501(c)(3)), incorporated in the United States
+OpenLake
+Student open-source society of the Indian Institute of Technology Bhilai
 
-## Registered Address
+OpenLake is a student body operating under IIT Bhilai. It is not separately incorporated and does not trade commercially.
 
-8605 Santa Monica Blvd #86294
-West Hollywood, CA 90069
-United States
+## Address
+
+OpenLake
+c/o Indian Institute of Technology Bhilai
+Kutelabhata, Durg, Chhattisgarh 491001
+India
 
 ## Authorized Representative
 
-Zach Latta, Founder
+Secretary, OpenLake
 
 ## Contact
 
-Email: [team@hackclub.com](mailto:team@hackclub.com)
+Email: [openlake@iitbhilai.ac.in]
 
-Phone: +1-855-625-HACK
+## VAT / Tax ID
 
-## VAT ID
-
-Not applicable (U.S. nonprofit organization)
+Not applicable. OpenLake is a non-commercial student society and does not carry on business activity.
 
 ## Legal Status
 
-Hack Club is a California nonprofit public benefit corporation, recognized as a 501(c)(3) organization under U.S. law.
-EIN: 81-2908499
+OpenLake is an unincorporated student society of IIT Bhilai. It has no separate legal personality and holds no independent registration under the Societies Registration Act or any other Indian statute.
 
-## Responsible for Content (§ 18 MStV)
+## Responsible for Content
 
-Zach Latta, Founder
-8605 Santa Monica Blvd #86294
-West Hollywood, CA 90069
-United States
+Secretary, OpenLake
+c/o Indian Institute of Technology Bhilai
+Kutelabhata, Durg, Chhattisgarh 491001
+India
 
 ## Dispute Resolution
 
-Information on consumer dispute resolution entities in EU Member States is available at [consumer-redress.ec.europa.eu](https://consumer-redress.ec.europa.eu). As a U.S. nonprofit organization, Hack Club is not obligated or willing to participate in dispute resolution proceedings before a consumer arbitration board.
+OpenLake does not offer goods or services to consumers and does not participate in consumer arbitration proceedings.
 
 ## Notes
 
-This imprint is provided to satisfy common EU/German transparency expectations (e.g., §5 DDG) and US best practices.
+This page is published for transparency. OpenLake is a non-commercial student society and is not a registered legal entity; nothing here should be read as a representation to the contrary.

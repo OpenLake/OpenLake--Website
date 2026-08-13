@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://hackclub.com/sitemap.xml",
+    sitemap: "https://openlake.in/sitemap.xml",
   };
 }

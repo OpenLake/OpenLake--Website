@@ -32,7 +32,7 @@ const NEWSLETTERS = [
     excerpt:
       "Our biggest cohort yet ships its first pull requests, we spotlight three student-led projects, and there's a new hardware corner in the makerspace. Here's everything that happened at OpenLake this month.",
     coverImageUrl: null, // e.g. "/assets/newsletter-issue2.webp"
-    readUrl: "https://example.com/newsletter/2",
+    readUrl: "",
     tags: ["Open Source", "Community", "Events"],
     accentColor: "#ec3750",
   },
@@ -44,7 +44,7 @@ const NEWSLETTERS = [
     excerpt:
       "The very first OpenLake newsletter. What we're building, why open source matters at IIT Bhilai, and how to get involved whether you write code, design, or just love shipping things.",
     coverImageUrl: null, // e.g. "/assets/newsletter-issue1.webp"
-    readUrl: "https://example.com/newsletter/1",
+    readUrl: "",
     tags: ["Welcome", "Open Source"],
     accentColor: "#ec3750",
   },
@@ -541,14 +541,6 @@ export default function NewsletterPage() {
               margin: 0,
             }}
           >
-            <a
-              href="https://slack.hackclub.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#ec3750", textDecoration: "none" }}
-            >
-            </a>
-            
           </p>
           <p
             style={{

@@ -10,15 +10,14 @@ const about = [
   { label: "Philosophy", href: "/philosophy" },
   { label: "Present Community", href: "/team" },
   { label: "Past Community", href: "/past-community" },
-  { label: "Newsletter", href: "/newsletterpage" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const resources = [
-  { label: "Web Development", href: "/fiscal-sponsorship" },
-  // { label: "Hacker Toolbox", href: "https://toolbox.hackclub.com" },
-  { label: "App Development", href: "/conduct" },
-  { label: "Game Development", href: "/privacy-and-terms" },
-  { label: "AI & ML", href: "/safety" },
+  { label: "Web Development", href: "/resources/web-development" },
+  { label: "App Development", href: "/resources/app-development" },
+  { label: "Game Development", href: "/resources/game-development" },
+  { label: "AI & ML", href: "/resources/ai-ml" },
 ];
 
 const links = [

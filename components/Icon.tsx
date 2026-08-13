@@ -1,7 +1,24 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import HackclubIcon from "@hackclub/icons";
+import type { IconType } from "react-icons";
+import {
+  FaGithub,
+  FaYoutube,
+  FaInstagram,
+  FaEnvelope,
+  FaArrowLeft,
+  FaArrowRight,
+} from "react-icons/fa";
+
+const glyphs: Record<string, IconType> = {
+  github: FaGithub,
+  youtube: FaYoutube,
+  instagram: FaInstagram,
+  email: FaEnvelope,
+  "arrow-left": FaArrowLeft,
+  "arrow-right": FaArrowRight,
+};
 
 export interface IconProps {
   glyph: string;
@@ -11,13 +28,6 @@ export interface IconProps {
 }
 
 export function Icon({ glyph, size = 40, style, className }: IconProps) {
-  return (
-    <HackclubIcon
-      // eslint-disable-next-line @typescript-eslint/no-explicit-anyfr
-      glyph={glyph as any}
-      size={size}
-      style={style}
-      className={className}
-    />
-  );
+  const Glyph = glyphs[glyph] ?? FaGithub;
+  return <Glyph size={size} style={style} className={className} aria-hidden />;
 }
