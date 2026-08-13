@@ -127,7 +127,7 @@ export function VideoSection() {
             </span>
             <span
               style={{
-                background: "linear-gradient(90deg, #ec3750 0%, #ff8c37 100%)",
+                background: "linear-gradient(90deg, var(--red) 0%, var(--orange) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",

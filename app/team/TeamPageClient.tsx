@@ -25,9 +25,9 @@ function BoardCard({
       <Image
         src={img}
         alt={name}
-        width={180}
-        height={180}
-        sizes="180px"
+        width={220}
+        height={220}
+        sizes="220px"
         className="board-card__avatar"
       />
       <p className="board-card__name">{name}</p>
@@ -271,8 +271,8 @@ export default function TeamPageClient() {
       <style>{`
         .team-page {
           background:
-            radial-gradient(circle at top left, rgba(255, 140, 55, 0.24), transparent 34%),
-            radial-gradient(circle at top right, rgba(236, 55, 80, 0.18), transparent 28%),
+            radial-gradient(circle at top left, rgba(40, 169, 226, 0.24), transparent 34%),
+            radial-gradient(circle at top right, rgba(11, 95, 176, 0.18), transparent 28%),
             var(--background);
           color: var(--foreground);
         }
@@ -392,8 +392,8 @@ export default function TeamPageClient() {
         }
 
         .board-card__avatar {
-          width: 180px;
-          height: 180px;
+          width: 220px;
+          height: 220px;
           border-radius: 50%;
           object-fit: cover;
           flex-shrink: 0;
@@ -402,7 +402,7 @@ export default function TeamPageClient() {
         .board-card__name {
           margin: 12px 0 4px;
           font-family: var(--font-phantom);
-          font-size: 1.45rem;
+          font-size: 1.7rem;
           font-weight: 700;
           line-height: 1.2;
           color: var(--foreground);

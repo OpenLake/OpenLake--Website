@@ -11,8 +11,9 @@
   --muted: rgba(23, 23, 29, 0.7);
   --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.13);
   --nav-bg: rgba(255, 255, 255, 0.82);
-  --red: #ec3750;
-  --orange: #ff8c37;
+  /* OpenLake accent — primary (dark blue) + secondary (light blue). Light mode. */
+  --red: #0b5fb0;
+  --orange: #28a9e2;
   --font-phantom: var(--font-phantom-src), system-ui, sans-serif;
   --font-zarathustra: var(--font-zarathustra-src), Georgia, serif;
   color-scheme: light;
@@ -27,6 +28,9 @@ html.dark {
   --muted: rgba(255, 246, 235, 0.7);
   --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.6);
   --nav-bg: rgba(23, 23, 29, 0.82);
+  /* Accent brightens on ink so it stays legible (primary was red, now blue). */
+  --red: #28a9e2;
+  --orange: #5bc0f0;
   color-scheme: dark;
 }
 
@@ -36,6 +40,8 @@ html.dark {
   --ink-2: #2e1719;
   --paper: #ffffff;
   --cream: #fff6eb;
+  /* Accent for use ON always-dark (ink) surfaces — stays bright in both modes. */
+  --accent-ink: #28a9e2;
   --grid-line: rgba(255, 255, 255, 0.1);
   --footer-bg: #000000;
 }
@@ -49,6 +55,9 @@ html.dark[data-theme-lock="light"] {
   --muted: rgba(23, 23, 29, 0.7);
   --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.13);
   --nav-bg: rgba(255, 255, 255, 0.82);
+  /* Locked-light overrides the dark accent back to the light-mode blues. */
+  --red: #0b5fb0;
+  --orange: #28a9e2;
   color-scheme: light;
 }
 
@@ -185,7 +194,7 @@ body {
     color 0.4s ease;
 }
 .dark-btn:hover {
-  background: #ec3750 !important;
+  background: var(--red) !important;
 }
 
 /* ── CTA button hover ─────────────────────────────────────────── */
