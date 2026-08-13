@@ -1,6 +1,5 @@
 import type { NextConfig } from "next";
 import { execSync } from "node:child_process";
-import { withBotId } from "botid/next/config";
 
 const getCommitSha = (): string => {
   const sha =
@@ -58,12 +57,7 @@ const nextConfig: NextConfig = {
     qualities: [75, 85, 100],
     remotePatterns: [
       { protocol: "https", hostname: "www.figma.com" },
-      { protocol: "https", hostname: "assets.hackclub.com" },
-      { protocol: "https", hostname: "cdn.hackclub.com" },
-      { protocol: "https", hostname: "hcb.hackclub.com" },
       { protocol: "https", hostname: "i.ibb.co" },
-      { protocol: "https", hostname: "cachet.hackclub.com" },
-      { protocol: "https", hostname: "raw.githubusercontent.com" },
       { protocol: "https", hostname: "github.com" },
       { protocol: "https", hostname: "gravatar.com" },
       { protocol: "https", hostname: "secure.gravatar.com" },
@@ -73,4 +67,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withBotId(nextConfig);
+export default nextConfig;

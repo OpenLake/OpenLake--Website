@@ -5,7 +5,6 @@ import { connection } from "next/server";
 
 const SITE_URL = "https://openlake.in";
 const APP_DIR = path.join(process.cwd(), "app");
-const EXCLUDED_PAGE_ROUTES = new Set(["/programs/edit"]);
 
 function collectStaticRoutes(dir = APP_DIR, routeSegments: string[] = []): string[] {
   const entries = readdirSync(dir, { withFileTypes: true });
@@ -28,9 +27,7 @@ function collectStaticRoutes(dir = APP_DIR, routeSegments: string[] = []): strin
     }
 
     const route = `/${routeSegments.join("/")}`.replace(/\/+/g, "/");
-    if (!EXCLUDED_PAGE_ROUTES.has(route)) {
-      routes.push(route === "" ? "/" : route);
-    }
+    routes.push(route === "" ? "/" : route);
   }
 
   return routes;

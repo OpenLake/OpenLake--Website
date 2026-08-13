@@ -1,5 +1,5 @@
 {
-  "name": "hackclub",
+  "name": "openlake-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,12 +12,9 @@
     "format:check": "oxfmt --check ."
   },
   "dependencies": {
-    "@hackclub/icons": "^0.2.2",
-    "@hackclub/meta": "^1.2.1",
     "@types/prismjs": "^1.26.6",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "botid": "^1.5.11",
     "next": "16.3.0",
     "next-plausible": "^4.0.0",
     "prismjs": "^1.30.0",
