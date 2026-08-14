@@ -2,19 +2,19 @@ import { YouTubeEmbed } from "../YouTubeEmbed";
 
 // Community back-img photos — repeated to fill taller section
 const backImgsBase = [
-  "/assets/backImg1.png",
-  "/assets/backImg2.png",
-  "/assets/backImg3.png",
-  "/assets/backImg4.png",
-  "/assets/backImg5.png",
-  "/assets/backImg6.png",
-  "/assets/backImg7.png",
-  "/assets/backImg8.png",
-  "/assets/backImg9.png",
-  "/assets/backImg10.png",
-  "/assets/backImg11.png",
-  "/assets/backImg12.png",
-  "/assets/backImg13.png",
+  "/assets/backImg1.webp",
+  "/assets/backImg2.webp",
+  "/assets/backImg3.webp",
+  "/assets/backImg4.webp",
+  "/assets/backImg5.webp",
+  "/assets/backImg6.webp",
+  "/assets/backImg7.webp",
+  "/assets/backImg8.webp",
+  "/assets/backImg9.webp",
+  "/assets/backImg10.webp",
+  "/assets/backImg11.webp",
+  "/assets/backImg12.webp",
+  "/assets/backImg13.webp",
 ];
 const backImgs = [...backImgsBase, ...backImgsBase, ...backImgsBase];
 
@@ -54,7 +54,7 @@ export function VideoSection() {
         }}
       >
         <img
-          src="/assets/backImg.png"
+          src="/assets/backImg.webp"
           alt=""
           width={1920}
           height={1280}
