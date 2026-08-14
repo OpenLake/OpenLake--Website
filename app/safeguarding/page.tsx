@@ -5,8 +5,8 @@ import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Safeguarding Policy — Hack Club",
-  description: "Hack Club's Events Safeguarding Policy for in-person events.",
+  title: "Safeguarding Policy — OpenLake",
+  description: "OpenLake's safeguarding policy for in-person events.",
   canonical: "/safeguarding",
 });
 
