@@ -5,8 +5,8 @@ import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Hack Club for IT Administrators — Hack Club",
-  description: "Guide for IT Administrators to provide the required tools needed for Hack Clubs",
+  title: "OpenLake for IT Administrators — OpenLake",
+  description: "Guide for IT administrators to provide the tools needed for OpenLake.",
   canonical: "/it-admins",
 });
 

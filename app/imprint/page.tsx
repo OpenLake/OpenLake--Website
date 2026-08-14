@@ -5,8 +5,8 @@ import { MarkdownPage } from "../../components/MarkdownPage";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Imprint — Hack Club",
-  description: "Legal notice and contact details for Hack Club (The Hack Foundation).",
+  title: "Imprint — OpenLake",
+  description: "Legal notice and contact details for OpenLake, IIT Bhilai's open-source society.",
   canonical: "/imprint",
 });
 

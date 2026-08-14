@@ -24,7 +24,7 @@ export function StickerEnvelopeLink() {
       target="_blank"
       rel="noopener"
       className="sticker-envelope"
-      aria-label="Get free Hack Club stickers mailed to you — anywhere in the world"
+      aria-label="Get free OpenLake stickers mailed to you — anywhere in the world"
       style={{
         display: "block",
         position: "relative",
@@ -78,7 +78,7 @@ export function StickerEnvelopeLink() {
             BHILAI, INDIA
           </div>
 
-          {/* Stamp — red with white Hack Club flag */}
+          {/* Stamp — red with white OpenLake flag */}
           <div
             style={{
               position: "absolute",
