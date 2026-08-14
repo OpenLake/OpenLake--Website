@@ -330,7 +330,19 @@ export default function BlogPage() {
               marginBottom: 30,
             }}
           >
-            
+            <p
+              style={{
+                fontFamily: "var(--font-phantom)",
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: "0.24em",
+                textTransform: "uppercase",
+                margin: 0,
+                color: "rgba(255, 255, 255, 0.7)",
+              }}
+            >
+              Writing from the lake
+            </p>
             <p
               style={{
                 fontFamily: "var(--font-phantom)",
@@ -363,7 +375,7 @@ export default function BlogPage() {
             <span
               style={{
                 fontStyle: "italic",
-                background: "linear-gradient(100deg, var(--orange) 0%, var(--accent-ink) 55%, var(--orange) 100%)",
+                background: "linear-gradient(100deg, var(--orange) 0%, var(--paper) 55%, var(--orange) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",

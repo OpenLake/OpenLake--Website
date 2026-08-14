@@ -37,7 +37,7 @@ html.dark {
 :root,
 html.dark {
   --ink: #17171d;
-  --ink-2: #2e1719;
+  --ink-2: #14233a;
   --paper: #ffffff;
   --cream: #fff6eb;
   /* Accent for use ON always-dark (ink) surfaces — stays bright in both modes. */
