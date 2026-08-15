@@ -178,7 +178,7 @@ export function StickerEnvelopeLink() {
 
       {/* Stickers — hidden at rest, fly in around the envelope on hover */}
       {FLY_STICKERS.map(({ src, className, w, h }) => (
-        <div key={src} className={`sticker-fly ${className}`} aria-hidden="true">
+        <div key={className} className={`sticker-fly ${className}`} aria-hidden="true">
           <Image
             src={src}
             alt=""

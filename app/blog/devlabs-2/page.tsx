@@ -17,7 +17,8 @@ type Block =
   | { type: "h2"; text: string }
   | { type: "quote"; text: string; cite: string }
   | { type: "ul"; items: string[] }
-  | { type: "figure"; src: string; w: number; h: number; caption: string };
+  | { type: "figure"; src: string; w: number; h: number; caption: string }
+  | { type: "short"; text: string; link: string; linkLabel: string };
 
 const BLOCKS: Block[] = [
   { type: "p", text: "Every summer the same thing happens in college group chats. Somebody drops a 40-hour YouTube playlist. Twelve people reply “starting today”. By week two the group is dead and everyone has silently agreed never to mention it again." },
@@ -25,6 +26,12 @@ const BLOCKS: Block[] = [
   { type: "p", text: "Twenty-five people finished." },
   { type: "p", text: "That is the number most recap posts quietly leave out, so we are putting it in the third paragraph. What follows is how it actually went, including the parts that did not work." },
   { type: "p", text: "A note on the quotes: everything attributed below comes from written feedback we collected from mentors and mentees at the end of the program. Some of it is condensed for length." },
+  {
+    type: "short",
+    text: "Short on time? Read the three-page framework: what you need, which tools to use, and how a week actually runs.",
+    link: "/blog/devlabs-playbook",
+    linkLabel: "How to run a DevLabs at your college",
+  },
 
   { type: "h2", text: "What we changed from v1" },
   { type: "p", text: "The first DevLabs hopped between topics. A week of this, a week of that. People finished it with a shallow map of a lot of things and the ability to build none of them." },
@@ -243,6 +250,39 @@ function renderBlock(block: Block, i: number) {
             {block.caption}
           </figcaption>
         </figure>
+      );
+    case "short":
+      return (
+        <div
+          key={i}
+          style={{
+            border: "1px solid var(--border)",
+            borderLeft: "3px solid var(--red)",
+            borderRadius: 16,
+            background: "var(--surface)",
+            padding: "20px 24px",
+            margin: "32px 0 8px",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-phantom)",
+              fontSize: 16,
+              lineHeight: 1.6,
+              color: "var(--foreground)",
+              margin: 0,
+            }}
+          >
+            <strong style={{ color: "var(--red)" }}>Short version.</strong>{" "}
+            {block.text}{" "}
+            <Link
+              href={block.link}
+              style={{ color: "var(--red)", textDecoration: "none", fontWeight: 700 }}
+            >
+              {block.linkLabel} →
+            </Link>
+          </p>
+        </div>
       );
   }
 }

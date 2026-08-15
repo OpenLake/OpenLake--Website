@@ -27,6 +27,18 @@ type Post = {
 
 const POSTS: Post[] = [
   {
+    title: "How to run a DevLabs at your college",
+    url: "/blog/devlabs-playbook",
+    internal: true,
+    image: "/assets/blog-devlabs-playbook.svg",
+    author: "Ashish Kumar Dash",
+    date: "Aug 2026",
+    readTime: "4 min read",
+    excerpt:
+      "The short version: a three-page framework for running a beginner open-source bootcamp with no budget — platforms to use, program structure, and prerequisites.",
+    tags: ["DevLabs", "Playbook", "Open Source"],
+  },
+  {
     title:
       "We ran a summer bootcamp for 150 students with no budget and a lot of WhatsApp",
     url: "/blog/devlabs-2",
