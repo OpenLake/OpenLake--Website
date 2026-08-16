@@ -460,7 +460,7 @@ export function HeroSection() {
       >
         <div className="hero-photos-left">
           <Photo
-            src="/assets/hero_photo1.png"
+            src="/assets/backImg1.webp"
             bbX={-140}
             bbY={65}
             bbW={390}
@@ -473,7 +473,7 @@ export function HeroSection() {
             parallaxRate={0.15}
           />
           <Photo
-            src="/assets/hero_photo2.png"
+            src="/assets/backImg2.webp"
             bbX={-185}
             bbY={225}
             bbW={390}
@@ -486,7 +486,7 @@ export function HeroSection() {
             parallaxRate={0.12}
           />
           <Photo
-            src="/assets/hero_photo3.png"
+            src="/assets/backImg3.webp"
             bbX={-170}
             bbY={365}
             bbW={390}
@@ -499,7 +499,7 @@ export function HeroSection() {
             parallaxRate={0.09}
           />
           <Photo
-            src="/assets/hero_photo4.png"
+            src="/assets/backImg4.webp"
             bbX={-140}
             bbY={495}
             bbW={390}
@@ -512,7 +512,7 @@ export function HeroSection() {
             parallaxRate={0.07}
           />
           <Photo
-            src="/assets/hero_photo5.png"
+            src="/assets/backImg5.webp"
             bbX={-95}
             bbY={610}
             bbW={390}
@@ -525,7 +525,7 @@ export function HeroSection() {
             parallaxRate={0.05}
           />
           <Photo
-            src="/assets/hero_photo6.png"
+            src="/assets/backImg6.webp"
             bbX={-100}
             bbY={695}
             bbW={390}
@@ -538,7 +538,7 @@ export function HeroSection() {
             parallaxRate={0.04}
           />
           <Photo
-            src="/assets/hero_photo7.png"
+            src="/assets/backImg7.webp"
             bbX={-5}
             bbY={725}
             bbW={390}
@@ -553,7 +553,7 @@ export function HeroSection() {
         </div>
         <div className="hero-photos-right">
           <Photo
-            src="/assets/hero_photo8.png"
+            src="/assets/backImg8.webp"
             bbX={1680}
             bbY={70}
             bbW={390}
@@ -567,7 +567,7 @@ export function HeroSection() {
             parallaxRate={0.15}
           />
           <Photo
-            src="/assets/hero_photo9.png"
+            src="/assets/backImg9.webp"
             bbX={1710}
             bbY={230}
             bbW={390}
@@ -581,7 +581,7 @@ export function HeroSection() {
             parallaxRate={0.12}
           />
           <Photo
-            src="/assets/hero_photo10.png"
+            src="/assets/backImg10.webp"
             bbX={1690}
             bbY={370}
             bbW={390}
@@ -595,7 +595,7 @@ export function HeroSection() {
             parallaxRate={0.09}
           />
           <Photo
-            src="/assets/hero_photo11.png"
+            src="/assets/backImg11.webp"
             bbX={1665}
             bbY={500}
             bbW={390}
@@ -609,7 +609,7 @@ export function HeroSection() {
             parallaxRate={0.07}
           />
           <Photo
-            src="/assets/hero_photo12.png"
+            src="/assets/backImg12.webp"
             bbX={1640}
             bbY={615}
             bbW={390}
@@ -623,7 +623,7 @@ export function HeroSection() {
             parallaxRate={0.05}
           />
           <Photo
-            src="/assets/hero_photo13.png"
+            src="/assets/backImg13.webp"
             bbX={1555}
             bbY={715}
             bbW={390}
