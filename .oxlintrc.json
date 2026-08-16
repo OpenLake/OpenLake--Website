@@ -7,5 +7,12 @@
   "rules": {
     "nextjs/no-img-element": "off"
   },
-  "ignorePatterns": [".next/**", "out/**", "build/**", "next-env.d.ts", "public/**"]
+  "ignorePatterns": [
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "public/**",
+    "openlake-website/**"
+  ]
 }
