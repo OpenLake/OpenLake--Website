@@ -57,12 +57,7 @@ function BoardCard({
     </article>
   );
   return href ? (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="board-card-anchor"
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" className="board-card-anchor">
       {card}
     </a>
   ) : (
@@ -85,10 +80,9 @@ export default function TeamPageClient() {
             </h1>
 
             <p className="team-hero__lede">
-              Meet the passionate students, mentors, and contributors who are
-              actively shaping OpenLake today. Together, they organize events,
-              build projects, mentor learners, and strengthen our growing
-              community.
+              Meet the passionate students, mentors, and contributors who are actively shaping
+              OpenLake today. Together, they organize events, build projects, mentor learners, and
+              strengthen our growing community.
             </p>
           </div>
         </div>
@@ -130,6 +124,13 @@ export default function TeamPageClient() {
           <h2 className="board-section__title">Domain Leads</h2>
           <div className="board-grid board-grid--leaders">
             <BoardCard
+              img="/team/Garvit_Sharma2.jpg"
+              name="Garvit Sharma"
+              boardRole=""
+              github="https://github.com/garvitshrma"
+              linkedin="http://www.linkedin.com/in/-garvitsharma"
+            />
+            <BoardCard
               img="/team/Aditya_Kumar_Gautam.jpeg"
               name="Aditya Kumar Gautam"
               boardRole=""
@@ -151,11 +152,11 @@ export default function TeamPageClient() {
           <h2 className="board-section__title">Mentors</h2>
           <div className="board-grid board-grid--advisors">
             <BoardCard
-              img="/team/Garvit_Sharma2.jpg"
-              name="Garvit Sharma"
+              img="/team/Lakshya_Photo.jpg"
+              name="Lakshya soni"
               boardRole=""
-              github="https://github.com/garvitshrma"
-              linkedin="http://www.linkedin.com/in/-garvitsharma"
+              github="https://github.com/0770-Lakshya"
+              linkedin="https://www.linkedin.com/in/lakshya-soni-57a71737b/"
             />
             <BoardCard
               img="/team/Jaswanth_Kumar.jpg"
@@ -165,12 +166,27 @@ export default function TeamPageClient() {
               linkedin="https://www.linkedin.com/in/jaswanth-kumar-kamireddi-86ba09373/"
             />
             <BoardCard
-              img="/team/Umap_Utkarsh.jpg"
-              name="Umap Utkarsh Sharad"
+              img="/team/Taha.jpeg"
+              name="Taha Hussain"
               boardRole=""
-              github="https://github.com/UtkarshUmap"
-              linkedin=""
+              github="https://github.com/Taha254511"
+              linkedin="https://www.linkedin.com/in/taha-hussain-248429368?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             />
+            <BoardCard
+              img="/team/akshat.jpg"
+              name="Akshat Kansal"
+              boardRole=""
+              github=""
+              linkedin="https://www.linkedin.com/in/akshat-kansal-8538402a3/"
+            />
+            <BoardCard
+              img="/team/Sujal_Som.jpg"
+              name="Sujal Som"
+              boardRole=""
+              github="https://github.com/sujalsom22"
+              linkedin="https://www.linkedin.com/in/sujal-som-053613376/"
+            />
+
             <BoardCard
               img="/team/Eashan.jpg"
               name="Eashan Hasija"
@@ -207,11 +223,26 @@ export default function TeamPageClient() {
           <h2 className="board-section__title">Maintainers</h2>
           <div className="board-grid board-grid--advisors">
             <BoardCard
-              img="/team/Taha.jpeg"
-              name="Taha Hussain"
+              img="/team/Umap_Utkarsh.jpg"
+              name="Umap Utkarsh Sharad"
               boardRole=""
-              github="https://github.com/Taha254511"
-              linkedin="https://www.linkedin.com/in/taha-hussain-248429368?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              github="https://github.com/UtkarshUmap"
+              linkedin=""
+            />
+            <BoardCard
+              img="/team/siddhant.jpg"
+              name="Siddhant Shukla"
+              boardRole=""
+              github=""
+              linkedin="https://www.linkedin.com/in/siddhant-shukla-91aba536b/"
+            />
+
+            <BoardCard
+              img="/team/sanil.jpg"
+              name="Sanil Saha"
+              boardRole=""
+              github=""
+              linkedin="https://www.linkedin.com/in/sanil-saha-b82425380/"
             />
             <BoardCard
               img="/team/Mounika.jpg"
@@ -221,11 +252,25 @@ export default function TeamPageClient() {
               linkedin="https://www.linkedin.com/in/sai-mounika-kotapati-269494321/"
             />
             <BoardCard
+              img="/team/adhi.jpg"
+              name="Adhi Agrawal"
+              boardRole=""
+              github=""
+              linkedin="https://www.linkedin.com/in/adhi-agrawal-7b8359388/"
+            />
+            <BoardCard
               img="/team/img.jpeg"
               name="Harshit Kandpal"
               boardRole=""
               github="https://github.com/HarK-github"
               linkedin="https://www.linkedin.com/in/harshit-k-a746a1310/"
+            />
+            <BoardCard
+              img="/team/kushal.jpg"
+              name="Kushal Agrawal "
+              boardRole=""
+              github=""
+              linkedin="https://www.linkedin.com/in/kushal-agarwal-1234k/"
             />
             <BoardCard
               img="/team/Neil_Chitale.jpg"
@@ -255,12 +300,19 @@ export default function TeamPageClient() {
               github="https://github.com/harshita-sl"
               linkedin="https://www.linkedin.com/in/harshita-sharma-389b6231b/"
             />
+          </div>
+        </div>
+      </section>
+      <section className="team-shell board-section">
+        <div className="board-section__inner">
+          <h2 className="board-section__title">Outreach Head</h2>
+          <div className="board-grid board-grid">
             <BoardCard
-              img="/team/Sujal_Som.jpg"
-              name="Sujal Som"
+              img="/team/anuskha.jpg"
+              name="Anushka Rath"
               boardRole=""
-              github="https://github.com/sujalsom22"
-              linkedin="https://www.linkedin.com/in/sujal-som-053613376/"
+              github=""
+              linkedin="https://www.linkedin.com/in/anushka-rath-51a506376/"
             />
           </div>
         </div>
@@ -341,6 +393,11 @@ export default function TeamPageClient() {
           padding-top: 56px;
         }
 
+        .board-section:last-of-type {
+          /* Keep the footer illustration (footer3.png) from overlapping the last card's social icons. */
+          padding-bottom: clamp(120px, 22vw, 220px);
+        }
+
         .board-section__inner {
           border-radius: 32px;
           padding: 36px clamp(24px, 4vw, 48px);
@@ -365,7 +422,7 @@ export default function TeamPageClient() {
         }
 
         .board-grid--leaders {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           margin-bottom: 18px;
         }
 
@@ -418,6 +475,7 @@ export default function TeamPageClient() {
 
         @media (max-width: 1100px) {
           .team-hero__inner,
+          .board-grid--leaders,
           .board-grid--advisors {
             grid-template-columns: 1fr;
           }
