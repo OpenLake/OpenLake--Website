@@ -15,10 +15,14 @@ type Block =
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }
+  | { type: "ol"; items: string[] }
   | { type: "aside"; text: string };
 
 const BLOCKS: Block[] = [
-  { type: "p", text: "This is the skeleton: what you need, which tools to use, and how a week actually runs." },
+  {
+    type: "p",
+    text: "This is the skeleton: what you need, which tools to use, and how a week actually runs.",
+  },
 
   { type: "h2", text: "1. What you need before you start" },
   { type: "p", text: "People" },
@@ -39,7 +43,10 @@ const BLOCKS: Block[] = [
     ],
   },
   { type: "p", text: "Tools" },
-  { type: "p", text: "All free. GitHub is the only non-negotiable, because the pull request workflow is the entire difference between this and a YouTube playlist." },
+  {
+    type: "p",
+    text: "All free. GitHub is the only non-negotiable, because the pull request workflow is the entire difference between this and a YouTube playlist.",
+  },
   {
     type: "ul",
     items: [
@@ -62,9 +69,12 @@ const BLOCKS: Block[] = [
   },
 
   { type: "h2", text: "3. The weekly loop" },
-  { type: "p", text: "Every week runs the same six steps. The repetition is the point: mentees stop wondering what happens next and mentors stop reinventing the format." },
   {
-    type: "ul",
+    type: "p",
+    text: "Every week runs the same six steps. The repetition is the point: mentees stop wondering what happens next and mentors stop reinventing the format.",
+  },
+  {
+    type: "ol",
     items: [
       "Topic drop — What the week covers. A paragraph, not a lecture.",
       "Resources — Curated links, a short notes PDF, or a deck. Not a YouTube rabbit hole.",
@@ -78,7 +88,7 @@ const BLOCKS: Block[] = [
 
   { type: "h2", text: "4. The eight weeks" },
   {
-    type: "ul",
+    type: "ol",
     items: [
       "Weeks 1 to 2, foundations. Highest attendance you will ever have. Keep it accessible. This is where you hook people.",
       "Weeks 3 to 5, core domain. Attendance starts dropping. Keep session quality identical regardless of how many show up.",
@@ -88,7 +98,10 @@ const BLOCKS: Block[] = [
   },
 
   { type: "h2", text: "5. What will go wrong" },
-  { type: "p", text: "All four of these will happen to you. Deciding your response now is cheaper than deciding it in week five." },
+  {
+    type: "p",
+    text: "All four of these will happen to you. Deciding your response now is cheaper than deciding it in week five.",
+  },
   {
     type: "ul",
     items: [
@@ -101,7 +114,7 @@ const BLOCKS: Block[] = [
 
   { type: "h2", text: "6. Two weeks before launch" },
   {
-    type: "ul",
+    type: "ol",
     items: [
       "Create the GitHub org and one repo per track.",
       "Push a sandbox to each repo: folder structure, .env.example, and any boilerplate mentees will need.",
@@ -149,7 +162,10 @@ function renderBlock(block: Block, i: number) {
             lineHeight: 1.72,
             color: "var(--foreground)",
             margin: "22px 0 0",
-            fontWeight: block.text === "People" || block.text === "Time" || block.text === "Tools" ? 700 : "normal",
+            fontWeight:
+              block.text === "People" || block.text === "Time" || block.text === "Tools"
+                ? 700
+                : "normal",
           }}
         >
           {block.text}
@@ -161,7 +177,8 @@ function renderBlock(block: Block, i: number) {
           key={i}
           style={{
             margin: "22px 0 0",
-            paddingLeft: 22,
+            paddingLeft: 0,
+            listStyle: "none",
             display: "flex",
             flexDirection: "column",
             gap: 14,
@@ -171,16 +188,50 @@ function renderBlock(block: Block, i: number) {
             <li
               key={j}
               style={{
+                display: "flex",
+                gap: 12,
                 fontFamily: "var(--font-phantom)",
                 fontSize: 18,
                 lineHeight: 1.7,
                 color: "var(--foreground)",
               }}
             >
-              {it}
+              <span aria-hidden="true">🔹</span>
+              <span>{it}</span>
             </li>
           ))}
         </ul>
+      );
+    case "ol":
+      return (
+        <ol
+          key={i}
+          style={{
+            margin: "22px 0 0",
+            paddingLeft: 0,
+            listStyle: "none",
+            display: "flex",
+            flexDirection: "column",
+            gap: 14,
+          }}
+        >
+          {block.items.map((it, j) => (
+            <li
+              key={j}
+              style={{
+                display: "flex",
+                gap: 12,
+                fontFamily: "var(--font-phantom)",
+                fontSize: 18,
+                lineHeight: 1.7,
+                color: "var(--foreground)",
+              }}
+            >
+              <span aria-hidden="true">🔹</span>
+              <span>{it}</span>
+            </li>
+          ))}
+        </ol>
       );
     case "aside":
       return (
@@ -284,8 +335,7 @@ export default function DevLabsPlaybookPost() {
               margin: "26px 0 0",
             }}
           >
-            A three-page framework for running a beginner open-source bootcamp with
-            no budget.
+            A three-page framework for running a beginner open-source bootcamp with no budget.
           </p>
 
           <div
@@ -299,12 +349,33 @@ export default function DevLabsPlaybookPost() {
               color: "rgba(255, 255, 255, 0.72)",
             }}
           >
-            <span style={{ fontWeight: 700, color: "var(--paper)" }}>
-              Ashish Kumar Dash
-            </span>
+            <span style={{ fontWeight: 700, color: "var(--paper)" }}>Ashish Kumar Dash</span>
             <span>· Secretary, OpenLake, IIT Bhilai</span>
             <span>· August 2026 · 4 min read</span>
           </div>
+
+          <p
+            style={{
+              fontFamily: "var(--font-phantom)",
+              fontSize: 14,
+              lineHeight: 1.6,
+              color: "rgba(255, 255, 255, 0.72)",
+              margin: "24px 0 0",
+            }}
+          >
+            Reach us at{" "}
+            <a
+              href="mailto:openlake@iitbhilai.ac.in"
+              style={{
+                color: "var(--paper)",
+                fontWeight: 700,
+                textDecoration: "underline",
+                textUnderlineOffset: "3px",
+              }}
+            >
+              openlake@iitbhilai.ac.in
+            </a>
+          </p>
         </div>
       </header>
 
@@ -334,8 +405,8 @@ export default function DevLabsPlaybookPost() {
               margin: 0,
             }}
           >
-            <strong style={{ color: "var(--red)" }}>Short version.</strong> Want
-            the long one? We also published{" "}
+            <strong style={{ color: "var(--red)" }}>Short version.</strong> Want the long one? We
+            also published{" "}
             <Link
               href="/blog/devlabs-2"
               style={{ color: "var(--red)", textDecoration: "none", fontWeight: 700 }}
@@ -377,8 +448,8 @@ export default function DevLabsPlaybookPost() {
             margin: 0,
           }}
         >
-          <strong style={{ color: "var(--foreground)" }}>OpenLake</strong> — IIT
-          Bhilai’s open-source society ·{" "}
+          <strong style={{ color: "var(--foreground)" }}>OpenLake</strong> — IIT Bhilai’s
+          open-source society ·{" "}
           <a href="https://openlake.in" style={{ color: "var(--red)", textDecoration: "none" }}>
             openlake.in
           </a>{" "}
