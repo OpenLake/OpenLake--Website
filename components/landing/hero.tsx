@@ -822,7 +822,8 @@ export function HeroSection() {
             maxWidth: "min(600px, calc(100vw - 64px))",
           }}
         >
-          Build. Learn. Contribute. OpenLake is IIT Bhilai's hub for open-source innovation and collaborative development.
+          Build. Learn. Contribute. OpenLake is IIT Bhilai's hub for open-source innovation and
+          collaborative development.
         </p>
 
         {/* Email signup */}
