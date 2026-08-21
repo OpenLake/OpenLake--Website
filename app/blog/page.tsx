@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { buildPageMetadata } from "@/lib/seo";
 
+
 export const metadata: Metadata = buildPageMetadata({
   title: "Blog — OpenLake",
   description:
@@ -84,6 +85,17 @@ const POSTS: Post[] = [
       "A deep technical dive into the polyglot microservices, economic algorithms, gRPC communication, MLFQ feed ranking, and database design powering Kudos — a platform where engagement is a scarce digital currency.",
     tags: ["Microservices", "Go", "gRPC", "Distributed Systems"],
   },
+  {
+    title: "The Only OpenSource Calender You Need!",
+    url: "https://opensourcealender.vercel.app/",
+    image: "/assets/cal.png",
+    author: "Siddhant Shukla",
+    date: "Aug 2026",
+    readTime: "7 min read",
+    excerpt:
+      "An interactive Open Source Program Calendar built for OpenLake, IIT Bhilai. Track majors programs like GSoC, LFX, FOSSEE, ESoC, GSSoC and C4GT through a centralized timeline.",
+    tags: ["OpenSource", "Timeline", "LFX", "GSSoC"],
+  }
 ];
 
 function ExternalArrow() {
