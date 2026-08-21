@@ -86,7 +86,7 @@ const POSTS: Post[] = [
     tags: ["Microservices", "Go", "gRPC", "Distributed Systems"],
   },
   {
-    title: "The Only OpenSource Calender You Need!",
+    title: "The Only OpenSource Calendar You Need!",
     url: "https://opensourcealender.vercel.app/",
     image: "/assets/cal.png",
     author: "Siddhant Shukla",
