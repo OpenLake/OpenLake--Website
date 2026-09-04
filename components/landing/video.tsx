@@ -112,8 +112,7 @@ export function VideoSection() {
           {/* Headline */}
           <h2
             style={{
-              fontFamily: "var(--font-zarathustra)",
-              fontWeight: "normal",
+              fontWeight: 700,
               fontSize: 40,
               lineHeight: 1.05,
               color: "var(--foreground)",
@@ -127,7 +126,7 @@ export function VideoSection() {
             </span>
             <span
               style={{
-                background: "linear-gradient(90deg, var(--red) 0%, var(--orange) 100%)",
+                background: "linear-gradient(90deg, var(--foreground) 0%, var(--red) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -148,7 +147,7 @@ export function VideoSection() {
               marginBottom: 32,
             }}
           >
-            <YouTubeEmbed id="PVD1LNDxOnc" title="Hack Club introduction for high school teens" />
+            <YouTubeEmbed id="PVD1LNDxOnc" title="OpenLake introduction" />
           </div>
 
           {/* Email signup */}

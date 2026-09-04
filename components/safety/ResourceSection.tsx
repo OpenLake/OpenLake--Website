@@ -7,7 +7,7 @@ export default function ResourceSection() {
     <section
       style={{
         padding: "80px 24px",
-        background: "#f8fafc",
+        background: "var(--surface)",
       }}
     >
       <div
@@ -19,6 +19,8 @@ export default function ResourceSection() {
         <h2
           style={{
             fontSize: "42px",
+            fontWeight: 700,
+            color: "var(--foreground)",
             textAlign: "center",
             marginBottom: "16px",
           }}

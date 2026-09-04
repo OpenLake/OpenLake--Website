@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
+import { PageHero, PageSection, Accent } from "@/components/PageHero";
 import { BtnArrowSvg } from "./btn-arrow";
 
 // ════════════════════════════════════════════════════════════════════════════
@@ -101,7 +102,7 @@ function NewsletterCard({ item }) {
           position: "relative",
           background: "var(--surface)",
           borderRadius: 16,
-          boxShadow: "2px 4px 6px rgba(0,0,0,0.25)",
+          boxShadow: "var(--shadow-dd)",
           overflow: "hidden",
           display: "flex",
           alignItems: "stretch",
@@ -178,9 +179,8 @@ function NewsletterCard({ item }) {
           {/* Title */}
           <h2
             style={{
-              fontFamily: "var(--font-zarathustra)",
               fontSize: 34,
-              fontWeight: "normal",
+              fontWeight: 700,
               color: "var(--foreground)",
               margin: "0 0 10px",
               lineHeight: 1.05,
@@ -280,20 +280,6 @@ function NewsletterCard({ item }) {
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-  const magazineBgRef = useRef(null);
-
-  // Parallax on the magazine background, same as the programs page.
-  const onScroll = useCallback(() => {
-    const y = window.scrollY;
-    if (magazineBgRef.current)
-      magazineBgRef.current.style.transform = `scaleY(-1) translateY(-${y * 0.5}px)`;
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [onScroll]);
-
   // Newest issue first.
   const sorted = [...NEWSLETTERS].sort((a, b) => b.date.localeCompare(a.date));
 
@@ -333,102 +319,19 @@ export default function NewsletterPage() {
         }
       `}</style>
 
-      {/* Red glow at the top */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(180deg, rgba(11, 95, 176,0.18) 0%, rgba(11, 95, 176,0.04) 20%, transparent 40%)",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/assets/bgFade2.svg"
-        alt=""
-        style={{
-          position: "absolute",
-          top: -12,
-          left: -1,
-          width: "101%",
-          height: "auto",
-          opacity: 0.55,
-          pointerEvents: "none",
-          zIndex: 0,
-          transform: "scaleY(-1)",
-        }}
-      />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        ref={magazineBgRef}
-        src="/assets/background.webp"
-        alt=""
-        style={{
-          position: "absolute",
-          top: -60,
-          left: 0,
-          width: "100%",
-          height: "auto",
-          transform: "scaleY(-1)",
-          opacity: 0.15,
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
+      <Navbar />
+
+      <PageHero
+        badge="✦ OpenLake Newsletter"
+        title={
+          <>
+            The OpenLake <Accent>Newsletter</Accent>
+          </>
+        }
+        lede="Build logs, project spotlights, and what's happening at IIT Bhilai's open-source hub. One issue a month. No spam, ever."
       />
 
-      <div style={{ position: "relative", zIndex: 50 }}>
-        <Navbar />
-      </div>
-
-      <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          paddingTop: "clamp(100px, 14vh, 140px)",
-          paddingBottom: 80,
-          paddingLeft: "clamp(24px, 14.29%, 220px)",
-          paddingRight: "clamp(24px, 14.29%, 220px)",
-        }}
-      >
-        <h1
-          style={{
-            fontFamily: "var(--font-zarathustra)",
-            fontSize: 60,
-            fontWeight: "normal",
-            lineHeight: 0.92,
-            color: "var(--foreground)",
-            textAlign: "center",
-            margin: "40px 0 16px",
-          }}
-        >
-          The OpenLake Newsletter
-        </h1>
-
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              margin: "0 0 4px",
-            }}
-          >
-            Build logs, project spotlights, and what's happening at IIT Bhilai's open-source hub.
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              margin: 0,
-            }}
-          >
-            One issue a month. No spam, ever.
-          </p>
-        </div>
-
+      <PageSection tone="surface">
         {/* Subscribe bar */}
         {subscribed ? (
           <div
@@ -436,7 +339,7 @@ export default function NewsletterPage() {
               background: "var(--surface)",
               borderRadius: 9999,
               height: 64,
-              border: "2.5px solid var(--red)",
+              border: "1px solid var(--red)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -459,7 +362,7 @@ export default function NewsletterPage() {
               background: "var(--surface)",
               borderRadius: 9999,
               height: 64,
-              border: "2.5px solid var(--border)",
+              border: "1px solid var(--border)",
               display: "flex",
               alignItems: "center",
               paddingLeft: 28,
@@ -556,7 +459,7 @@ export default function NewsletterPage() {
 
           </p>
         </div>
-      </div>
+      </PageSection>
       <Footer />
     </main>
   );

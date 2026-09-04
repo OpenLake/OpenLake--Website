@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero, PageSection, Accent } from "@/components/PageHero";
 import { buildPageMetadata } from "@/lib/seo";
 
 
@@ -163,7 +164,7 @@ function PostCard({ post }: { post: Post }) {
     background: "var(--surface)",
     borderRadius: 24,
     border: "1px solid var(--border)",
-    boxShadow: "0 20px 48px rgba(23, 23, 29, 0.06)",
+    boxShadow: "var(--shadow-dd)",
     textDecoration: "none",
     color: "inherit",
     overflow: "hidden",
@@ -200,10 +201,9 @@ function PostCard({ post }: { post: Post }) {
         <h2
           className="blog-card__title"
           style={{
-            fontFamily: "var(--font-zarathustra)",
-            fontWeight: "normal",
+            fontWeight: 700,
             color: "var(--foreground)",
-            lineHeight: 1.08,
+            lineHeight: 1.2,
             margin: 0,
             fontSize: "clamp(1.5rem, 2.6vw, 2.1rem)",
           }}
@@ -310,7 +310,7 @@ export default function BlogPage() {
       <style>{`
         .blog-card { grid-template-columns: 1fr; will-change: transform; }
         .blog-card__media { aspect-ratio: 16 / 9; overflow: hidden; }
-        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 32px 72px rgba(23, 23, 29, 0.12); }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 32px 72px rgba(23, 54, 83, 0.12); }
         .blog-card:hover .blog-card__read span { transform: translateX(3px); }
         @media (min-width: 860px) {
           .blog-card { grid-template-columns: minmax(0, 44%) 1fr; align-items: center; }
@@ -320,123 +320,20 @@ export default function BlogPage() {
         }
       `}</style>
 
-      <Navbar invertColors />
+      <Navbar />
 
-      {/* Hero — big editorial masthead */}
-      <header
-        style={{
-          position: "relative",
-          overflow: "hidden",
-          background:
-            "radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.18), transparent 30%), linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 46%, var(--accent-ink) 120%)",
-          padding: "clamp(120px, 18vh, 170px) 0 clamp(56px, 8vh, 90px)",
-          color: "var(--paper)",
-        }}
-      >
-        <div
-          style={{
-            position: "relative",
-            zIndex: 1,
-            maxWidth: 1180,
-            margin: "0 auto",
-            padding: "0 clamp(24px, 5vw, 48px)",
-          }}
-        >
-          {/* Masthead top rule */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 16,
-              borderBottom: "1px solid rgba(255, 255, 255, 0.25)",
-              paddingBottom: 14,
-              marginBottom: 30,
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "var(--font-phantom)",
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: "0.24em",
-                textTransform: "uppercase",
-                margin: 0,
-                color: "rgba(255, 255, 255, 0.7)",
-              }}
-            >
-              Writing from the lake
-            </p>
-            <p
-              style={{
-                fontFamily: "var(--font-phantom)",
-                fontSize: 13,
-                fontWeight: 700,
-                letterSpacing: "0.24em",
-                textTransform: "uppercase",
-                margin: 0,
-                color: "rgba(255, 255, 255, 0.7)",
-              }}
-            >
-              Vol. 1 — 2026
-            </p>
-          </div>
-
-          {/* Masthead — oversized title */}
-          <h1
-            style={{
-              fontFamily: "var(--font-zarathustra)",
-              fontSize: "clamp(3.4rem, 10vw, 8rem)",
-              fontWeight: "normal",
-              lineHeight: 0.88,
-              letterSpacing: "-0.01em",
-              margin: 0,
-              textAlign: "center",
-            }}
-          >
-            The OpenLake
-            <br />
-            <span
-              style={{
-                fontStyle: "italic",
-                background: "linear-gradient(100deg, var(--orange) 0%, var(--paper) 55%, var(--orange) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Blog
-            </span>
-          </h1>
-
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: "clamp(17px, 2.2vw, 21px)",
-              lineHeight: 1.5,
-              margin: "26px auto 0",
-              maxWidth: 620,
-              textAlign: "center",
-              color: "rgba(255, 255, 255, 0.85)",
-            }}
-          >
-            Mentorships, side projects, and deep technical write-ups by the students
-            building at IIT Bhilai — shipped in the open.
-          </p>
-
-        </div>
-      </header>
+      <PageHero
+        badge="✦ Writing from the lake"
+        title={
+          <>
+            The OpenLake <Accent>Blog</Accent>
+          </>
+        }
+        lede="Mentorships, side projects, and deep technical write-ups by the students building at IIT Bhilai — shipped in the open."
+      />
 
       {/* Posts */}
-      <section
-        style={{
-          position: "relative",
-          zIndex: 2,
-          maxWidth: 1080,
-          margin: "0 auto",
-          padding: "clamp(56px, 8vw, 88px) clamp(24px, 5vw, 48px) 96px",
-        }}
-      >
+      <PageSection tone="surface">
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
           {POSTS.map((post) => (
             <PostCard key={post.url} post={post} />
@@ -463,7 +360,7 @@ export default function BlogPage() {
           </Link>
           .
         </p>
-      </section>
+      </PageSection>
 
       <Footer />
     </main>

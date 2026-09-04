@@ -3,6 +3,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import { Footer } from "../../components/Footer";
+import { PageHero, Accent } from "@/components/PageHero";
 import { Navbar } from "../../components/Navbar";
 
 function BoardCard({
@@ -68,34 +69,18 @@ function BoardCard({
 export default function TeamPageClient() {
   return (
     <main id="main" tabIndex={-1} className="team-page">
-      <section className="team-hero">
-        <Navbar invertColors />
+      <Navbar />
 
-        <div className="team-shell team-hero__inner">
-          <div className="team-hero__copy">
-            <h1 className="team-hero__title">
-              Meet the
-              <br />
-              Present Community.
-            </h1>
-
-            <p className="team-hero__lede">
-              Meet the passionate students, mentors, and contributors who are actively shaping
-              OpenLake today. Together, they organize events, build projects, mentor learners, and
-              strengthen our growing community.
-            </p>
-          </div>
-        </div>
-
-        <Image
-          src="/assets/projectsBg.svg"
-          alt=""
-          aria-hidden="true"
-          fill
-          sizes="100vw"
-          className="team-hero__texture"
-        />
-      </section>
+      <PageHero
+        title={
+          <>
+            Meet the
+            <br />
+            <Accent>Present Community</Accent>.
+          </>
+        }
+        lede="Meet the passionate students, mentors, and contributors who are actively shaping OpenLake today. Together, they organize events, build projects, mentor learners, and strengthen our growing community."
+      />
 
       <section className="team-shell board-section">
         <div className="board-section__inner">
@@ -322,10 +307,7 @@ export default function TeamPageClient() {
 
       <style>{`
         .team-page {
-          background:
-            radial-gradient(circle at top left, rgba(40, 169, 226, 0.24), transparent 34%),
-            radial-gradient(circle at top right, rgba(11, 95, 176, 0.18), transparent 28%),
-            var(--background);
+          background: var(--background);
           color: var(--foreground);
         }
 
@@ -335,57 +317,11 @@ export default function TeamPageClient() {
         }
 
 
-        .team-hero {
-          position: relative;
-          overflow: hidden;
-          background:
-            radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.22), transparent 28%),
-            linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 44%, var(--red) 100%);
-          padding: 120px 0 88px;
-        }
 
-        .team-hero__inner {
-          position: relative;
-          z-index: 2;
-          display: grid;
-          grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-          gap: 40px;
-          align-items: center;
-        }
 
-        .team-hero__copy {
-          width: min(66vw, 880px);
-          max-width: 880px;
-        }
 
-        .team-hero__title {
-          margin: 0;
-          font-family: var(--font-zarathustra);
-          font-size: clamp(2.9rem, 5.2vw, 4.8rem);
-          line-height: 0.86;
-          color: var(--cream);
-          font-weight: 400;
-        }
 
-        .team-hero__lede {
-          margin: 28px 0 0;
-          max-width: 620px;
-          font-family: var(--font-phantom);
-          font-size: clamp(1.05rem, 1.6vw, 1.35rem);
-          line-height: 1.42;
-          color: rgba(255, 246, 235, 0.82);
-        }
 
-        .team-hero__texture {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          opacity: 0.12;
-          mix-blend-mode: screen;
-          pointer-events: none;
-        }
 
 
 
@@ -403,15 +339,14 @@ export default function TeamPageClient() {
           padding: 36px clamp(24px, 4vw, 48px);
           background: var(--surface);
           border: 1px solid var(--border);
-          box-shadow: 0 24px 60px rgba(91, 52, 18, 0.12);
+          box-shadow: 0 24px 60px rgba(23, 54, 83, 0.12);
         }
 
         .board-section__title {
           margin: 0 0 28px;
-          font-family: var(--font-zarathustra);
-          font-size: clamp(2rem, 3.5vw, 3rem);
-          line-height: 0.96;
-          font-weight: 400;
+          font-size: 42px;
+          line-height: 1.2;
+          font-weight: 700;
           text-align: center;
           color: var(--foreground);
         }
@@ -454,7 +389,7 @@ export default function TeamPageClient() {
           border-radius: 50%;
           object-fit: cover;
           flex-shrink: 0;
-          box-shadow: 0 12px 28px rgba(91, 52, 18, 0.16);
+          box-shadow: 0 12px 28px rgba(23, 54, 83, 0.16);
         }
         .board-card__name {
           margin: 12px 0 4px;
@@ -474,7 +409,6 @@ export default function TeamPageClient() {
         }
 
         @media (max-width: 1100px) {
-          .team-hero__inner,
           .board-grid--leaders,
           .board-grid--advisors {
             grid-template-columns: 1fr;
@@ -484,10 +418,6 @@ export default function TeamPageClient() {
         @media (max-width: 767px) {
           .team-shell {
             width: calc(100vw - 32px);
-          }
-
-          .team-hero {
-            padding: 104px 0 72px;
           }
 
           .board-grid--leaders,

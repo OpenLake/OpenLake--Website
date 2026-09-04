@@ -42,7 +42,7 @@ export function StickerEnvelopeLink() {
           borderRadius: 10,
           // Airmail edging — diagonal red/blue stripes
           background:
-            "repeating-linear-gradient(45deg, var(--red) 0 7px, #fffdf8 7px 14px, #338eda 14px 21px, #fffdf8 21px 28px)",
+            "repeating-linear-gradient(45deg, var(--red) 0 7px, var(--paper) 7px 14px, var(--orange) 14px 21px, var(--paper) 21px 28px)",
           padding: 8,
           aspectRatio: "10 / 6.2",
         }}
@@ -52,11 +52,11 @@ export function StickerEnvelopeLink() {
             position: "relative",
             width: "100%",
             height: "100%",
-            background: "linear-gradient(155deg, #fffefb 0%, #fdfaf2 55%, #f9f3e6 100%)",
+            background: "linear-gradient(155deg, var(--paper) 0%, var(--sky-050) 55%, var(--sky-100) 100%)",
             borderRadius: 5,
             overflow: "hidden",
             boxShadow:
-              "inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -6px 14px rgba(23,23,29,0.035)",
+              "inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -6px 14px rgba(23, 54, 83, 0.05)",
           }}
         >
           {/* Return address */}
@@ -69,7 +69,7 @@ export function StickerEnvelopeLink() {
               fontSize: "clamp(7px, 3.5cqw, 9.5px)",
               lineHeight: 1.45,
               letterSpacing: "0.07em",
-              color: "rgba(23,23,29,0.5)",
+              color: "rgba(23, 54, 83, 0.5)",
               whiteSpace: "nowrap",
             }}
           >
@@ -86,8 +86,8 @@ export function StickerEnvelopeLink() {
               right: "5.5%",
               width: "18%",
               aspectRatio: "82 / 92",
-              background: "#ffffff",
-              boxShadow: "0 1.5px 4px rgba(23,23,29,0.18)",
+              background: "var(--paper)",
+              boxShadow: "0 1.5px 4px rgba(23, 54, 83, 0.18)",
               transform: "rotate(3deg)",
               padding: "1.1%",
             }}
@@ -96,7 +96,7 @@ export function StickerEnvelopeLink() {
               style={{
                 width: "100%",
                 height: "100%",
-                background: "linear-gradient(150deg, #3fa9f0 0%, var(--red) 45%, #1f6fb8 100%)",
+                background: "linear-gradient(150deg, var(--orange) 0%, var(--red) 45%, var(--ink-2) 100%)",
                 borderRadius: 1,
                 display: "flex",
                 alignItems: "center",
@@ -124,12 +124,12 @@ export function StickerEnvelopeLink() {
               transform: "rotate(-6deg)",
             }}
           >
-            <circle cx="35" cy="35" r="26" fill="none" stroke="#17171d" strokeWidth="2.5" />
-            <circle cx="35" cy="35" r="19" fill="none" stroke="#17171d" strokeWidth="1.2" />
+            <circle cx="35" cy="35" r="26" fill="none" stroke="var(--ink)" strokeWidth="2.5" />
+            <circle cx="35" cy="35" r="19" fill="none" stroke="var(--ink)" strokeWidth="1.2" />
             <path
               d="M64 22 Q74 18 84 22 T104 22 M64 34 Q74 30 84 34 T104 34 M64 46 Q74 42 84 46 T104 46"
               fill="none"
-              stroke="#17171d"
+              stroke="var(--ink)"
               strokeWidth="2.5"
               strokeLinecap="round"
             />
@@ -146,14 +146,14 @@ export function StickerEnvelopeLink() {
               alignItems: "flex-start",
               fontFamily: "var(--font-phantom)",
               fontStyle: "italic",
-              color: "#17171d",
+              color: "var(--ink)",
               fontSize: "clamp(10px, 5.6cqw, 14px)",
               lineHeight: 1.05,
             }}
           >
             <span
               style={{
-                color: "rgba(23,23,29,0.5)",
+                color: "rgba(23, 54, 83, 0.5)",
                 fontStyle: "normal",
                 marginRight: "2.5%",
                 flexShrink: 0,
@@ -162,10 +162,10 @@ export function StickerEnvelopeLink() {
               TO:
             </span>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ borderBottom: "1.2px solid rgba(23,23,29,0.35)" }}>you, a programmer</div>
+              <div style={{ borderBottom: "1.2px solid rgba(23, 54, 83, 0.35)" }}>you, a programmer</div>
               <div
                 style={{
-                  borderBottom: "1.2px solid rgba(23,23,29,0.35)",
+                  borderBottom: "1.2px solid rgba(23, 54, 83, 0.35)",
                   marginTop: "6.5%",
                 }}
               >
@@ -209,14 +209,14 @@ export function StickerEnvelopeLink() {
           alignItems: "center",
           gap: 7,
           background: "var(--red)",
-          color: "#ffffff",
+          color: "var(--paper)",
           borderRadius: 999,
           padding: "8px 18px",
-          border: "2.5px solid #fffdf8",
+          border: "2.5px solid var(--paper)",
           fontFamily: "var(--font-phantom)",
           fontSize: 16,
           whiteSpace: "nowrap",
-          boxShadow: "0 5px 16px rgba(11, 95, 176,0.40), 0 2px 5px rgba(23,23,29,0.14)",
+          boxShadow: "0 5px 16px rgba(23, 54, 83, 0.40), 0 2px 5px rgba(23, 54, 83, 0.14)",
         }}
       >
         Get free stickers
@@ -253,7 +253,7 @@ export function StickerEnvelopeLink() {
           .sticker-envelope { width: 200px; margin-top: 14px; }
         }
         .sticker-envelope .sticker-envelope-body {
-          box-shadow: 0 12px 28px rgba(23, 23, 29, 0.18), 0 3px 7px rgba(23, 23, 29, 0.09);
+          box-shadow: 0 12px 28px rgba(23, 54, 83, 0.18), 0 3px 7px rgba(23, 54, 83, 0.09);
           transition: box-shadow 0.28s ease;
         }
         .sticker-envelope:hover,
@@ -262,7 +262,7 @@ export function StickerEnvelopeLink() {
         }
         .sticker-envelope:hover .sticker-envelope-body,
         .sticker-envelope:focus-visible .sticker-envelope-body {
-          box-shadow: 0 20px 40px rgba(23, 23, 29, 0.24), 0 5px 12px rgba(23, 23, 29, 0.11);
+          box-shadow: 0 20px 40px rgba(23, 54, 83, 0.24), 0 5px 12px rgba(23, 54, 83, 0.11);
         }
         .sticker-envelope-pill {
           transform: translateX(-50%) rotate(1.5deg);

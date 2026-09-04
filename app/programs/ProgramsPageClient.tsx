@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef } from "react";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import { PageHero, PageSection, Accent } from "@/components/PageHero";
 import { PROJECT_TYPE_OPTIONS, formatInPersonDate } from "../../lib/site-programs";
 import type { AirtableProgram } from "../../lib/programs";
 import { parseLocalDate } from "../../lib/programs";
@@ -20,7 +21,9 @@ import { BtnArrowSvg } from "../../components/landing/btn-arrow";
 //    websiteUrl   - the CTA button links here (button hidden if omitted)
 //    site.description        - the paragraph under the title
 //    site.projectImageUrl    - a normal picture shown inside the card (under title)
-//    site.projectImageHeight - height of that picture in px (default 150)
+//    site.projectImageHeight - optional fixed height in px. Leave it unset
+//                              and the picture keeps a 16:9 box that scales
+//                              with the card (what GitHub previews expect).
 //    site.logoUrl            - image shown instead of the title text
 //    site.logoSize           - logo height in px (default 48)
 //    site.bgType / bgImageUrl - set bgType:"image" + bgImageUrl for a bg photo
@@ -43,15 +46,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Student_Database_COSA",
     site: {
       description: "A weekend build sprint where members ship a small open-source tool together.",
-      projectImageUrl: "/assets/ProjectImg2.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg2.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0a1f1c",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Both",
       projectTypes: [],
       inPersonStart: null,
@@ -60,11 +62,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#ripple",
       pinned: true,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -75,15 +77,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Smart-Insti-App",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg3.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg3.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0d2b26",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Online Only",
       projectTypes: [],
       inPersonStart: null,
@@ -92,11 +93,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#depths",
       pinned: false,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -107,15 +108,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Leaderboard-Pro",
     site: {
       description: "An in-person hack night at IIT Bhilai for prototyping wild ideas overnight.",
-      projectImageUrl: "/assets/ProjectImg4.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg4.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#08201d",
-      textColor: "#e0fffa",
-      accentColor: "#2dd4bf",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "In-Person Only",
       projectTypes: [],
       inPersonStart: null,
@@ -124,11 +124,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#current",
       pinned: false,
-      buttonColor: "#2dd4bf",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -139,15 +139,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Centre-for-Career-Planning-and-Services-Portal",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg5.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg5.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0d2b26",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Online Only",
       projectTypes: [],
       inPersonStart: null,
@@ -156,11 +155,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#depths",
       pinned: false,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -171,15 +170,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/canonforces",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg6.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg6.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0d2b26",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Online Only",
       projectTypes: [],
       inPersonStart: null,
@@ -188,11 +186,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#depths",
       pinned: false,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -203,15 +201,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/RateMyCourse",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg7.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg7.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0d2b26",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Online Only",
       projectTypes: [],
       inPersonStart: null,
@@ -220,11 +217,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#depths",
       pinned: false,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -235,15 +232,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/Campus-Marketplace",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg8.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg8.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0d2b26",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Online Only",
       projectTypes: [],
       inPersonStart: null,
@@ -252,11 +248,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#depths",
       pinned: false,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   {
@@ -267,15 +263,14 @@ const PROGRAMS: AirtableProgram[] = [
     websiteUrl: "https://github.com/OpenLake/bhilaee-simulator",
     site: {
       description: "A deep-dive series on systems programming, taught project-by-project.",
-      projectImageUrl: "/assets/ProjectImg9.png",
-      projectImageHeight: 150,
+      projectImageUrl: null, // TODO: add public/assets/ProjectImg9.png
       logoUrl: null,
       logoSize: 48,
       bgType: "color",
       bgImageUrl: null,
-      bgColor: "#0d2b26",
-      textColor: "#e0fffa",
-      accentColor: "#22d3ee",
+      bgColor: "var(--surface)",
+      textColor: "var(--foreground)",
+      accentColor: "var(--red)",
       format: "Online Only",
       projectTypes: [],
       inPersonStart: null,
@@ -284,11 +279,11 @@ const PROGRAMS: AirtableProgram[] = [
       additionalRequirements: null,
       slackChannel: "#depths",
       pinned: false,
-      buttonColor: "#22d3ee",
-      buttonTextColor: "#04110f",
+      buttonColor: "var(--red)",
+      buttonTextColor: "var(--paper)",
       buttonBorderRadius: 44,
       buttonBorderWidth: 0,
-      buttonBorderColor: "#e0fffa",
+      buttonBorderColor: "var(--foreground)",
     },
   },
   // ── Copy the block above, paste it here, and change the values ──
@@ -304,7 +299,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
   const logoSize = s?.logoSize ?? 48;
   const bgImageUrl = s?.bgType === "image" ? (s?.bgImageUrl ?? null) : null;
   const buttonColor = s?.buttonColor ?? "var(--red)";
-  const buttonTextColor = s?.buttonTextColor ?? "#ffffff";
+  const buttonTextColor = s?.buttonTextColor ?? "var(--paper)";
   const buttonRadius = s?.buttonBorderRadius ?? 44;
   const buttonBorderWidth = s?.buttonBorderWidth ?? 0;
   const buttonBorderColor = s?.buttonBorderColor ?? "var(--foreground)";
@@ -314,7 +309,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
   // Project image = a normal picture shown inside the card, under the title.
   // (Cast to any because these are custom fields not in the original type.)
   const projectImageUrl = (s as any)?.projectImageUrl ?? null;
-  const projectImageHeight = (s as any)?.projectImageHeight ?? 150;
+  const projectImageHeight = (s as any)?.projectImageHeight ?? null;
   const liveUrl = (s as any)?.liveUrl ?? null;
 
   // Italic metadata lines
@@ -366,8 +361,9 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
         style={{
           position: "relative",
           background: bgImageUrl ? "transparent" : bgColor,
-          borderRadius: 16,
-          boxShadow: "2px 4px 6px rgba(0,0,0,0.25)",
+          borderRadius: 18,
+          border: "1px solid var(--border)",
+          boxShadow: "var(--shadow-dd)",
           overflow: "hidden",
           display: "flex",
           flexDirection: "column",
@@ -440,9 +436,8 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
             style={{
               position: "relative",
               zIndex: 1,
-              fontFamily: "var(--font-zarathustra)",
               fontSize: 40,
-              fontWeight: "normal",
+              fontWeight: 700,
               color: textColor,
               margin: "0 0 8px",
               lineHeight: 1,
@@ -464,8 +459,11 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
               position: "relative",
               zIndex: 1,
               width: "100%",
-              height: projectImageHeight,
+              ...(projectImageHeight
+                ? { height: projectImageHeight }
+                : { aspectRatio: "16 / 9", height: "auto" }),
               objectFit: "cover",
+              background: "var(--surface-hover)",
               borderRadius: 12,
               marginBottom: 12,
               display: "block",
@@ -622,19 +620,6 @@ export default function ProgramsPage({
   const [programs] = useState<AirtableProgram[]>(
     initialPrograms && initialPrograms.length > 0 ? initialPrograms : PROGRAMS,
   );
-  const magazineBgRef = useRef<HTMLImageElement>(null);
-
-  const onScroll = useCallback(() => {
-    const y = window.scrollY;
-    if (magazineBgRef.current)
-      magazineBgRef.current.style.transform = `scaleY(-1) translateY(-${y * 0.5}px)`;
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [onScroll]);
-
   const filtered = (programs ?? []).filter((p) => {
     const q = search.toLowerCase();
     return (
@@ -653,16 +638,7 @@ export default function ProgramsPage({
   });
 
   return (
-    <main
-      id="main"
-      tabIndex={-1}
-      style={{
-        position: "relative",
-        background: "var(--background)",
-        minHeight: "100vh",
-        overflow: "hidden",
-      }}
-    >
+    <main id="main" tabIndex={-1} style={{ background: "var(--background)" }}>
       <style>{`
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
         @media (max-width: 700px) { .programs-grid { grid-template-columns: 1fr !important; } }
@@ -672,102 +648,31 @@ export default function ProgramsPage({
         .cta-btn:hover .btn-arrow { transform: translateX(5px); }
       `}</style>
 
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(180deg, rgba(11, 95, 176,0.18) 0%, rgba(11, 95, 176,0.04) 20%, transparent 40%)",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/assets/bgFade2.svg"
-        alt=""
-        style={{
-          position: "absolute",
-          top: -12,
-          left: -1,
-          width: "101%",
-          height: "auto",
-          opacity: 0.55,
-          pointerEvents: "none",
-          zIndex: 0,
-          transform: "scaleY(-1)",
-        }}
-      />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        ref={magazineBgRef}
-        src="/assets/background.png"
-        alt=""
-        style={{
-          position: "absolute",
-          top: -60,
-          left: 0,
-          width: "100%",
-          height: "auto",
-          transform: "scaleY(-1)",
-          opacity: 0.15,
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
+      <Navbar />
 
-      <div style={{ position: "relative", zIndex: 50 }}>
-        <Navbar />
-      </div>
-
-      <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          paddingTop: "clamp(100px, 14vh, 140px)",
-          paddingBottom: 80,
-          paddingLeft: "clamp(24px, 14.29%, 220px)",
-          paddingRight: "clamp(24px, 14.29%, 220px)",
-        }}
+      <PageHero
+        badge="✦ OpenLake Projects"
+        title={
+          <>
+            Projects <Accent>@ OpenLake</Accent>
+          </>
+        }
+        lede="We always strive towards the benefit of society with our projects."
       >
-        <h1
-          style={{
-            fontFamily: "var(--font-zarathustra)",
-            fontSize: 60,
-            fontWeight: "normal",
-            lineHeight: 0.92,
-            color: "var(--foreground)",
-            textAlign: "center",
-            margin: "40px 0 16px",
-          }}
-        >
-          Projects @ OpenLake
-        </h1>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              margin: "0 0 4px",
-            }}
-          >
-            We always strive towards the benefit of society with our projects.
-          </p>
-        </div>
-
-        {/* Search */}
         <div
           style={{
             background: "var(--surface)",
             borderRadius: 9999,
             height: 64,
-            border: "2.5px solid var(--border)",
+            border: "1px solid var(--border)",
+            boxShadow: "var(--shadow-dd)",
             display: "flex",
             alignItems: "center",
             paddingLeft: 28,
             paddingRight: 28,
-            marginBottom: 32,
+            width: "100%",
+            maxWidth: 720,
+            margin: "0 auto",
           }}
         >
           <svg
@@ -795,14 +700,14 @@ export default function ProgramsPage({
               flex: 1,
               background: "transparent",
               border: "none",
-              fontFamily: "var(--font-phantom)",
               fontSize: 20,
               color: "var(--foreground)",
             }}
           />
         </div>
+      </PageHero>
 
-
+      <PageSection tone="surface">
         <div
           className="programs-grid"
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}
@@ -812,14 +717,13 @@ export default function ProgramsPage({
           ))}
         </div>
 
-        {/* Footer */}
-        <div style={{ marginTop: 80, textAlign: "center" }}>
+        {/* Closing note */}
+        <div style={{ marginTop: 64, textAlign: "center" }}>
           <p
             style={{
-              fontFamily: "var(--font-phantom)",
               fontSize: 20,
-              color: "var(--foreground)",
-              opacity: 0.55,
+              color: "var(--muted)",
+              lineHeight: 1.7,
               margin: 0,
             }}
           >
@@ -835,7 +739,8 @@ export default function ProgramsPage({
             .
           </p>
         </div>
-      </div>
+      </PageSection>
+
       <Footer />
     </main>
   );

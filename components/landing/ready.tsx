@@ -29,7 +29,6 @@ export function ReadySection() {
         {/* "Ready?" headline */}
         {/* <h2
           style={{
-            fontFamily: "var(--font-zarathustra)",
             fontWeight: 400,
             fontSize: 40,
             lineHeight: 1,

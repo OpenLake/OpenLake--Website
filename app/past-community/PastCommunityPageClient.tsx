@@ -2,8 +2,8 @@
 
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import { PageHero, Accent } from "@/components/PageHero";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { ThemeLock } from "@/components/ThemeToggle";
 
 const coordinators = [
   {
@@ -588,64 +588,28 @@ function Coordinator2024({
 export default function PastCommunityPageClient() {
   return (
     <>
-      <ThemeLock />
       <Navbar />
 
       <main
+        id="main"
+        tabIndex={-1}
         style={{
           background: "var(--background)",
           minHeight: "100vh",
         }}
       >
-        {/* Hero */}
-        <section
-          style={{
-            padding: "140px 24px 90px",
-            textAlign: "center",
-            borderBottom: "1px solid var(--border)",
-            background:
-  "linear-gradient(120deg, color-mix(in srgb, var(--red) 16%, var(--background)) 0%, color-mix(in srgb, var(--orange) 12%, var(--background)) 100%)",
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "850px",
-              margin: "0 auto",
-            }}
-          >
-            <h1
-              style={{
-                fontSize: "64px",
-                fontWeight: 700,
-                lineHeight: 1.1,
-                color: "var(--foreground)",
-                marginBottom: "24px",
-              }}
-            >
+        <PageHero
+          title={
+            <>
               Meet the
               <br />
-              Past Community.
-            </h1>
+              <Accent>Past Community</Accent>.
+            </>
+          }
+          lede="Honoring the members whose leadership, dedication, and contributions helped shape OpenLake. Their efforts laid the foundation for the vibrant community we have today."
+        />
 
-            <p
-              style={{
-                fontSize: "22px",
-                color: "var(--muted)",
-                lineHeight: 1.7,
-              }}
-            >
-              Honoring the members whose leadership, dedication, and
-              contributions helped shape OpenLake. Their efforts laid the
-              foundation for the vibrant community we have today.
-            </p>
-          </div>
-        </section>
-        <div
-          style={{
-            background:
-  "linear-gradient(180deg, color-mix(in srgb, var(--orange) 10%, var(--background)) 0%, var(--background) 60%)",
-          }}
-        >
+        <div style={{ background: "var(--surface)", padding: "80px 0" }}>
 
         {/* Content */}
         <section
@@ -659,8 +623,8 @@ export default function PastCommunityPageClient() {
           <h2
             style={{
               textAlign: "center",
-              fontSize: "52px",
-              fontWeight: 800,
+              fontSize: "42px",
+              fontWeight: 700,
               marginBottom: "20px",
               color: "var(--foreground)",
             }}
@@ -769,8 +733,8 @@ export default function PastCommunityPageClient() {
           <h2
             style={{
               textAlign: "center",
-              fontSize: "52px",
-              fontWeight: 800,
+              fontSize: "42px",
+              fontWeight: 700,
               marginBottom: "20px",
               color: "var(--foreground)",
             }}
@@ -856,8 +820,8 @@ export default function PastCommunityPageClient() {
           <h2
             style={{
               textAlign: "center",
-              fontSize: "52px",
-              fontWeight: 800,
+              fontSize: "42px",
+              fontWeight: 700,
               marginBottom: "20px",
               color: "var(--foreground)",
             }}
@@ -943,8 +907,8 @@ export default function PastCommunityPageClient() {
           <h2
             style={{
               textAlign: "center",
-              fontSize: "52px",
-              fontWeight: 800,
+              fontSize: "42px",
+              fontWeight: 700,
               marginBottom: "20px",
               color: "var(--foreground)",
             }}
@@ -1030,8 +994,8 @@ export default function PastCommunityPageClient() {
           <h2
             style={{
               textAlign: "center",
-              fontSize: "52px",
-              fontWeight: 800,
+              fontSize: "42px",
+              fontWeight: 700,
               marginBottom: "20px",
               color: "var(--foreground)",
             }}
@@ -1115,8 +1079,8 @@ export default function PastCommunityPageClient() {
           <h2
             style={{
               textAlign: "center",
-              fontSize: "52px",
-              fontWeight: 800,
+              fontSize: "42px",
+              fontWeight: 700,
               marginBottom: "20px",
               color: "var(--foreground)",
             }}

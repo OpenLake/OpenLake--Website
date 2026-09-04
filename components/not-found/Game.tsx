@@ -305,7 +305,6 @@ export function Game() {
           lineHeight: 0.9,
           letterSpacing: "-0.03em",
           fontWeight: 400,
-          fontFamily: "var(--font-zarathustra)",
           fontSize: "clamp(64px, 16vw, 172px)",
           color: "var(--foreground)",
         }}
@@ -423,23 +422,23 @@ export function Game() {
               overflow: hidden;
               color: inherit;
               background:
-                radial-gradient(circle at 18% 18%, rgba(91, 192, 222, 0.16), transparent 30%),
-                radial-gradient(circle at 86% 16%, rgba(255, 206, 107, 0.22), transparent 24%),
-                linear-gradient(180deg, #fff8ef 0%, #ffe8dc 100%);
+                radial-gradient(circle at 18% 18%, rgba(40, 169, 226, 0.16), transparent 30%),
+                radial-gradient(circle at 86% 16%, rgba(40, 169, 226, 0.10), transparent 24%),
+                linear-gradient(180deg, var(--paper) 0%, var(--sky-100) 100%);
               animation: overlay-enter 260ms cubic-bezier(0.22, 1, 0.36, 1);
             }
 
             html.dark .game-overlay {
               background:
-                radial-gradient(circle at 18% 18%, rgba(91, 192, 222, 0.12), transparent 30%),
-                radial-gradient(circle at 86% 16%, rgba(255, 206, 107, 0.14), transparent 24%),
-                linear-gradient(180deg, #1d1a18 0%, #21160f 100%);
+                radial-gradient(circle at 18% 18%, rgba(40, 169, 226, 0.12), transparent 30%),
+                radial-gradient(circle at 86% 16%, rgba(40, 169, 226, 0.08), transparent 24%),
+                linear-gradient(180deg, var(--deep-970) 0%, var(--deep-990) 100%);
             }
 
             .game-overlay__wash {
               position: absolute;
               inset: 0;
-              background: radial-gradient(circle at center, rgba(11, 95, 176, 0.06), transparent 40%);
+              background: radial-gradient(circle at center, rgba(23, 54, 83, 0.06), transparent 40%);
               pointer-events: none;
             }
 
@@ -507,7 +506,7 @@ export function Game() {
               width: 52px;
               height: 18px;
               border-radius: 999px;
-              background: linear-gradient(90deg, rgba(91, 192, 222, 0.6), rgba(91, 192, 222, 0.05));
+              background: linear-gradient(90deg, rgba(40, 169, 226, 0.6), rgba(40, 169, 226, 0.05));
               filter: blur(4px);
               transform: translateY(-50%);
               animation: thruster 240ms ease-in-out infinite alternate;
@@ -520,7 +519,7 @@ export function Game() {
               display: block;
               width: 100%;
               height: auto;
-              filter: drop-shadow(0 10px 20px rgba(23, 23, 29, 0.22));
+              filter: drop-shadow(0 10px 20px rgba(23, 54, 83, 0.22));
             }
 
             .game-overlay__hud {
@@ -562,8 +561,8 @@ export function Game() {
             }
 
             .game-exit:hover {
-              background: rgba(11, 95, 176, 0.14);
-              border-color: rgba(11, 95, 176, 0.28);
+              background: rgba(23, 54, 83, 0.14);
+              border-color: rgba(23, 54, 83, 0.28);
             }
 
             .game-overlay__panel {
@@ -588,7 +587,7 @@ export function Game() {
 
             .game-overlay__panel h2 {
               margin: 0;
-              font-family: var(--font-zarathustra);
+              font-weight: 700;
               font-size: clamp(34px, 7vw, 56px);
               line-height: 0.92;
               font-weight: 400;
@@ -725,7 +724,7 @@ export function Game() {
         }
 
         .glitch-trigger:focus-visible {
-          outline: 3px solid rgba(11, 95, 176, 0.32);
+          outline: 3px solid rgba(23, 54, 83, 0.32);
           outline-offset: 12px;
           border-radius: 24px;
         }
@@ -741,7 +740,7 @@ export function Game() {
         }
 
         .glitch-layer.cyan {
-          color: #5bc0de;
+          color: var(--brand-sky);
           transform: translate(-2px, 0);
           clip-path: inset(6% 0 64% 0);
           animation: cyan 1.8s steps(2, jump-end) infinite alternate;

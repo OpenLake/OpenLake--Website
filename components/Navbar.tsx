@@ -109,7 +109,7 @@ function DropdownMenu({ items, menuId }: { items: Item[]; menuId: string }) {
           background-color: var(--dd-hover);
           color: var(--red);
           padding-left: 26px;
-          box-shadow: 0 4px 12px rgba(11, 95, 176, 0.12);
+          box-shadow: 0 4px 12px rgba(23, 54, 83, 0.12);
         }
         @keyframes ddIn {
           from {
@@ -154,10 +154,10 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
 
   const inv = invertColors && !scrolled;
   const txt = inv ? "var(--cream)" : "var(--foreground)";
-  const muted = inv ? "rgba(255, 246, 235, 0.7)" : "var(--muted)";
+  const muted = inv ? "rgba(255, 255, 255, 0.7)" : "var(--muted)";
   const btnTxt = inv ? "var(--ink)" : "var(--background)";
-  const btnHover = "var(--red)";
-  const mobBg = inv ? "rgba(23, 23, 29, 0.96)" : "var(--nav-bg)";
+  const btnHover = "var(--btn-hover-bg)";
+  const mobBg = inv ? "rgba(23, 54, 83, 0.96)" : "var(--nav-bg)";
   const mobBorder = `1px solid ${inv ? "rgba(255, 255, 255, 0.08)" : "var(--border)"}`;
 
   const enter = (l: string) => {
@@ -632,7 +632,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
         }
         .nav-cta:hover {
           background: ${btnHover};
-          color: var(--paper);
+          color: var(--btn-hover-fg);
         }
         .nav-cta:active {
           transform: translateY(0) scale(0.98);

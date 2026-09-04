@@ -2,62 +2,137 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ══════════════════════════════════════════════════════════════
+   BRAND PALETTE — the single source of truth for colour.
+
+   Three source colours build the whole site:
+
+     #173653  deep navy   — body text, and every dark surface
+     #28a9e2  sky blue    — accent: fills, washes, text on navy
+     #ffffff  paper       — light surfaces, and text on navy
+
+   Everything else is a tint or shade of one of those three — same
+   hue, different lightness. Pages consume these variables; they do
+   not hard-code hex, which is what keeps every route on one theme.
+
+   ── The one rule that matters ──
+   Body text is navy, so an accent that is ALSO navy is invisible as
+   an accent. And #28a9e2 only reaches 2.5:1 on white — below AA even
+   for large text — so it cannot carry text on a light surface either.
+   Hence the split:
+
+     --red     accent TEXT + accent fills. Readable on both grounds:
+               darkened sky on light, full sky on dark.
+     --orange  DECORATIVE only — gradients, washes, tints. Never text
+               on a light surface.
+
+   Solid navy and full sky are still what you see most: they are
+   --foreground, --ink, the --deep-* ladder and --accent-ink.
+   ══════════════════════════════════════════════════════════════ */
 :root {
-  --background: #ffffff;
-  --foreground: #17171d;
-  --surface: #f9fafc;
-  --surface-hover: #f1f2f5;
-  --border: rgba(0, 0, 0, 0.08);
-  --muted: rgba(23, 23, 29, 0.7);
-  --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.13);
-  --nav-bg: rgba(255, 255, 255, 0.82);
-  /* OpenLake accent — primary (dark blue) + secondary (light blue). Light mode. */
-  --red: #0b5fb0;
-  --orange: #28a9e2;
+  /* Source colours */
+  --brand-deep: #173653;
+  --brand-sky: #28a9e2;
+  --brand-paper: #ffffff;
+
+  /* Shades of --brand-deep, for layering dark sections. Same hue (209deg)
+     the whole way down; only lightness moves.
+     The --deep-9xx steps are the always-dark surfaces (--ink-2, hero
+     panels), which render in BOTH modes — do not repoint them to darken
+     dark mode.
+     The three above them are dark mode's own page/card/raised surfaces:
+     near-black, carrying only a trace of the brand hue. At this depth the
+     tonal step between page and card is ~1.08:1, so the border does the
+     separating — see --border below. */
+  --deep-990: #05080b;
+  --deep-970: #0d141a;
+  --deep-930: #1a232c;
+  --deep-950: #0c1c2b;
+  --deep-900: #112a41;
+  --deep-800: #173653; /* = --brand-deep */
+  --deep-700: #1e4569;
+
+  /* Tints and shades of --brand-sky. --sky-700 is the sky darkened until
+     it clears AA on white (6.1:1), for accent text on light surfaces. */
+  --sky-700: #17698f;
+  --sky-300: #7cc9ee;
+  --sky-100: #e7f4fb;
+  --sky-050: #f4fafd;
+
+  /* ── Light mode ── */
+  --background: var(--brand-paper);
+  --foreground: var(--brand-deep);
+  --surface: var(--sky-050);
+  --surface-hover: var(--sky-100);
+  --border: rgba(23, 54, 83, 0.12);
+  --muted: rgba(23, 54, 83, 0.72);
+  --shadow-dd: 0 8px 32px rgba(23, 54, 83, 0.16);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  /* Accent text/fills must clear the navy body text they sit beside. */
+  --red: var(--sky-700);
+  --orange: var(--brand-sky);
+  --btn-hover-bg: var(--sky-700);
+  --btn-hover-fg: var(--brand-paper);
   --font-phantom: var(--font-phantom-src), system-ui, sans-serif;
   --font-zarathustra: var(--font-zarathustra-src), Georgia, serif;
   color-scheme: light;
 }
 
 html.dark {
-  --background: #17171d;
-  --foreground: #fff6eb;
-  --surface: #1f1f27;
-  --surface-hover: #2a2a33;
-  --border: rgba(255, 255, 255, 0.08);
-  --muted: rgba(255, 246, 235, 0.7);
+  --background: var(--deep-990);
+  --foreground: var(--brand-paper);
+  --surface: var(--deep-970);
+  --surface-hover: var(--deep-930);
+  /* On a near-black ground the card/page tonal step is too small to see,
+     so the hairline carries the separation. At .18 it reads at 1.86:1
+     against the page — a touch stronger than GitHub dark's own (1.55:1). */
+  --border: rgba(255, 255, 255, 0.18);
+  --muted: rgba(255, 255, 255, 0.72);
   --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.6);
-  --nav-bg: rgba(23, 23, 29, 0.82);
-  /* Accent brightens on ink so it stays legible (primary was red, now blue). */
-  --red: #28a9e2;
-  --orange: #5bc0f0;
+  --nav-bg: rgba(5, 8, 11, 0.85);
+  /* On navy the sky needs no darkening — it reads at 5.1:1. */
+  --red: var(--brand-sky);
+  --orange: var(--sky-300);
+  --btn-hover-bg: var(--brand-sky);
+  --btn-hover-fg: var(--brand-deep);
   color-scheme: dark;
 }
 
 :root,
 html.dark {
-  --ink: #17171d;
-  --ink-2: #14233a;
-  --paper: #ffffff;
-  --cream: #fff6eb;
-  /* Accent for use ON always-dark (ink) surfaces — stays bright in both modes. */
-  --accent-ink: #28a9e2;
+  /* Always-dark surfaces (hero panels, footer) and the text on them. */
+  --ink: var(--deep-800);
+  --ink-2: var(--deep-950);
+  --paper: var(--brand-paper);
+  --cream: var(--brand-paper);
+  /* Accent for use ON always-dark surfaces — stays bright in both modes. */
+  --accent-ink: var(--brand-sky);
   --grid-line: rgba(255, 255, 255, 0.1);
-  --footer-bg: #000000;
+  --footer-bg: var(--deep-950);
+}
+
+/* The footer used to be the darkest band on the page. In dark mode the page
+   itself is now near-black, so the footer joins it and its grid lines carry
+   the boundary. Must come after the block above, which sets --footer-bg at
+   equal specificity. Light mode keeps the navy footer. */
+html.dark {
+  --footer-bg: var(--deep-990);
 }
 
 html.dark[data-theme-lock="light"] {
-  --background: #ffffff;
-  --foreground: #17171d;
-  --surface: #f9fafc;
-  --surface-hover: #f1f2f5;
-  --border: rgba(0, 0, 0, 0.08);
-  --muted: rgba(23, 23, 29, 0.7);
-  --shadow-dd: 0 8px 32px rgba(0, 0, 0, 0.13);
-  --nav-bg: rgba(255, 255, 255, 0.82);
-  /* Locked-light overrides the dark accent back to the light-mode blues. */
-  --red: #0b5fb0;
-  --orange: #28a9e2;
+  --background: var(--brand-paper);
+  --foreground: var(--brand-deep);
+  --surface: var(--sky-050);
+  --surface-hover: var(--sky-100);
+  --border: rgba(23, 54, 83, 0.12);
+  --muted: rgba(23, 54, 83, 0.72);
+  --shadow-dd: 0 8px 32px rgba(23, 54, 83, 0.16);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  /* Locked-light overrides the dark accents back to the light-mode pair. */
+  --red: var(--sky-700);
+  --orange: var(--brand-sky);
+  --btn-hover-bg: var(--sky-700);
+  --btn-hover-fg: var(--brand-paper);
   color-scheme: light;
 }
 
@@ -194,7 +269,8 @@ body {
     color 0.4s ease;
 }
 .dark-btn:hover {
-  background: var(--red) !important;
+  background: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
 }
 
 /* ── CTA button hover ─────────────────────────────────────────── */

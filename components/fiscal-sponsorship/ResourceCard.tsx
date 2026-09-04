@@ -71,7 +71,7 @@ export function ResourceCard({
           <span
             style={{
               background: "var(--red)",
-              color: "#fff",
+              color: "var(--paper)",
               padding: "6px 12px",
               borderRadius: "999px",
               fontSize: "12px",
@@ -132,7 +132,7 @@ export function ResourceCard({
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              color: "#2563eb",
+              color: "var(--red)",
               textDecoration: "none",
               fontWeight: 700,
               fontSize: "16px",

@@ -277,8 +277,7 @@ function renderBlock(block: Block, i: number) {
         <h2
           key={i}
           style={{
-            fontFamily: "var(--font-zarathustra)",
-            fontWeight: "normal",
+            fontWeight: 700,
             fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
             lineHeight: 1.14,
             color: "var(--foreground)",
@@ -315,7 +314,6 @@ function renderBlock(block: Block, i: number) {
         >
           <p
             style={{
-              fontFamily: "var(--font-zarathustra)",
               fontStyle: "italic",
               fontSize: "clamp(1.2rem, 2.2vw, 1.5rem)",
               lineHeight: 1.4,
@@ -448,7 +446,7 @@ export default function DevLabs2Post() {
       tabIndex={-1}
       style={{ position: "relative", background: "var(--background)", minHeight: "100vh" }}
     >
-      <Navbar invertColors />
+      <Navbar />
 
       {/* Masthead */}
       <header
@@ -456,8 +454,8 @@ export default function DevLabs2Post() {
           position: "relative",
           overflow: "hidden",
           background:
-            "radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.16), transparent 32%), linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 48%, var(--accent-ink) 130%)",
-          color: "var(--paper)",
+            "linear-gradient(135deg, var(--surface) 0%, var(--background) 50%, var(--surface) 100%)",
+          color: "var(--foreground)",
           padding: "clamp(116px, 16vh, 160px) 0 clamp(48px, 7vh, 76px)",
         }}
       >
@@ -478,7 +476,7 @@ export default function DevLabs2Post() {
               fontSize: 14,
               fontWeight: 700,
               letterSpacing: "0.04em",
-              color: "rgba(255, 255, 255, 0.8)",
+              color: "var(--red)",
               textDecoration: "none",
               marginBottom: 26,
             }}
@@ -493,7 +491,7 @@ export default function DevLabs2Post() {
               fontWeight: 700,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(255, 255, 255, 0.65)",
+              color: "var(--red)",
               margin: "0 0 22px",
             }}
           >
@@ -502,8 +500,7 @@ export default function DevLabs2Post() {
 
           <h1
             style={{
-              fontFamily: "var(--font-zarathustra)",
-              fontWeight: "normal",
+              fontWeight: 700,
               fontSize: "clamp(2.4rem, 6vw, 4rem)",
               lineHeight: 1.02,
               letterSpacing: "-0.01em",
@@ -518,7 +515,7 @@ export default function DevLabs2Post() {
               fontFamily: "var(--font-phantom)",
               fontSize: "clamp(17px, 2.2vw, 20px)",
               lineHeight: 1.55,
-              color: "rgba(255, 255, 255, 0.85)",
+              color: "var(--muted)",
               margin: "26px 0 0",
             }}
           >
@@ -534,10 +531,10 @@ export default function DevLabs2Post() {
               marginTop: 30,
               fontFamily: "var(--font-phantom)",
               fontSize: 14,
-              color: "rgba(255, 255, 255, 0.72)",
+              color: "var(--muted)",
             }}
           >
-            <span style={{ fontWeight: 700, color: "var(--paper)" }}>Ashish Kumar Dash</span>
+            <span style={{ fontWeight: 700, color: "var(--foreground)" }}>Ashish Kumar Dash</span>
             <span>· Secretary, OpenLake, IIT Bhilai</span>
             <span>· August 2026 · 8 min read</span>
           </div>
@@ -547,7 +544,7 @@ export default function DevLabs2Post() {
               fontFamily: "var(--font-phantom)",
               fontSize: 14,
               lineHeight: 1.6,
-              color: "rgba(255, 255, 255, 0.72)",
+              color: "var(--muted)",
               margin: "24px 0 0",
             }}
           >
@@ -555,7 +552,7 @@ export default function DevLabs2Post() {
             <a
               href="mailto:openlake@iitbhilai.ac.in"
               style={{
-                color: "var(--paper)",
+                color: "var(--red)",
                 fontWeight: 700,
                 textDecoration: "underline",
                 textUnderlineOffset: "3px",
@@ -579,7 +576,6 @@ export default function DevLabs2Post() {
 
         <p
           style={{
-            fontFamily: "var(--font-zarathustra)",
             fontStyle: "italic",
             fontSize: "clamp(1.4rem, 2.6vw, 1.8rem)",
             color: "var(--red)",

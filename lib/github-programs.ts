@@ -6,9 +6,9 @@ const CARD_THEME = {
   logoSize: 48,
   bgType: "color" as const,
   bgImageUrl: null,
-  bgColor: "#0d2b26",
-  textColor: "#e0fffa",
-  accentColor: "#22d3ee",
+  bgColor: "var(--surface)",
+  textColor: "var(--foreground)",
+  accentColor: "var(--red)",
   format: null,
   projectTypes: [],
   inPersonStart: null,
@@ -16,11 +16,11 @@ const CARD_THEME = {
   inPersonLocation: null,
   additionalRequirements: null,
   slackChannel: null,
-  buttonColor: "#22d3ee",
-  buttonTextColor: "#04110f",
+  buttonColor: "var(--red)",
+  buttonTextColor: "var(--paper)",
   buttonBorderRadius: 44,
   buttonBorderWidth: 0,
-  buttonBorderColor: "#e0fffa",
+  buttonBorderColor: "var(--border)",
 };
 
 const CUSTOM_IMAGES: Record<string, string> = {
@@ -71,7 +71,6 @@ function mapRepo(repo: GitHubRepo): AirtableProgram {
       projectImageUrl:
         CUSTOM_IMAGES[repo.name] ??
         `https://opengraph.githubassets.com/1/OpenLake/${repo.name}`,
-      projectImageHeight: 150,
       pinned: false,
       // Custom field: a deployed site, if the repo has one. Read in ProgramCard.
       liveUrl: homepage ? homepage : null,

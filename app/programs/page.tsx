@@ -6,7 +6,7 @@ import { fetchGitHubPrograms } from "@/lib/github-programs";
 export const metadata: Metadata = buildPageMetadata({
   title: "Projects — OpenLake",
   description:
-    "Open-source projects built by OpenLake, IIT Bhilai's open-source club.",
+    "Open-source projects built by OpenLake, IIT Bhilai's open-source society.",
   canonical: "/programs",
 });
 

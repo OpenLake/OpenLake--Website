@@ -51,22 +51,30 @@ export function MarkdownPage({ content }: { content: string }) {
 
       <style>{`
         .markdown-page {
-          background: var(--background);
+          background:
+            linear-gradient(
+                180deg,
+                var(--surface) 0%,
+                color-mix(in srgb, var(--surface) 55%, var(--background)) 45%,
+                var(--background) 100%
+              )
+              no-repeat top / 100% 520px,
+            var(--background);
           color: var(--foreground);
         }
 
         .markdown-page__content {
           width: min(800px, calc(100vw - 48px));
-          margin: 48px auto;
-          padding: 48px 0 80px;
+          margin: 0 auto;
+          padding: 100px 0 80px;
           font-family: var(--font-phantom);
           font-size: 1.125rem;
           line-height: 1.7;
         }
 
         .markdown-page__content h1 {
-          font-size: 2.5rem;
-          font-weight: 800;
+          font-size: clamp(42px, 7vw, 72px);
+          font-weight: 700;
           line-height: 1.15;
           margin: 0 0 24px;
           color: var(--foreground);

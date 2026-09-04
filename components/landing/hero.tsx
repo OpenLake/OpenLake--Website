@@ -396,7 +396,7 @@ export function HeroSection() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        background: "linear-gradient(180deg, rgba(11, 95, 176,0.04) 60%, #28a9e2 100%)",
+        background: "linear-gradient(180deg, rgba(23, 54, 83, 0.04) 60%, var(--brand-sky) 100%)",
       }}
     >
       {/*
@@ -709,7 +709,7 @@ export function HeroSection() {
           content: '';
           position: absolute;
           inset: 0;
-          background: #395eda;
+          background: var(--red);
           transform: translateX(-101%);
           z-index: -1;
         }
@@ -748,7 +748,7 @@ export function HeroSection() {
             gap: 8,
             fontFamily: "var(--font-phantom)",
             fontSize: 20,
-            color: magHover === "in" ? "#ffffff" : "var(--muted)",
+            color: magHover === "in" ? "var(--paper)" : "var(--muted)",
             textDecoration: "none",
             textAlign: "center",
             marginBottom: 18,
@@ -762,7 +762,7 @@ export function HeroSection() {
             setMagHover(magHover === "in" ? "out" : "idle");
           }}
         >
-          {/* <span style={{ color: magHover === "in" ? "#ffffff" : "var(--red)" }}>✦</span> */}
+          {/* <span style={{ color: magHover === "in" ? "var(--paper)" : "var(--red)" }}>✦</span> */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/foss-star.svg"
@@ -780,7 +780,6 @@ export function HeroSection() {
         {/* Headline — forced 2-line wrap */}
         <h1
           style={{
-            fontFamily: "var(--font-zarathustra)",
             fontSize: "clamp(52px, 12vw, 90px)",
             fontWeight: "normal",
             lineHeight: 0.92,
@@ -794,7 +793,7 @@ export function HeroSection() {
           <span
             style={{
               background:
-                "repeating-linear-gradient(105deg, var(--red) 0%, var(--orange) 16%, #f1c40f 32%, #33d6a6 48%, #338eda 64%, #a633d6 80%, var(--red) 100%)",
+                "repeating-linear-gradient(105deg, var(--foreground) 0%, var(--red) 50%, var(--foreground) 100%)",
               backgroundSize: "200% 100%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -844,7 +843,7 @@ export function HeroSection() {
             background: "var(--nav-bg)",
             border: "1px solid var(--border)",
             borderRadius: 9999,
-            boxShadow: "0 10px 28px rgba(23, 23, 29, 0.08)",
+            boxShadow: "0 10px 28px rgba(23, 54, 83, 0.08)",
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
             pointerEvents: "auto",

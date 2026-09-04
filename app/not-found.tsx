@@ -71,7 +71,7 @@ export default async function NotFound() {
           minHeight: "100vh",
           overflow: "hidden",
           background:
-            "linear-gradient(180deg, rgba(11, 95, 176,0.40) 60%, rgba(11, 95, 176,0.04) 100%)",
+            "linear-gradient(180deg, rgba(40, 169, 226, 0.40) 60%, rgba(40, 169, 226, 0.04) 100%)",
         }}
       >
         <Navbar />
@@ -231,15 +231,15 @@ export default async function NotFound() {
             inset: 0;
             z-index: 2;
             background:
-              radial-gradient(circle at top, rgba(255, 246, 235, 0.08), transparent 36%),
-              linear-gradient(180deg, rgba(255, 246, 235, 0.18) 10%, rgba(255, 246, 235, 0.68) 42%, rgba(255, 246, 235, 0.94) 100%);
+              radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 36%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0.18) 10%, rgba(255, 255, 255, 0.68) 42%, rgba(255, 255, 255, 0.94) 100%);
             pointer-events: none;
           }
 
           html.dark .content-veil {
             background:
-              radial-gradient(circle at top, rgba(23, 23, 29, 0.08), transparent 36%),
-              linear-gradient(180deg, rgba(23, 23, 29, 0.18) 10%, rgba(23, 23, 29, 0.68) 42%, rgba(23, 23, 29, 0.94) 100%);
+              radial-gradient(circle at top, rgba(5, 8, 11, 0.08), transparent 36%),
+              linear-gradient(180deg, rgba(5, 8, 11, 0.18) 10%, rgba(5, 8, 11, 0.68) 42%, rgba(5, 8, 11, 0.94) 100%);
           }
 
           .go-home-btn {
