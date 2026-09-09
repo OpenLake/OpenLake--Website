@@ -293,11 +293,11 @@ export default function TeamPageClient() {
           <h2 className="board-section__title">Outreach Head</h2>
           <div className="board-grid board-grid">
             <BoardCard
-              img="/team/anuskha.jpg"
-              name="Anushka Rath"
+              img="/team/Rishi.jpeg"
+              name="Rishi Bansode"
               boardRole=""
               github=""
-              linkedin="https://www.linkedin.com/in/anushka-rath-51a506376/"
+              linkedin="https://www.linkedin.com/in/rishi-bansode-345060389/"
             />
           </div>
         </div>
