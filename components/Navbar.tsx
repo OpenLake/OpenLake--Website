@@ -10,6 +10,7 @@ const about = [
   { label: "Philosophy", href: "/philosophy" },
   { label: "Present Community", href: "/team" },
   { label: "Past Community", href: "/past-community" },
+  { label: "Hall of Fame", href: "/hall-of-fame" },
   { label: "Blog", href: "/blog" },
 ];
 
