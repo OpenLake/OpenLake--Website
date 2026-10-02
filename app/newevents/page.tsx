@@ -4,7 +4,46 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PageHero, PageSection, SectionTitle, Accent } from "@/components/PageHero";
+import {
+  PageHero,
+  PageSection,
+  SectionTitle,
+  Accent,
+} from "@/components/PageHero";
+
+const MLH_URL =
+  "https://events.mlh.com/events/14954-hacktoberfest-hack-day-durg-x-openlake";
+const WHATSAPP_URL = "https://chat.whatsapp.com/EinYHPrubps3vFl6arVEpu";
+
+/* Hacktoberfest poster palette */
+const CREAM = "#fff6eb";
+const RUST = "#a54a35";
+const TEAL = "#12716a";
+const YELLOW = "#ffd24d";
+const INK = "#33241b";
+
+const BUNTING_COLORS = ["#c9553f", "#e2734a", "#3f7d6e", "#ffd24d"];
+
+function Bunting() {
+  return (
+    <svg
+      viewBox="0 0 480 26"
+      preserveAspectRatio="none"
+      className="block h-5 w-full sm:h-7"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <line x1="0" y1="2" x2="480" y2="2" stroke={INK} strokeWidth="2" />
+      {Array.from({ length: 24 }, (_, i) => (
+        <polygon
+          key={i}
+          points={`${i * 20},3 ${(i + 1) * 20},3 ${i * 20 + 10},25`}
+          fill={BUNTING_COLORS[i % BUNTING_COLORS.length]}
+        />
+      ))}
+    </svg>
+  );
+}
 
 // ════════════════════════════════════════════════════════════════════════════
 //  EDIT ME: your events live here. Copy a block, paste it, change the values.
@@ -35,27 +74,27 @@ type EventItem = {
   accentColor: string;
 };
 
-const UPCOMING_EVENT: EventItem = {
-  id: "upcoming-1",
-  title: "OpenLake Intro Session",
-  badge: "22 Aug 2026",
-  description:
-    "Join us for the official intro session of OpenLake! Meet the team, learn about our vision, upcoming projects, and how you can be a part of our open-source community.",
-  imageUrl: "/team/intro.png",
-  imageUrlMobile: "/team/openlakeintro26.jpeg",
-  date: "22 Aug 2026",
-  location: "L101, IIT Bhilai",
-  bgColor: "var(--surface)",
-  textColor: "var(--foreground)",
-  accentColor: "var(--red)",
-};
-
 const PAST_EVENTS: EventItem[] = [
+  {
+    id: "0",
+    title: "OpenLake Intro Session",
+    badge: "22 Aug 2026",
+    description:
+      "The official intro session of OpenLake! We met the team, shared our vision and upcoming projects, and how to be a part of our open-source community.",
+    imageUrl: "/team/intro.png",
+    imageUrlMobile: "/team/openlakeintro26.jpeg",
+    date: "22 Aug 2026",
+    location: "L101, IIT Bhilai",
+    bgColor: "var(--surface)",
+    textColor: "var(--foreground)",
+    accentColor: "var(--red)",
+  },
   {
     id: "1",
     title: "FOSS Overflow",
     badge: "22 Jan 2026",
-    description: "OverFlow into Open Source with India's Largest Open Source Hackathon.",
+    description:
+      "OverFlow into Open Source with India's Largest Open Source Hackathon.",
     imageUrl: "/team/eventimage.png",
     location: "IIT Bhilai",
     bgColor: "var(--surface)",
@@ -149,7 +188,8 @@ const PAST_EVENTS: EventItem[] = [
     id: "9",
     title: "Object Oriented Programming and Flask",
     badge: "06 Aug 2022",
-    description: "An introductory workshop on OOP concepts and the Flask framework.",
+    description:
+      "An introductory workshop on OOP concepts and the Flask framework.",
     imageUrl: "/team/event4.png",
     location: "IIT Bhilai",
     bgColor: "var(--surface)",
@@ -172,7 +212,13 @@ const PAST_EVENTS: EventItem[] = [
 ];
 
 // ── Event card ────────────────────────────────────────────────────────────────
-function EventCard({ event, priority = false }: { event: EventItem; priority?: boolean }) {
+function EventCard({
+  event,
+  priority = false,
+}: {
+  event: EventItem;
+  priority?: boolean;
+}) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const { bgColor, textColor, accentColor } = event;
 
@@ -191,15 +237,22 @@ function EventCard({ event, priority = false }: { event: EventItem; priority?: b
         const el = wrapperRef.current;
         if (!el) return;
         el.style.transition = "transform 0.4s ease";
-        el.style.transform = "perspective(1400px) scale(1) rotateY(0deg) rotateX(0deg)";
+        el.style.transform =
+          "perspective(1400px) scale(1) rotateY(0deg) rotateX(0deg)";
         setTimeout(() => {
-          if (wrapperRef.current) wrapperRef.current.style.transition = "transform 0.06s ease";
+          if (wrapperRef.current)
+            wrapperRef.current.style.transition = "transform 0.06s ease";
         }, 400);
       }}
       onMouseEnter={() => {
-        if (wrapperRef.current) wrapperRef.current.style.transition = "transform 0.06s ease";
+        if (wrapperRef.current)
+          wrapperRef.current.style.transition = "transform 0.06s ease";
       }}
-      style={{ position: "relative", transition: "transform 0.06s ease", willChange: "transform" }}
+      style={{
+        position: "relative",
+        transition: "transform 0.06s ease",
+        willChange: "transform",
+      }}
     >
       <div
         className="event-card"
@@ -364,10 +417,26 @@ export default function EventsPage() {
             </>
           }
           lede="Workshops, hackathons, bootcamps and tech talks that bring students together to learn, build, and innovate."
-        />
+        >
+          <a
+            href={MLH_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full px-5 py-2 text-sm font-semibold sm:text-base"
+            style={{ background: RUST, color: CREAM }}
+          >
+            🎃 Official MLH Hacktoberfest Hack Day — 10 Oct 2026
+          </a>
+        </PageHero>
 
         <PageSection tone="surface" id="upcoming">
-          <SectionTitle>OpenLake Intro Session 2026-27</SectionTitle>
+          <span
+            className="mb-4 block w-fit mx-auto rounded-full px-4 py-1 text-sm font-semibold"
+            style={{ background: `${TEAL}1a`, color: TEAL }}
+          >
+            ⚡ Upcoming · Powered by MLH × DEV
+          </span>
+          <SectionTitle>Hacktoberfest Hack Day — Durg × OpenLake</SectionTitle>
           <p
             style={{
               fontSize: 20,
@@ -377,10 +446,108 @@ export default function EventsPage() {
               margin: "0 0 32px",
             }}
           >
-            Stay tuned for the next exciting event organized by OpenLake.
+            One day. You walk in with a laptop, you walk out with a working AI
+            project in a public GitHub repo.
           </p>
 
-          <EventCard event={UPCOMING_EVENT} priority />
+          <div
+            className="overflow-hidden rounded-3xl border-2 shadow-xl"
+            style={{ borderColor: RUST, background: CREAM }}
+          >
+            <Bunting />
+
+            <div className="grid md:grid-cols-2">
+              {/* Poster */}
+              <div className="relative w-full" style={{ background: CREAM }}>
+                <Image
+                  src="/team/hackoctoberfest.png"
+                  alt="Hacktoberfest is coming to IIT Bhilai — Hack Day Durg × OpenLake poster"
+                  width={1080}
+                  height={1350}
+                  priority
+                  className="block h-auto w-full max-h-[380px] object-contain sm:max-h-[460px]"
+                />
+              </div>
+
+              {/* Intro + first steps */}
+              <div
+                className="flex flex-col justify-center gap-4 p-5 sm:p-6 md:p-8"
+                style={{ color: INK }}
+              >
+                <div className="flex flex-wrap gap-2">
+                  <span
+                    className="rounded-full px-4 py-1 text-sm font-semibold"
+                    style={{ background: RUST, color: CREAM }}
+                  >
+                    📅 10 Oct 2026
+                  </span>
+                  <span
+                    className="rounded-full px-4 py-1 text-sm font-semibold"
+                    style={{ background: `${TEAL}1a`, color: TEAL }}
+                  >
+                    📍 L101, IIT Bhilai
+                  </span>
+                  <span
+                    className="rounded-full px-4 py-1 text-sm font-semibold"
+                    style={{ background: YELLOW, color: INK }}
+                  >
+                    🏆 Google Gemma challenge
+                  </span>
+                </div>
+
+                <div>
+                  <h3
+                    className="text-xl font-extrabold sm:text-2xl"
+                    style={{ color: RUST }}
+                  >
+                    HACKTOBERFEST IS COMING TO IIT BHILAI
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 sm:text-base sm:leading-7">
+                    For the first time, MLH is coming to IIT Bhilai in the form
+                    of Hacktoberfest!💙 On 10 October, OpenLake is hosting an
+                    official Hacktoberfest Hack Day — one of only a few hundred
+                    worldwide, run by Major League Hacking and DEV, in
+                    partnership with DigitalOcean. This is the biggest
+                    open-source event this campus has hosted.{" "}
+                    <strong style={{ color: RUST }}>
+                      You should be in the room.🚀
+                    </strong>
+                  </p>
+                </div>
+
+                <div className="space-y-1 text-sm leading-6">
+                  <p>🌅 Morning — hands-on workshop to get everyone running</p>
+                  <p>
+                    🛠️ Afternoon — you build, mentors on the floor the entire
+                    time
+                  </p>
+                  <p>🎤 Evening — demos &amp; judging</p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <a
+                    href={MLH_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full px-5 py-2 text-sm font-semibold transition"
+                    style={{ background: RUST, color: CREAM }}
+                  >
+                    🎟️ Register on MLH
+                  </a>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold underline-offset-4 hover:underline"
+                    style={{ color: TEAL }}
+                  >
+                    💬 WhatsApp group
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </PageSection>
 
         <PageSection tone="background">
@@ -404,7 +571,14 @@ export default function EventsPage() {
           </div>
 
           <div style={{ marginTop: 64, textAlign: "center" }}>
-            <p style={{ fontSize: 20, color: "var(--muted)", lineHeight: 1.7, margin: 0 }}>
+            <p
+              style={{
+                fontSize: 20,
+                color: "var(--muted)",
+                lineHeight: 1.7,
+                margin: 0,
+              }}
+            >
               Want to be part of the next one? Find us on{" "}
               <a
                 href="https://github.com/OpenLake"
