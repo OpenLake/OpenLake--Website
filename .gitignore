@@ -12,3 +12,4 @@ tsconfig.tsbuildinfo
 .vercel
 .env*.local
 .freebuff/
+/openlake-website
