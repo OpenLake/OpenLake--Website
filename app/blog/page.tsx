@@ -29,6 +29,17 @@ type Post = {
 
 const POSTS: Post[] = [
   {
+    title: "Hosting an MLH Hackathon in 20 Days — OpenLake Hacktoberfest",
+    url: "https://garvitsharma.vercel.app/blogs/openlake-hacktoberfest-2026",
+    image: "/assets/blog/openlake-hacktoberfest-2026/cover.jpg",
+    author: "Garvit Sharma",
+    date: "Oct 2026",
+    readTime: "7 min read",
+    excerpt:
+      "Twenty days' notice to host an MLH hackathon at IIT Bhilai — 300 registrations, 30 teams and one very long day. What went right, what nearly fell over, and what it taught me about running an event at this scale.",
+    tags: ["Hackathon", "MLH", "Hacktoberfest", "OpenLake"],
+  },
+  {
     title: "How to run a DevLabs at your college",
     url: "/blog/devlabs-playbook",
     internal: true,
