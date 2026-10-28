@@ -100,7 +100,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full">
 <Script
-  src="https://compassai-widget.vercel.app//compass-widget.js"
+  src="https://compassai-widget.vercel.app/compass-widget.js"
   data-api="https://compassai-fm0k.onrender.com"
   data-name="Ask OpenLake"
   strategy="afterInteractive"
