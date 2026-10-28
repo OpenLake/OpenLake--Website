@@ -100,9 +100,10 @@ export default function RootLayout({
       </head>
       <body className="min-h-full">
         <Script
-          src="https://compass-ai-widget.vercel.app/compass-widget.js"
-          strategy="afterInteractive"
-        />
+  src="https://compass-ai-widget.vercel.app/compass-widget.js"
+  data-api="https://compassai-fm0k.onrender.com"
+  strategy="afterInteractive"
+/>
         <PlausibleProvider src="https://plausible.io/js/pa-Fxh-6GHJlpUS4AXISXi-C.js">
           <SkipToMainLink />
           {children}
