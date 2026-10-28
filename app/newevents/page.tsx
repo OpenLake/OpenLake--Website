@@ -11,40 +11,6 @@ import {
   Accent,
 } from "@/components/PageHero";
 
-const MLH_URL =
-  "https://events.mlh.com/events/14954-hacktoberfest-hack-day-durg-x-openlake";
-const WHATSAPP_URL = "https://chat.whatsapp.com/EinYHPrubps3vFl6arVEpu";
-
-/* Hacktoberfest poster palette */
-const CREAM = "#fff6eb";
-const RUST = "#a54a35";
-const TEAL = "#12716a";
-const YELLOW = "#ffd24d";
-const INK = "#33241b";
-
-const BUNTING_COLORS = ["#c9553f", "#e2734a", "#3f7d6e", "#ffd24d"];
-
-function Bunting() {
-  return (
-    <svg
-      viewBox="0 0 480 26"
-      preserveAspectRatio="none"
-      className="block h-5 w-full sm:h-7"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <line x1="0" y1="2" x2="480" y2="2" stroke={INK} strokeWidth="2" />
-      {Array.from({ length: 24 }, (_, i) => (
-        <polygon
-          key={i}
-          points={`${i * 20},3 ${(i + 1) * 20},3 ${i * 20 + 10},25`}
-          fill={BUNTING_COLORS[i % BUNTING_COLORS.length]}
-        />
-      ))}
-    </svg>
-  );
-}
-
 // ════════════════════════════════════════════════════════════════════════════
 //  EDIT ME: your events live here. Copy a block, paste it, change the values.
 //  You should never need to touch anything below these arrays.
@@ -75,6 +41,19 @@ type EventItem = {
 };
 
 const PAST_EVENTS: EventItem[] = [
+  {
+    id: "mlh-hacktoberfest-2026",
+    title: "MLH Hacktoberfest Hack Day — Durg × OpenLake",
+    badge: "10 Oct 2026",
+    description:
+      "For the first time, MLH came to IIT Bhilai in the form of Hacktoberfest! OpenLake hosted an official Hacktoberfest Hack Day — one of only a few hundred worldwide, run by Major League Hacking and DEV, in partnership with DigitalOcean. A day of building AI projects, learning, and contributing to open source.",
+    imageUrl: "/team/hackoctoberfest.png",
+    date: "10 Oct 2026",
+    location: "L101, IIT Bhilai",
+    bgColor: "var(--surface)",
+    textColor: "var(--foreground)",
+    accentColor: "var(--red)",
+  },
   {
     id: "0",
     title: "OpenLake Intro Session",
@@ -417,26 +396,16 @@ export default function EventsPage() {
             </>
           }
           lede="Workshops, hackathons, bootcamps and tech talks that bring students together to learn, build, and innovate."
-        >
-          <a
-            href={MLH_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-full px-5 py-2 text-sm font-semibold sm:text-base"
-            style={{ background: RUST, color: CREAM }}
-          >
-            🎃 Official MLH Hacktoberfest Hack Day — 10 Oct 2026
-          </a>
-        </PageHero>
+        />
 
-        <PageSection tone="surface" id="upcoming">
+<PageSection tone="surface" id="upcoming">
           <span
             className="mb-4 block w-fit mx-auto rounded-full px-4 py-1 text-sm font-semibold"
-            style={{ background: `${TEAL}1a`, color: TEAL }}
+            style={{ background: "var(--surface-hover)", color: "var(--red)" }}
           >
-            ⚡ Upcoming · Powered by MLH × DEV
+            ⚡ Upcoming · OpenLake × Meraz 7.0
           </span>
-          <SectionTitle>Hacktoberfest Hack Day — Durg × OpenLake</SectionTitle>
+          <SectionTitle>OpenLake × Meraz 7.0 — Two Events, One Day</SectionTitle>
           <p
             style={{
               fontSize: 20,
@@ -446,104 +415,170 @@ export default function EventsPage() {
               margin: "0 0 32px",
             }}
           >
-            One day. You walk in with a laptop, you walk out with a working AI
-            project in a public GitHub repo.
+            Join us for a day of AI innovation and creative coding at IIT Bhilai.
           </p>
 
-          <div
-            className="overflow-hidden rounded-3xl border-2 shadow-xl"
-            style={{ borderColor: RUST, background: CREAM }}
-          >
-            <Bunting />
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Agents War Card */}
+            <div
+              className="overflow-hidden rounded-3xl border-2 shadow-xl"
+              style={{ borderColor: "var(--red)", background: "var(--surface)" }}
+            >
+              <div className="grid lg:grid-cols-2">
+                {/* Poster */}
+                <div className="relative w-full" style={{ background: "var(--surface)" }}>
+                  <Image
+                    src="/assets/agentswar.png"
+                    alt="Agents War — OpenLake × Meraz 7.0 poster"
+                    width={1080}
+                    height={1350}
+                    priority
+                    className="block h-auto w-full max-h-[380px] object-contain sm:max-h-[460px]"
+                    style={{ padding: 20 }}
+                  />
+                </div>
 
-            <div className="grid md:grid-cols-2">
-              {/* Poster */}
-              <div className="relative w-full" style={{ background: CREAM }}>
-                <Image
-                  src="/team/hackoctoberfest.png"
-                  alt="Hacktoberfest is coming to IIT Bhilai — Hack Day Durg × OpenLake poster"
-                  width={1080}
-                  height={1350}
-                  priority
-                  className="block h-auto w-full max-h-[380px] object-contain sm:max-h-[460px]"
-                />
+                {/* Content */}
+                <div
+                  className="flex flex-col justify-center gap-3 p-5 sm:p-6 md:p-8"
+                  style={{ color: "var(--foreground)" }}
+                >
+                  <div className="flex flex-wrap gap-2">
+                    <span
+                      className="rounded-full px-4 py-1 text-sm font-semibold"
+                      style={{ background: "var(--red)", color: "var(--background)" }}
+                    >
+                      📅 1 Nov 2026
+                    </span>
+                    <span
+                      className="rounded-full px-4 py-1 text-sm font-semibold"
+                      style={{ background: "var(--surface-hover)", color: "var(--red)" }}
+                    >
+                      🕙 10:00 AM – 1:30 PM
+                    </span>
+                    <span
+                      className="rounded-full px-4 py-1 text-sm font-semibold"
+                      style={{ background: "var(--surface-hover)", color: "var(--red)" }}
+                    >
+                      📍 L102, IIT Bhilai
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3
+                      className="text-xl font-extrabold sm:text-2xl"
+                      style={{ color: "var(--red)" }}
+                    >
+                      AGENTS WAR
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-6 sm:text-base sm:leading-7">
+                      Build autonomous AI agents that compete, collaborate, and
+                      conquer challenges in a simulated arena. Hands-on hackathon
+                      for all levels — bring your laptop, leave with a working agent.
+                      <strong style={{ color: "var(--red)" }}>🚀</strong>
+                    </p>
+                  </div>
+
+                  <div className="space-y-1 text-sm leading-5">
+                    <p>🧠 Agent architectures & tool calling</p>
+                    <p>⚔️ Battle-test agents in live challenges</p>
+                    <p>🏆 Prizes for most capable agents</p>
+                  </div>
+
+                  <div className="mt-2">
+                    <a
+                      href="https://docs.google.com/forms/d/15Mw5qFpCD9f-FBkDEukU4fiV9RkXuTHQkzHY4Kw9tW0/viewform?edit_requested=true"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full px-5 py-2 text-sm font-semibold transition cursor-pointer inline-block"
+                      style={{ background: "var(--red)", color: "var(--background)" }}
+                    >
+                      🎟️ Register
+                    </a>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              {/* Intro + first steps */}
-              <div
-                className="flex flex-col justify-center gap-4 p-5 sm:p-6 md:p-8"
-                style={{ color: INK }}
-              >
-                <div className="flex flex-wrap gap-2">
-                  <span
-                    className="rounded-full px-4 py-1 text-sm font-semibold"
-                    style={{ background: RUST, color: CREAM }}
-                  >
-                    📅 10 Oct 2026
-                  </span>
-                  <span
-                    className="rounded-full px-4 py-1 text-sm font-semibold"
-                    style={{ background: `${TEAL}1a`, color: TEAL }}
-                  >
-                    📍 L101, IIT Bhilai
-                  </span>
-                  <span
-                    className="rounded-full px-4 py-1 text-sm font-semibold"
-                    style={{ background: YELLOW, color: INK }}
-                  >
-                    🏆 Google Gemma challenge
-                  </span>
+            {/* Gandhi Hackathon Card */}
+            <div
+              className="overflow-hidden rounded-3xl border-2 shadow-xl"
+              style={{ borderColor: "var(--orange)", background: "var(--surface)" }}
+            >
+              <div className="grid lg:grid-cols-2">
+                {/* Poster */}
+                <div className="relative w-full" style={{ background: "var(--surface)" }}>
+                  <Image
+                    src="/assets/gandhihackathon.png"
+                    alt="Gandhi Hackathon — OpenLake × Meraz 7.0 poster"
+                    width={1080}
+                    height={1350}
+                    priority
+                    className="block h-auto w-full max-h-[380px] object-contain sm:max-h-[460px]"
+                    style={{ padding: 20 }}
+                  />
                 </div>
 
-                <div>
-                  <h3
-                    className="text-xl font-extrabold sm:text-2xl"
-                    style={{ color: RUST }}
-                  >
-                    HACKTOBERFEST IS COMING TO IIT BHILAI
-                  </h3>
+                {/* Content */}
+                <div
+                  className="flex flex-col justify-center gap-3 p-5 sm:p-6 md:p-8"
+                  style={{ color: "var(--foreground)" }}
+                >
+                  <div className="flex flex-wrap gap-2">
+                    <span
+                      className="rounded-full px-4 py-1 text-sm font-semibold"
+                      style={{ background: "var(--orange)", color: "var(--background)" }}
+                    >
+                      📅 1 Nov 2026
+                    </span>
+                    <span
+                      className="rounded-full px-4 py-1 text-sm font-semibold"
+                      style={{ background: "var(--surface-hover)", color: "var(--orange)" }}
+                    >
+                      🕐 2:00 PM – 5:00 PM
+                    </span>
+                    <span
+                      className="rounded-full px-4 py-1 text-sm font-semibold"
+                      style={{ background: "var(--surface-hover)", color: "var(--orange)" }}
+                    >
+                      📍 L101, IIT Bhilai
+                    </span>
+                  </div>
 
-                  <p className="mt-3 text-sm leading-6 sm:text-base sm:leading-7">
-                    For the first time, MLH is coming to IIT Bhilai in the form
-                    of Hacktoberfest!💙 On 10 October, OpenLake is hosting an
-                    official Hacktoberfest Hack Day — one of only a few hundred
-                    worldwide, run by Major League Hacking and DEV, in
-                    partnership with DigitalOcean. This is the biggest
-                    open-source event this campus has hosted.{" "}
-                    <strong style={{ color: RUST }}>
-                      You should be in the room.🚀
-                    </strong>
-                  </p>
-                </div>
+                  <div>
+                    <h3
+                      className="text-xl font-extrabold sm:text-2xl"
+                      style={{ color: "var(--orange)" }}
+                    >
+                      GANDHI HACKATHON
+                    </h3>
 
-                <div className="space-y-1 text-sm leading-6">
-                  <p>🌅 Morning — hands-on workshop to get everyone running</p>
-                  <p>
-                    🛠️ Afternoon — you build, mentors on the floor the entire
-                    time
-                  </p>
-                  <p>🎤 Evening — demos &amp; judging</p>
-                </div>
+                    <p className="mt-2 text-sm leading-6 sm:text-base sm:leading-7">
+                      Creative coding hackathon inspired by Gandhian principles —
+                      build for impact, simplicity, and truth. Minimal viable
+                      solutions, ethical tech, real community problems.
+                      <strong style={{ color: "var(--orange)" }}>🚀</strong>
+                    </p>
+                  </div>
 
-                <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-                  <a
-                    href={MLH_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full px-5 py-2 text-sm font-semibold transition"
-                    style={{ background: RUST, color: CREAM }}
-                  >
-                    🎟️ Register on MLH
-                  </a>
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold underline-offset-4 hover:underline"
-                    style={{ color: TEAL }}
-                  >
-                    💬 WhatsApp group
-                  </a>
+                  <div className="space-y-1 text-sm leading-5">
+                    <p>🎯 Theme: Tech for Social Impact</p>
+                    <p>🛠️ Build minimal, meaningful solutions</p>
+                    <p>🏆 Prizes for highest impact projects</p>
+                  </div>
+
+                  <div className="mt-2">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfhBb3Iv_eMVsbf3zkAk-NrjRrqmuj9gZsXUCzLSgd6FJvCrw/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full px-5 py-2 text-sm font-semibold transition cursor-pointer inline-block"
+                      style={{ background: "var(--orange)", color: "var(--background)" }}
+                    >
+                      🎟️ Register
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
