@@ -24,33 +24,8 @@ import { BtnArrowSvg } from "./btn-arrow";
 //    tags         - array of short strings, e.g. ["Open Source", "Events"]
 //    accentColor  - optional; defaults to the OpenLake red (var(--red))
 // ════════════════════════════════════════════════════════════════════════════
-const NEWSLETTERS = [
-  {
-    id: "1",
-    issue: 2,
-    title: "Winter of Code kicks off",
-    date: "2026-01-15",
-    excerpt:
-      "Our biggest cohort yet ships its first pull requests, we spotlight three student-led projects, and there's a new hardware corner in the makerspace. Here's everything that happened at OpenLake this month.",
-    coverImageUrl: null, // e.g. "/assets/newsletter-issue2.webp"
-    readUrl: "",
-    tags: ["Open Source", "Community", "Events"],
-    accentColor: "var(--red)",
-  },
-  {
-    id: "2",
-    issue: 1,
-    title: "Hello from the Lake",
-    date: "2025-12-10",
-    excerpt:
-      "The very first OpenLake newsletter. What we're building, why open source matters at IIT Bhilai, and how to get involved whether you write code, design, or just love shipping things.",
-    coverImageUrl: null, // e.g. "/assets/newsletter-issue1.webp"
-    readUrl: "",
-    tags: ["Welcome", "Open Source"],
-    accentColor: "var(--red)",
-  },
-  // ── Copy the block above, paste it here, and change the values ──
-];
+// Add an issue only after it is published and readUrl points to the real article.
+const NEWSLETTERS = [];
 
 // Turn "2026-01-15" into "15 January 2026" (no timezone surprises).
 function formatDate(iso) {
@@ -277,17 +252,28 @@ function NewsletterCard({ item }) {
 }
 
 // ── Page ────────────────────────────────────────────────────────────────────
-export default function NewsletterPage() {
+export default function NewsletterPage({ signupEnabled, confirmed }) {
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [status, setStatus] = useState("idle");
   // Newest issue first.
   const sorted = [...NEWSLETTERS].sort((a, b) => b.date.localeCompare(a.date));
 
-  function handleSubscribe() {
-    // TODO: wire this to your real newsletter provider / API route.
-    // For now it just shows a local confirmation.
-    if (!email || !email.includes("@")) return;
-    setSubscribed(true);
+  async function handleSubscribe(event) {
+    event.preventDefault();
+    if (status === "loading") return;
+    setStatus("loading");
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      if (!response.ok) throw new Error("Subscription request failed");
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -328,21 +314,23 @@ export default function NewsletterPage() {
             The OpenLake <Accent>Newsletter</Accent>
           </>
         }
-        lede="Build logs, project spotlights, and what's happening at IIT Bhilai's open-source hub. One issue a month. No spam, ever."
+        lede="Build logs, project spotlights, and news from IIT Bhilai's open-source community."
       />
 
       <PageSection tone="surface">
         {/* Subscribe bar */}
-        {subscribed ? (
+        {confirmed || status === "success" ? (
           <div
             style={{
               background: "var(--surface)",
               borderRadius: 9999,
-              height: 64,
+              minHeight: 64,
               border: "1px solid var(--red)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              padding: "12px 20px",
+              textAlign: "center",
               marginBottom: 48,
             }}
           >
@@ -353,15 +341,16 @@ export default function NewsletterPage() {
                 color: "var(--foreground)",
               }}
             >
-              🎉 You're on the list — see you in the next issue!
+              {confirmed ? "You're subscribed. Thanks for confirming!" : "Check your inbox to confirm your subscription."}
             </span>
           </div>
-        ) : (
-          <div
+        ) : signupEnabled ? (
+          <form
+            onSubmit={handleSubscribe}
             style={{
               background: "var(--surface)",
               borderRadius: 9999,
-              height: 64,
+              minHeight: 64,
               border: "1px solid var(--border)",
               display: "flex",
               alignItems: "center",
@@ -373,15 +362,14 @@ export default function NewsletterPage() {
             <input
               data-news-email
               type="email"
+              required
               aria-label="Email address"
               placeholder="you@iitbhilai.ac.in"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") handleSubscribe();
-              }}
               style={{
                 flex: 1,
+                minWidth: 0,
                 background: "transparent",
                 border: "none",
                 fontFamily: "var(--font-phantom)",
@@ -390,7 +378,8 @@ export default function NewsletterPage() {
               }}
             />
             <button
-              onClick={handleSubscribe}
+              type="submit"
+              disabled={status === "loading"}
               className="sub-btn"
               style={{
                 display: "inline-flex",
@@ -410,55 +399,43 @@ export default function NewsletterPage() {
                 whiteSpace: "nowrap",
               }}
             >
-              Subscribe
+              {status === "loading" ? "Subscribing…" : "Subscribe"}
               <span aria-hidden="true" style={{ display: "inline-flex" }}>
                 <BtnArrowSvg />
               </span>
             </button>
-          </div>
+          </form>
+        ) : (
+          <output style={{ display: "block", textAlign: "center", marginBottom: 48 }}>
+            Newsletter signup is temporarily unavailable.
+          </output>
+        )}
+
+        {status === "error" && (
+          <p role="alert" style={{ color: "var(--red)", margin: "-32px 0 48px", textAlign: "center" }}>
+            We could not start your subscription. Please try again later.
+          </p>
+        )}
+        {signupEnabled && status !== "success" && !confirmed && (
+          <p style={{ textAlign: "center", margin: "-32px 0 48px", color: "var(--foreground)" }}>
+            We use Brevo to send the newsletter. Confirm by email; unsubscribe anytime. {" "}
+            <Link href="/privacy" style={{ color: "var(--red)" }}>Privacy details</Link>
+          </p>
         )}
 
         {/* Issue list */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-          {sorted.map((item) => (
-            <NewsletterCard key={item.id} item={item} />
-          ))}
-        </div>
-
-        {/* Footer note */}
-        <div
-          style={{
-            marginTop: 80,
-            display: "flex",
-            flexDirection: "column",
-            gap: 8,
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              opacity: 0.55,
-              margin: 0,
-            }}
-          >
+        {sorted.length > 0 ? (
+          <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+            {sorted.map((item) => (
+              <NewsletterCard key={item.id} item={item} />
+            ))}
+          </div>
+        ) : (
+          <p style={{ textAlign: "center", fontSize: 20, color: "var(--foreground)" }}>
+            No issues published yet. The archive will appear here when the first issue is out.
           </p>
-          <p
-            style={{
-              fontFamily: "var(--font-phantom)",
-              fontSize: 20,
-              color: "var(--foreground)",
-              opacity: 0.55,
-              margin: 0,
-            }}
-          >
-            <Link href="/programs" style={{ color: "var(--red)", textDecoration: "none" }}>
-            </Link>
+        )}
 
-          </p>
-        </div>
       </PageSection>
       <Footer />
     </main>

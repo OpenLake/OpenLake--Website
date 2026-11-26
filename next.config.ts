@@ -32,23 +32,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/fiscal-sponsorship",
-        destination: "/resources/web-development",
-        permanent: true,
-      },
-      {
         source: "/conduct",
-        destination: "/resources/app-development",
+        destination: "/safeguarding",
         permanent: true,
       },
       {
         source: "/privacy-and-terms",
-        destination: "/resources/game-development",
+        destination: "/privacy",
         permanent: true,
       },
       {
         source: "/safety",
-        destination: "/resources/ai-ml",
+        destination: "/safeguarding",
         permanent: true,
       },
     ];

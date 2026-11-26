@@ -44,13 +44,13 @@ function BoardCard({
         }}
       >
         {github && (
-          <a href={github} target="_blank" rel="noopener noreferrer">
+          <a href={github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}>
             <FaGithub size={26} />
           </a>
         )}
 
         {linkedin && (
-          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${name} on LinkedIn`}>
             <FaLinkedin size={26} />
           </a>
         )}
