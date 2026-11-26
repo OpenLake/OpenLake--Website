@@ -355,7 +355,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
       onMouseEnter={() => {
         if (wrapperRef.current) wrapperRef.current.style.transition = "transform 0.06s ease";
       }}
-      style={{ position: "relative", transition: "transform 0.06s ease", willChange: "transform" }}
+      style={{ position: "relative", minWidth: 0, transition: "transform 0.06s ease", willChange: "transform" }}
     >
       <div
         style={{
@@ -443,6 +443,7 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
               lineHeight: 1,
               textAlign: "center",
               width: "100%",
+              overflowWrap: "anywhere",
             }}
           >
             {program.name}
@@ -544,8 +545,8 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
                 justifyContent: "center",
                 paddingTop: 6,
                 paddingBottom: 6,
-                paddingLeft: 20,
-                paddingRight: 20,
+                paddingLeft: 16,
+                paddingRight: 16,
                 background: buttonColor,
                 borderRadius: buttonRadius,
                 border: `${buttonBorderWidth}px solid ${buttonBorderColor}`,
@@ -578,8 +579,8 @@ function ProgramCard({ program }: { program: AirtableProgram }) {
                 justifyContent: "center",
                 paddingTop: 6,
                 paddingBottom: 6,
-                paddingLeft: 20,
-                paddingRight: 20,
+                paddingLeft: 16,
+                paddingRight: 16,
                 background: "transparent",
                 borderRadius: buttonRadius,
                 border: `2px solid ${buttonColor}`,
@@ -641,7 +642,7 @@ export default function ProgramsPage({
     <main id="main" tabIndex={-1} style={{ background: "var(--background)" }}>
       <style>{`
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-        @media (max-width: 700px) { .programs-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 700px) { .programs-grid { grid-template-columns: minmax(0, 1fr) !important; } }
         input[data-programs-search]::placeholder { opacity: 0.5; }
         input[data-programs-search] { outline: none; }
         .cta-btn .btn-arrow { display: inline-block; transition: transform 0.2s ease; }
@@ -710,7 +711,7 @@ export default function ProgramsPage({
       <PageSection tone="surface">
         <div
           className="programs-grid"
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}
+          style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 28 }}
         >
           {sorted.map((p) => (
             <ProgramCard key={p.id} program={p} />
