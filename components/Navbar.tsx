@@ -278,6 +278,7 @@ export function Navbar({ invertColors = false }: { invertColors?: boolean }) {
               fontSize: "25px",
               margin: 0,
               fontWeight: 700,
+              color: txt,
             }}
           >
             OpenLake
