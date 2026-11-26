@@ -9,7 +9,7 @@ const coordinators = [
   {
     name: "Amay Dixit",
     github: "https://github.com/amaydixit11",
-    linkedin: "https://www.linkedin.com/in/amay-dixit-462113284/",
+    linkedin: "https://www.linkedin.com/in/amaydixit11",
   },
 ];
 
@@ -117,6 +117,7 @@ function Member({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${name} on GitHub`}
             style={{ color: "var(--foreground)" }}
           >
             <FaGithub size={20} />
@@ -128,6 +129,7 @@ function Member({
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${name} on LinkedIn`}
             style={{ color: "var(--foreground)" }}
           >
             <FaLinkedin size={20} />
@@ -181,12 +183,12 @@ const coordinators2024 = [
   {
     name: "Nishchay Rajput",
     github: "https://github.com/NishchayRajput",
-    linkedin: "https://www.linkedin.com/in/nishchay-rajput-83969a264/",
+    linkedin: "https://www.linkedin.com/in/nishchay18r",
   },
   {
     name: "Sumit Kumar Pathak",
     github: "https://github.com/sk-pathak",
-    linkedin: "https://www.linkedin.com/in/sumit-pathak-bb0a5314b/",
+    linkedin: "https://www.linkedin.com/in/capable-average",
   },
 ];
 
@@ -214,12 +216,12 @@ const mentors2024 = [
 {
   name: "Amay Dixit",
   github: "https://github.com/amaydixit11",
-  linkedin: "https://www.linkedin.com/in/amay-dixit-462113284/",
+  linkedin: "https://www.linkedin.com/in/amaydixit11",
 },
 {
   name: "Sumit Pathak",
   github: "https://github.com/sk-pathak",
-  linkedin: "https://in.linkedin.com/in/sumit-pathak-263420225",
+  linkedin: "https://www.linkedin.com/in/capable-average",
 },
 {
   name: "Shashank Pant",
@@ -247,13 +249,13 @@ const mentors2024 = [
 const coordinators2023 = [
   {
     name: "Tushar Bansal",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/tusharbansal22",
   },
   {
     name: "Madhur Jain",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/madhur-jain-37a243218",
   },
 ];
 
@@ -261,12 +263,12 @@ const mentors2023 = [
   {
   name: "Sudeep Ranjan Sahoo",
   github: "https://github.com/srs-sudeep",
-  linkedin: "https://www.linkedin.com/in/sudeep-ranjan-sahoo-b82355232/",
+  linkedin: "https://www.linkedin.com/in/sudeep-ranjan-sahoo-b82355232",
 },
 {
   name: "Aditya Dubey",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Arya Lanjewar",
@@ -275,18 +277,18 @@ const mentors2023 = [
 },
 {
   name: "Ayush Krishnan",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/aayush-krishnan05",
 },
 {
   name: "Javed Habib",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/javed-habib",
 },
 {
   name: "Roshan Jha",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/phool-roshan-jha",
 },
 {
   name: "Rohit Ashwani",
@@ -295,183 +297,183 @@ const mentors2023 = [
 },
 {
   name: "Shubham Daule",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/shubham-daule-6387a0227",
 },
 {
   name: "Siddhi Aggarwal",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Arnav Prakash Choudhury",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 ];
 //2022-23
 const coordinators2022 = [
   {
     name: "Sudhir Sharma",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "",
   },
   {
     name: "Satvik Vemuganti",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "",
   },
 ];
 const mentors2022 = [
   {
   name: "Aakash Thatte",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Abhishek Singh Khushwaha",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Ananya Hooda",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/04ananya",
 },
 {
   name: "Anshu Kumar",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Sudeep Ranjan Sahoo",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/sudeep-ranjan-sahoo-b82355232",
 },
 {
   name: "Chaitanya Bisht",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Harshith Naresh Chunduri",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Madhur Jain",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/madhur-jain-37a243218",
 },
 {
   name: "Sarvesh Kumar",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 ];
 //2021-2022
 const coordinators2021 = [
   {
     name: "Kumar Shivendu",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/kshivendu",
   },
   {
     name: "Shashwat Jaiswal",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/shashwatjaiswal",
   },
 ];
 const mentors2021 = [
   {
   name: "Ambar",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/ambarvm",
 },
 {
   name: "Shikhar",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Rishi",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Shashwat",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Ashutosh",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Gopal",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "https://www.linkedin.com/in/gopald27",
 },
 {
   name: "Ashita",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Shivam",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Akshat",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 {
   name: "Sunit",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "",
+  linkedin: "",
 },
 ];
 //2020-2021
 const coordinators2020 = [
   {
     name: "Anand Panchbhai",
-    github: "https://github.com/",
-    linkedin: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/anandpanchbhai",
   },
   {
     name: "Rachuri Sri Pramodh",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/pramodhrachuri",
   },
   {
     name: "Anees Ahmed",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/aneesahmedpro",
   },
   {
     name: "Yatendra Singh",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/yatendra-singh-a80920164",
   },
 ];
 const mentors2020 = [
   {
     name: "Meghana Varanasi",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "",
   },
   {
     name: "Kumar Shivendu",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/kshivendu",
   },
   {
     name: "Ambar Mutha",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/ambarvm",
   },
 ];
 
@@ -518,13 +520,16 @@ function Member2024({
           flexShrink: 0,
         }}
       >
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <FaGithub size={22} />
-        </a>
-
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={22} />
-        </a>
+        {github && (
+          <a href={github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}>
+            <FaGithub size={22} />
+          </a>
+        )}
+        {linkedin && (
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${name} on LinkedIn`}>
+            <FaLinkedin size={22} />
+          </a>
+        )}
       </div>
     </div>
   );
@@ -573,13 +578,16 @@ function Coordinator2024({
           flexShrink: 0,
         }}
       >
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <FaGithub size={22} />
-        </a>
-
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={22} />
-        </a>
+        {github && (
+          <a href={github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}>
+            <FaGithub size={22} />
+          </a>
+        )}
+        {linkedin && (
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${name} on LinkedIn`}>
+            <FaLinkedin size={22} />
+          </a>
+        )}
       </div>
     </div>
   );
