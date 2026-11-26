@@ -24,6 +24,8 @@ const sectionHeadingStyles = {
 const hcLinks = [
   { label: "Philosophy", href: "/philosophy" },
   { label: "Our Team", href: "/team" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Safeguarding", href: "/safeguarding" },
 ];
 
 const resLinks = [
